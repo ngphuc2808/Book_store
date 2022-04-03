@@ -1,15 +1,18 @@
 #header {
     background-color: #25282f;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    position: fixed;
 }
 
 #header .header-content {
     padding: 8px 0;
-}
-
-#header .header-content {
     display: flex;
     align-items: center;
+}
+
+#header .header-content div {
+    padding: 0 8px;
 }
 
 #header .header-logo {
@@ -28,13 +31,11 @@
 }
 
 .header-hotline i,
-.header-basket i {
-    padding-right: 3px;
+.header-basket i,
+.navbar-item i,
+.connect-tag i {
+    padding: 0 4px;
     color: #e66619;
-}
-
-.header-search {
-    padding: 0 16px;
 }
 
 .header-search input {
@@ -44,43 +45,114 @@
     outline: none;
 }
 
-.header-search i {
+.header-search .search-btn {
     color: #e66619;
     font-size: 20px;
     padding: 8px;
     background-color: #fff;
 }
 
-.header-search i:hover {
-    color: #ffa500;
+.header-search .search-btn:hover {
+    color: rgba(230, 102, 25, 0.7);
     cursor: pointer;
 }
 
-#nav::after {
-    content: "";
-    display: block;
-    clear: both;
+.navbar-list {
+    list-style: none;
 }
 
-#nav li {
+.navbar-item,
+.connect-tag {
     display: inline-block;
-    padding: 0 8px;
-    line-height: 46px;
+    padding: 4px 8px;
+    line-height: 35px;
+    position: relative;
 }
 
-#nav li a {
+.navbar-item a,
+.connect-tag-item {
     color: #fff;
     text-decoration: none;
     font-size: 13px;
 }
 
-#nav li i {
-    color: #e66619;
-    padding: 0 3px;
+.connect-tag-item::selection {
+    background-color: transparent;
 }
 
-.header-hotline:hover,
-.header-basket:hover,
-#nav li:hover {
+.connect-tag-item:hover {
+    cursor: context-menu;
+}
+
+.connect-tag-icon {
+    color: transparent;
+}
+
+.pointer:hover,
+.navbar-item:hover,
+.connect-tag-icon > i:hover {
     cursor: pointer;
+    opacity: 0.8;
+}
+
+.navbar-item-separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #e66619;
+    height: 16px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* QR Code */
+.connect_qr_code_fb {
+    width: 140px;
+    height: 176px;
+    position: absolute;
+    left: 37px;
+    top: 100%;
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+}
+
+.connect_qr_code_gh {
+    width: 140px;
+    height: 176px;
+    position: absolute;
+    left: 64px;
+    top: 100%;
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+}
+
+.qr_img_fb {
+    width: 100%;
+    height: 100%;
+}
+
+.connect-tag-icon-fb:hover .connect_qr_code_fb,
+.connect-tag-icon-gh:hover .connect_qr_code_gh {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

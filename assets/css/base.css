@@ -6,7 +6,7 @@
 
 html {
     font-family: 'Arial', 'Helvetica', 'sans-serif';
-    font-size: 100%;
+    font-size: 15px;
     line-height: 1.6;
     box-sizing: border-box;
 }
@@ -16,6 +16,11 @@ html {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
 }
 
 .pull-left {
@@ -34,10 +39,15 @@ html {
     width: 100% !important;
 }
 
-.mr-16 {
-    margin-right: 16px !important;
-}
-
 .d-block {
     display: block !important;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mr-auto {
+    margin-right: auto !important;
 }
