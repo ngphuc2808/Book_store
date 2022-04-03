@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Arial', 'Helvetica', 'sans-serif';
+    font-size: 100%;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+.content-section {
+    width: 1200px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.color-white {
+    color: #fff !important;
+}
+
+.width-100 {
+    width: 100% !important;
+}
+
+.mr-16 {
+    margin-right: 16px !important;
+}
+
+.d-block {
+    display: block !important;
+}
