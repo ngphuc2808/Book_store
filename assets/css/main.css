@@ -90,6 +90,10 @@
     margin: 0 8px;
 }
 
+#header .list-category {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
 .header-basket {
     position: relative;
 }
