@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/img/icon_page.jpg">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/base.css">
@@ -15,7 +17,7 @@
 <body>
     <div class="app">
         <header id="header">
-            <div class="content-section">
+            <div class="content-section b-color">
                 <nav class="row navbar d-flex">
                     <ul class="navbar-list">
                         <li class="navbar-item navbar-item-separate">
@@ -41,9 +43,89 @@
                         <li class="navbar-item">
                             <i class="fa-solid fa-clipboard-question"></i>
                             <a href="#">Hỗ trợ</a>
-                        </li><li class="navbar-item">
+                        </li><li class="navbar-item navbar-item-check">
                             <i class="fa-solid fa-receipt"></i>
                             <a href="#">Kiểm tra đơn hàng</a>
+                            <ul class="check-order">
+                                <li class="check-order-header">Đơn hàng của bạn</li>
+                                <li class="check-order-list">
+                                    <ul>
+                                        <li class="check-order-item check-order-content-unclicked">
+                                            <img src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png" alt="">
+                                            <a href="" class="check-order-content ">
+                                                <p class="check-order-code">
+                                                    Mã đơn hàng:                                              
+                                                </p>
+                                                <p class="check-order-price">
+                                                    Giá tiền: 
+                                                </p>
+                                                <p class="check-order-date">
+                                                    Ngày đặt hàng:  
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="check-order-item check-order-content-unclicked">
+                                            <img src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png" alt="">
+                                            <a href="" class="check-order-content ">
+                                                <p class="check-order-code">
+                                                    Mã đơn hàng:                                              
+                                                </p>
+                                                <p class="check-order-price">
+                                                    Giá tiền: 
+                                                </p>
+                                                <p class="check-order-date">
+                                                    Ngày đặt hàng:  
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="check-order-item check-order-content-unclicked">
+                                            <img src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png" alt="">
+                                            <a href="" class="check-order-content ">
+                                                <p class="check-order-code">
+                                                    Mã đơn hàng:                                              
+                                                </p>
+                                                <p class="check-order-price">
+                                                    Giá tiền: 
+                                                </p>
+                                                <p class="check-order-date">
+                                                    Ngày đặt hàng:  
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="check-order-item">
+                                            <img src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png" alt="">
+                                            <a href="" class="check-order-content ">
+                                                <p class="check-order-code">
+                                                    Mã đơn hàng:                                              
+                                                </p>
+                                                <p class="check-order-price">
+                                                    Giá tiền: 
+                                                </p>
+                                                <p class="check-order-date">
+                                                    Ngày đặt hàng:  
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="check-order-item">
+                                            <img src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png" alt="">
+                                            <a href="" class="check-order-content ">
+                                                <p class="check-order-code">
+                                                    Mã đơn hàng:                                              
+                                                </p>
+                                                <p class="check-order-price">
+                                                    Giá tiền: 
+                                                </p>
+                                                <p class="check-order-date">
+                                                    Ngày đặt hàng:  
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="check-order-footer">
+                                    <a href="">Xem tất cả</a>
+                                </li>
+                            </ul>
                         </li><li class="navbar-item navbar-item-separate">
                             <i class="fa-solid fa-user"></i>
                             <a href="#"><b>Đăng ký</b></a>
@@ -54,33 +136,814 @@
                 </nav>
                 <div class="row header-content">
                     <div class="header-logo pointer">
-                        <img src="/assets/img/logo_page.JPG" alt="" class="width-100">
+                        <img src="/assets/img/logo_page2.JPG" alt="" class="width-100">
                     </div>
                     <div class="header-search">
-                        <input class="width-100" type="text" name="" id="" placeholder="Bạn cần tìm gì?">
+                        <input class="" type="text" name="" id="" placeholder="Bạn cần tìm sách gì?">
                         <i class="search-btn fa-solid fa-magnifying-glass"></i>
+                        <div class="history-find">
+                            <h4 class="history-find-heading">Lịch sử tìm kiếm</h4>
+                            <ul class="history-find-list">
+                                <li class="history-find-item">
+                                    <a href="">Bút bi</a>
+                                </li>
+                                <li class="history-find-item">
+                                    <a href="">Bút chì</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="header-hotline pointer">
-                        <i class="fa-solid fa-headset"></i>
+                        <a class="icon-hotline" href="">
+                            <i class="fa-solid fa-headset"></i>
+                        </a>
                         <a href="#">
                             <span>0906391823</span>
                         </a>
                     </div>
                     <div class="header-basket pointer">
-                        <i class="fa-solid fa-basket-shopping"></i>
+                        <a class="icon-basket" href="">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            <span class="header-basket-notice">
+                                3
+                            </span>
+                        </a>
                         <a href="#">Giỏ hàng</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 bc-white">
+                <div class="content-section">
+                    <div class="row content-categories">
+                        <ul class="content-categories-list">
+                            <li class="list-item list-item-nxb list-item-separate">
+                                <span class="list-item-title" href="">
+                                    <i class="icon-navbar fa-solid fa-bars"></i>
+                                    <p class="pull-right">Nhà xuất bản</p>
+                                </span>
+                                <ul class="nxb-list">
+                                    <li class="nxb-item">
+                                        <a class="nxb-item-name" href="">
+                                            <i class="fa-solid fa-caret-right"></i>
+                                            Kim Đồng
+                                        </a>
+                                    </li>
+                                    <li class="nxb-item">
+                                        <a class="nxb-item-name" href="">
+                                            <i class="fa-solid fa-caret-right"></i>
+                                            Giáo Dục
+                                        </a>
+                                    </li>
+                                    <li class="nxb-item">
+                                        <a class="nxb-item-name" href="">
+                                            <i class="fa-solid fa-caret-right"></i>
+                                            Hồng Đức
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list-item list-item-separate">                        
+                                <span class="list-item-title" href="">
+                                    <p>Kinh tế</p>
+                                </span>
+                            </li>
+                            <li class="list-item list-item-separate">
+                                <a class="list-item-title" href="">
+                                    <p>Văn học</p>
+                                </a>
+                            </li>
+                            <li class="list-item list-item-separate">
+                                <a class="list-item-title" href="">
+                                    <p>Tâm lý - Kĩ năng sống</p>
+                                </a>
+                            </li>
+                            <li class="list-item list-item-separate">
+                                <a class="list-item-title" href="">
+                                    <p>Ngoại ngữ</p>
+                                </a>
+                            </li>
+                            <li class="list-item list-item-separate">
+                                <a class="list-item-title" href="">
+                                    <p>Tiểu thuyết</p>
+                                </a>
+                            </li>
+                            <li class="list-item list-item-separate">
+                                <a class="list-item-title" href="">
+                                    <p>Tiểu sử - Hồi ký</p>
+                                </a>
+                            </li>
+                            <li class="list-item list-item-separate">
+                                <a class="list-item-title" href="">
+                                    <p>Giáo khoa - Tham khảo</p>
+                                </a>
+                            </li>
+                            <li class="list-item list-item-separate">
+                                <a class="list-item-title" href="">
+                                    <p>Sách thiếu nhi</p>
+                                </a>
+                            </li>
+                            <li class="list-item">
+                                <a class="list-item-title" href="">
+                                    <p>Chuyên ngành</p>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </header>
 
         <div id="container">
-    
+            <div class="content-section">
+                <div class="row content-section-adv">
+                    <div class="content-section-slider">
+                        <div class="slider-main">
+                            <div class="slider-item">
+                                <a href="#">
+                                    <img src="https://cdn0.fahasa.com/media/magentothem/banner7/MonthlySale_T4_mainbanner__840x320.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="slider-item">
+                                <a href="#">
+                                    <img src="https://cdn0.fahasa.com/media/magentothem/banner7/840x320_1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="slider-item">
+                                <a href="#">
+                                    <img src="https://cdn0.fahasa.com/media/magentothem/banner7/disney-resize-840x320-t4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="slider-item">
+                                <a href="#">
+                                    <img src="https://cdn0.fahasa.com/media/magentothem/banner7/SHOPEEPAY_DDAY_THANG4_BO1_840_x_320.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="slider-item">
+                                <a href="#">
+                                    <img src="https://cdn0.fahasa.com/media/magentothem/banner7/ff104288c86706395f76.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-section-img">
+                        <div class="content-section-notify">
+                            <a href="#">
+                                <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-04-2022/MonthlySale_T4_bo1__392x156.jpg" alt="Notify">
+                            </a>
+                        </div>
+                        <div class="content-section-notify">
+                            <a href="#">
+                                <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-03-2022/392x156_manga.jpg" alt="Notify">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row container-list-product">
+                    <div class="content-list-product">
+                        <div class="content-list-product-title">
+                            <a class="content-list-product-title-name a-red" class="a-red" href="">
+                                Sách Bán Chạy
+                            </a>
+                        </div>
+                        <div class="list-product">
+                            <div class="card-item">
+                                <div class="card-item-label-favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                </div>
+                                <div class="card-item-sale-off">
+                                    <span class="sale-off-percent">50%</span>
+                                    <span class="sale-off-label">GIẢM</span>
+                                </div>
+                                <div class="card-item-img">
+                                    <a href="#">
+                                        <img src="https://cdn0.fahasa.com/media/catalog/product//a/c/acc6c6b332b1fbefa2a0.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p class="card-item-title">
+                                    Move Up 2 (2021)
+                                </p>
+                                <div class="card-item-price">
+                                    <span class="old-price">100.000 đ</span>
+                                    <span class="new-price">50.000 đ</span>
+                                </div>
+                                <div class="card-item-favorite">
+                                    <div class="favorite-rating"></div>
+                                    <div class="favorite-icon">
+                                        <i class="favorite-heart fa-regular fa-heart"></i>
+                                        <i class="favorite-heart-fill fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-item-buy">
+                                    <button class="add-to-basket">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        Thêm giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-list-product-footer">
+                            <a href="">
+                                Xem thêm
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-list-product">
+                        <div class="content-list-product-title">
+                            <a class="content-list-product-title-name a-red" class="a-red" href="">
+                                Sách Mới
+                            </a>
+                        </div>
+                        <div class="list-product">
+                            <div class="card-item">
+                                <div class="card-item-label-favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                </div>
+                                <div class="card-item-sale-off">
+                                    <span class="sale-off-percent">50%</span>
+                                    <span class="sale-off-label">GIẢM</span>
+                                </div>
+                                <div class="card-item-img">
+                                    <a href="#">
+                                        <img src="https://cdn0.fahasa.com/media/catalog/product//a/c/acc6c6b332b1fbefa2a0.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p class="card-item-title">
+                                    Move Up 2 (2021)
+                                </p>
+                                <div class="card-item-price">
+                                    <span class="old-price">100.000 đ</span>
+                                    <span class="new-price">50.000 đ</span>
+                                </div>
+                                <div class="card-item-favorite">
+                                    <div class="favorite-rating"></div>
+                                    <div class="favorite-icon">
+                                        <i class="favorite-heart fa-regular fa-heart"></i>
+                                        <i class="favorite-heart-fill fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-item-buy">
+                                    <button class="add-to-basket">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        Thêm giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-list-product-footer">
+                            <a href="">
+                                Xem thêm
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-list-product">
+                        <div class="content-list-product-title">
+                            <a class="content-list-product-title-name" href="">
+                                Sách Kinh Tế
+                            </a>
+                        </div>
+                        <div class="list-product">
+                            <div class="card-item">
+                                <div class="card-item-label-favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                </div>
+                                <div class="card-item-sale-off">
+                                    <span class="sale-off-percent">50%</span>
+                                    <span class="sale-off-label">GIẢM</span>
+                                </div>
+                                <div class="card-item-img">
+                                    <a href="#">
+                                        <img src="https://cdn0.fahasa.com/media/catalog/product//a/c/acc6c6b332b1fbefa2a0.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p class="card-item-title">
+                                    Move Up 2 (2021)
+                                </p>
+                                <div class="card-item-price">
+                                    <span class="old-price">100.000 đ</span>
+                                    <span class="new-price">50.000 đ</span>
+                                </div>
+                                <div class="card-item-favorite">
+                                    <div class="favorite-rating"></div>
+                                    <div class="favorite-icon">
+                                        <i class="favorite-heart fa-regular fa-heart"></i>
+                                        <i class="favorite-heart-fill fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-item-buy">
+                                    <button class="add-to-basket">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        Thêm giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-list-product-footer">
+                            <a href="">
+                                Xem thêm
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-list-product">
+                        <div class="content-list-product-title">
+                            <a class="content-list-product-title-name" href="">
+                                Sách Văn Học
+                            </a>
+                        </div>
+                        <div class="list-product">
+                            <div class="card-item">
+                                <div class="card-item-label-favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                </div>
+                                <div class="card-item-sale-off">
+                                    <span class="sale-off-percent">50%</span>
+                                    <span class="sale-off-label">GIẢM</span>
+                                </div>
+                                <div class="card-item-img">
+                                    <a href="#">
+                                        <img src="https://cdn0.fahasa.com/media/catalog/product//a/c/acc6c6b332b1fbefa2a0.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p class="card-item-title">
+                                    Move Up 2 (2021)
+                                </p>
+                                <div class="card-item-price">
+                                    <span class="old-price">100.000 đ</span>
+                                    <span class="new-price">50.000 đ</span>
+                                </div>
+                                <div class="card-item-favorite">
+                                    <div class="favorite-rating"></div>
+                                    <div class="favorite-icon">
+                                        <i class="favorite-heart fa-regular fa-heart"></i>
+                                        <i class="favorite-heart-fill fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-item-buy">
+                                    <button class="add-to-basket">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        Thêm giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-list-product-footer">
+                            <a href="">
+                                Xem thêm
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-list-product">
+                        <div class="content-list-product-title">
+                            <a class="content-list-product-title-name" href="">
+                                Sách Tâm Lý
+                            </a>
+                            <a class="content-list-product-title-name ml-8" href="">
+                                Sách Kỹ Năng Sống
+                            </a>
+                        </div>
+                        <div class="list-product">
+                            <div class="card-item">
+                                <div class="card-item-label-favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                </div>
+                                <div class="card-item-sale-off">
+                                    <span class="sale-off-percent">50%</span>
+                                    <span class="sale-off-label">GIẢM</span>
+                                </div>
+                                <div class="card-item-img">
+                                    <a href="#">
+                                        <img src="https://cdn0.fahasa.com/media/catalog/product//a/c/acc6c6b332b1fbefa2a0.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p class="card-item-title">
+                                    Move Up 2 (2021)
+                                </p>
+                                <div class="card-item-price">
+                                    <span class="old-price">100.000 đ</span>
+                                    <span class="new-price">50.000 đ</span>
+                                </div>
+                                <div class="card-item-favorite">
+                                    <div class="favorite-rating"></div>
+                                    <div class="favorite-icon">
+                                        <i class="favorite-heart fa-regular fa-heart"></i>
+                                        <i class="favorite-heart-fill fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-item-buy">
+                                    <button class="add-to-basket">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        Thêm giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-list-product-footer">
+                            <a href="">
+                                Xem thêm
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-list-product">
+                        <div class="content-list-product-title">
+                            <a class="content-list-product-title-name" href="">
+                                Sách Ngoại Ngữ
+                            </a>
+                        </div>
+                        <div class="list-product">
+                            <div class="card-item">
+                                <div class="card-item-label-favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                </div>
+                                <div class="card-item-sale-off">
+                                    <span class="sale-off-percent">50%</span>
+                                    <span class="sale-off-label">GIẢM</span>
+                                </div>
+                                <div class="card-item-img">
+                                    <a href="#">
+                                        <img src="https://cdn0.fahasa.com/media/catalog/product//a/c/acc6c6b332b1fbefa2a0.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p class="card-item-title">
+                                    Move Up 2 (2021)
+                                </p>
+                                <div class="card-item-price">
+                                    <span class="old-price">100.000 đ</span>
+                                    <span class="new-price">50.000 đ</span>
+                                </div>
+                                <div class="card-item-favorite">
+                                    <div class="favorite-rating"></div>
+                                    <div class="favorite-icon">
+                                        <i class="favorite-heart fa-regular fa-heart"></i>
+                                        <i class="favorite-heart-fill fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-item-buy">
+                                    <button class="add-to-basket">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        Thêm giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-list-product-footer">
+                            <a href="">
+                                Xem thêm
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-list-product">
+                        <div class="content-list-product-title">
+                            <a class="content-list-product-title-name" href="">
+                                Sách Tiểu Thuyết
+                            </a>
+                        </div>
+                        <div class="list-product">
+                            <div class="card-item">
+                                <div class="card-item-label-favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                </div>
+                                <div class="card-item-sale-off">
+                                    <span class="sale-off-percent">50%</span>
+                                    <span class="sale-off-label">GIẢM</span>
+                                </div>
+                                <div class="card-item-img">
+                                    <a href="#">
+                                        <img src="https://cdn0.fahasa.com/media/catalog/product//a/c/acc6c6b332b1fbefa2a0.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p class="card-item-title">
+                                    Move Up 2 (2021)
+                                </p>
+                                <div class="card-item-price">
+                                    <span class="old-price">100.000 đ</span>
+                                    <span class="new-price">50.000 đ</span>
+                                </div>
+                                <div class="card-item-favorite">
+                                    <div class="favorite-rating"></div>
+                                    <div class="favorite-icon">
+                                        <i class="favorite-heart fa-regular fa-heart"></i>
+                                        <i class="favorite-heart-fill fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-item-buy">
+                                    <button class="add-to-basket">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        Thêm giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-list-product-footer">
+                            <a href="">
+                                Xem thêm
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-list-product">
+                        <div class="content-list-product-title">
+                            <a class="content-list-product-title-name" href="">
+                                Sách Tiểu Sử
+                            </a>
+                            <a class="content-list-product-title-name ml-8" href="">
+                                Sách Hồi Ký
+                            </a>
+                        </div>
+                        <div class="list-product">
+                            <div class="card-item">
+                                <div class="card-item-label-favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                </div>
+                                <div class="card-item-sale-off">
+                                    <span class="sale-off-percent">50%</span>
+                                    <span class="sale-off-label">GIẢM</span>
+                                </div>
+                                <div class="card-item-img">
+                                    <a href="#">
+                                        <img src="https://cdn0.fahasa.com/media/catalog/product//a/c/acc6c6b332b1fbefa2a0.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p class="card-item-title">
+                                    Move Up 2 (2021)
+                                </p>
+                                <div class="card-item-price">
+                                    <span class="old-price">100.000 đ</span>
+                                    <span class="new-price">50.000 đ</span>
+                                </div>
+                                <div class="card-item-favorite">
+                                    <div class="favorite-rating"></div>
+                                    <div class="favorite-icon">
+                                        <i class="favorite-heart fa-regular fa-heart"></i>
+                                        <i class="favorite-heart-fill fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-item-buy">
+                                    <button class="add-to-basket">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        Thêm giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-list-product-footer">
+                            <a href="">
+                                Xem thêm
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-list-product">
+                        <div class="content-list-product-title">
+                            <a class="content-list-product-title-name" href="">
+                                Sách Giáo Khoa
+                            </a>
+                            <a class="content-list-product-title-name ml-8" href="">
+                                Tài Liệu Tham Khảo
+                            </a>
+                        </div>
+                        <div class="list-product">
+                            <div class="card-item">
+                                <div class="card-item-label-favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                </div>
+                                <div class="card-item-sale-off">
+                                    <span class="sale-off-percent">50%</span>
+                                    <span class="sale-off-label">GIẢM</span>
+                                </div>
+                                <div class="card-item-img">
+                                    <a href="#">
+                                        <img src="https://cdn0.fahasa.com/media/catalog/product//a/c/acc6c6b332b1fbefa2a0.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p class="card-item-title">
+                                    Move Up 2 (2021)
+                                </p>
+                                <div class="card-item-price">
+                                    <span class="old-price">100.000 đ</span>
+                                    <span class="new-price">50.000 đ</span>
+                                </div>
+                                <div class="card-item-favorite">
+                                    <div class="favorite-rating"></div>
+                                    <div class="favorite-icon">
+                                        <i class="favorite-heart fa-regular fa-heart"></i>
+                                        <i class="favorite-heart-fill fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-item-buy">
+                                    <button class="add-to-basket">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        Thêm giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-list-product-footer">
+                            <a href="">
+                                Xem thêm
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-list-product">
+                        <div class="content-list-product-title">
+                            <a class="content-list-product-title-name" href="">
+                                Sách Thiếu Nhi
+                            </a>
+                        </div>
+                        <div class="list-product">
+                            <div class="card-item">
+                                <div class="card-item-label-favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                </div>
+                                <div class="card-item-sale-off">
+                                    <span class="sale-off-percent">50%</span>
+                                    <span class="sale-off-label">GIẢM</span>
+                                </div>
+                                <div class="card-item-img">
+                                    <a href="#">
+                                        <img src="https://cdn0.fahasa.com/media/catalog/product//a/c/acc6c6b332b1fbefa2a0.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p class="card-item-title">
+                                    Move Up 2 (2021)
+                                </p>
+                                <div class="card-item-price">
+                                    <span class="old-price">100.000 đ</span>
+                                    <span class="new-price">50.000 đ</span>
+                                </div>
+                                <div class="card-item-favorite">
+                                    <div class="favorite-rating"></div>
+                                    <div class="favorite-icon">
+                                        <i class="favorite-heart fa-regular fa-heart"></i>
+                                        <i class="favorite-heart-fill fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-item-buy">
+                                    <button class="add-to-basket">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        Thêm giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-list-product-footer">
+                            <a href="">
+                                Xem thêm
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-list-product">
+                        <div class="content-list-product-title">
+                            <a class="content-list-product-title-name" href="">
+                                Sách Chuyên Ngành
+                            </a>
+                        </div>
+                        <div class="list-product">
+                            <div class="card-item">
+                                <div class="card-item-label-favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                </div>
+                                <div class="card-item-sale-off">
+                                    <span class="sale-off-percent">50%</span>
+                                    <span class="sale-off-label">GIẢM</span>
+                                </div>
+                                <div class="card-item-img">
+                                    <a href="#">
+                                        <img src="https://cdn0.fahasa.com/media/catalog/product//a/c/acc6c6b332b1fbefa2a0.jpg" alt="">
+                                    </a>
+                                </div>
+                                <p class="card-item-title">
+                                    Move Up 2 (2021)
+                                </p>
+                                <div class="card-item-price">
+                                    <span class="old-price">100.000 đ</span>
+                                    <span class="new-price">50.000 đ</span>
+                                </div>
+                                <div class="card-item-favorite">
+                                    <div class="favorite-rating"></div>
+                                    <div class="favorite-icon">
+                                        <i class="favorite-heart fa-regular fa-heart"></i>
+                                        <i class="favorite-heart-fill fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div class="card-item-buy">
+                                    <button class="add-to-basket">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        Thêm giỏ hàng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-list-product-footer">
+                            <a href="">
+                                Xem thêm
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer id="footer">
-    
+            <div class="content-section">
+                <div class="row footer-detail">
+                    <h3 class="footer-section-heading">Nhà Sách Tương Lai - Sách gì cũng có, mua ngay!</h3>
+                    <p class="footer-section-contain"> 
+                        NhaSachTuongLai - ứng dụng mua sắm trực tuyến các loại sách chính hãng. NhaSachTuongLai sẽ cung cấp 
+                        cho bạn những loại sách hay, thú vị, tin cậy, an toàn và miễn phí và an tâm khi mua hàng trực tuyến hơn bao giờ hết!
+                    </p>
+                    <div class="footer-section-icon">
+                        <p>Powered by</p>
+                        <i class="icon-heart fa-solid fa-heart"></i>
+                    </div>
+                    <hr>
+                    <div class="footer-link-list-icon">
+                        <a href=""><i class="fa-brands fa-facebook-square a-fb"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram-square a-ins"></i></a>
+                        <a href=""><i class="fa-brands fa-github-square a-git"></i></i></a>
+                        <a href=""><i class="fa-brands fa-google-plus-square a-google"></i></a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
+
+    <div class="modal-login">
+        <div class="modal-container modal-signup">
+            <div class="modal-container-logo">
+                <i class="fa-solid fa-circle-user"></i>
+                <p href="" class="text-login">ĐĂNG KÝ</p>
+            </div>
+            <div class="modal-container-detail">
+                <div class="btn-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <form action="">
+                    <input type="text" name="username" placeholder="Tài khoản" class="control-form">
+                    <input type="email" name="email" placeholder="Email" class="control-form">
+                    <input type="text" name="phone" placeholder="Số điện thoại" class="control-form">
+                    <div class="input-pwd">
+                        <input type="password" name="password" id="password" placeholder="Mật khẩu" class="control-form">
+                        <input type="password" name="confirm" id="confirm" placeholder="Xác nhận mật khẩu" class="control-form">
+                    </div>
+                    <div class="accept">
+                        <input type="checkbox" id="check-accept" name="accept"> 
+                        <label for="accept">          
+                            Tôi xác nhận các yêu cầu trên là đúng
+                        </label>
+                    </div>
+                    <div class="button-submit">
+                        <button class="btn btn-register">
+                            <span>Đăng ký</span> 
+                        </button>    
+                    </div>
+                </form>
+                <div class="clone-button">
+                    <a href="">Đăng nhập ở đây</a>   
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="modal-container modal-signin">
+            <div class="modal-container-logo">
+                <i class="fa-solid fa-circle-user"></i>
+                <p href="" class="text-login">ĐĂNG NHẬP</p>
+            </div>
+            <div class="modal-container-detail">
+                <div class="btn-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <form action="">
+                    <input type="text" name="username" id="" placeholder="Tài khoản" class="control-form">
+                    <input type="email" name="password" id="" placeholder="Mật khẩu" class="control-form">
+                    <div class="signin-container">
+                        <div class="button-submit">
+                            <button class="btn btn-success">
+                                <span>Đăng nhập</span> 
+                            </button>    
+                        </div>
+                        <div class="forget-password">
+                            <a href="">Quên mật khẩu?</a>   
+                        </div>
+                    </div>
+                </form>
+                <div class="clone-button">
+                    <a href="">Đăng ký ở đây</a>   
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="/assets/js/frontend/plugin.js"></script>
 </body>
 </html>

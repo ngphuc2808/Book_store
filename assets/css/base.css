@@ -11,8 +11,12 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    background-color: #e8e8e8;
+}
+
 .content-section {
-    width: 1200px;
+    width: 1300px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -50,4 +54,16 @@ html {
 
 .mr-auto {
     margin-right: auto !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.bc-white {
+    background-color: #fff !important;
+}
+
+.ml-8 {
+    margin-left: 8px !important;
 }
