@@ -195,22 +195,36 @@
 }
 
 .navbar-item .check-order-list {
-    max-height: 300px;
-    overflow-y: scroll;
+    max-height: 30vh;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
-.navbar-item .check-order-item {
+.navbar-item .check-order-item a {
     display: flex;
     padding: 12px;
     cursor: pointer;
 }
 
 .navbar-item .check-order-code {
-    color: #000;
-    line-height: 15px;
+    font-weight: 600;
+    color: #333;
+    line-height: 16px;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.navbar-item .check-order-name {
+    color: #333;
+    line-height: 16px;
+    max-height: 32px;
     font-size: 14px;
     margin-bottom: 5px;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 
 .navbar-item .check-order-header {
@@ -225,6 +239,7 @@
 }
 
 .navbar-item .check-order-content {
+    flex: 1;
     margin-left: 12px;
 }
 
@@ -346,7 +361,7 @@
     transform: scale(0);
     opacity: 0;
     transform-origin: top;
-    transition: ease 0.3s;
+    transition: ease 0.2s;
 }
 
 .content-categories .nxb-list::before {
@@ -586,6 +601,12 @@
     padding: 8px;
     margin: 10px 10px 0 10px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform linear 0.1s;
+    border-radius: 4px;
+}
+
+.list-product .card-item:hover {
+    transform: translateY(-2px);
 }
 
 .list-product .card-item-sale-off {
@@ -601,6 +622,7 @@
     padding: 4px;
     font-weight: 600;
     user-select: none;
+    border-top-right-radius: 4px;
 }
 
 .list-product .card-item-sale-off::before {
@@ -679,10 +701,10 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    font-size: 16px;
-    margin: 24px 0 0 0;
-    padding: 0 10px;
     overflow: hidden;
+    font-size: 16px;
+    margin: 24px 0 10px 0;
+    padding: 0 10px;
 }
 
 .list-product .old-price {
@@ -774,6 +796,10 @@
 
 .list-product .card-item-img {
     width: 100%;
+    min-height: 169px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .list-product .card-item-img a {
@@ -822,63 +848,76 @@
 /* Footer */
 #footer {
     margin-top: 70px;
-    border-top: 4px solid #25292f;
-    background-color: #fff;
+    background-color: #25292f;
+    border-top: 4px solid #e66619;
 }
 
 .footer-detail {
-    margin-top: 60px;
     padding: 0 8px;
 }
 
 .footer-detail .footer-section-heading {
-    color: #c92127;
+    color: #e66619;
     text-transform: uppercase;
     font-size: 20px;
+    text-align: left;
 }
 
 .footer-detail .footer-section-contain {
+    text-align: justify;
     margin-top: 10px;
-    color: rgba(0, 0, 0, 0.54);
-    font-size: 12px;
+    color: #fff;
+    font-size: 13px;
 }
 
-.footer-detail .footer-section-icon {
+.footer-list {
+    list-style-type: none;
+    color: #fff;
+    text-align: left;
+    font-size: 15px;
+}
+
+.footer-detail {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 16px 0;
-    color: rgba(0, 0, 0, 0.54);
-    font-size: 14px;
+    justify-content: space-around;
 }
 
-.footer-detail .icon-heart {
-    padding: 0 8px;
-    font-size: 16px;
-    color: rgb(255, 102, 102);
-}
-
-.footer-detail hr {
-    height:1px;
-    border-width:0;
+.footer-list-title {
     color: #e66619;
-    background-color: #e66619;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 16px;
-    width: 50%;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.column-content {
+    height: 100%;
+    padding: 70px 8px;
+}
+
+.column-content-1 {
+    flex-basis: 50%;
+}
+
+.column-content-2 {
+    flex-basis: 30%;
+
+}
+
+.footer-list-powered {
+    text-align: right;
+    font-weight: 600;
+    color: #fff;
 }
 
 .footer-detail .footer-link-list-icon {
+    margin-top: 4px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .footer-detail .footer-link-list-icon a {
     text-decoration: none;
     font-size: 36px;
-    padding: 0 12px;
-    margin-bottom: 24px;
+    padding: 0 8px;
 }
 
 .footer-detail .footer-link-list-icon .a-fb {
@@ -893,7 +932,7 @@
 }
 
 .footer-detail .footer-link-list-icon .a-git {
-    color: #25292f;
+    color: #fafafa;
 }
 
 .footer-detail .footer-link-list-icon .a-google {
