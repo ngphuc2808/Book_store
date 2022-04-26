@@ -9,6 +9,10 @@
         display: none;
     }
 
+    .detail-login {
+        display: none;
+    }
+
 }
 
 
@@ -94,10 +98,6 @@
         padding: 0 16px;
     }
 
-    /* .list-product .card-item {
-        width: calc(100%/3 - 2.6%);
-    } */
-
     .header-basket-notice {
         left: 10px;
         bottom: 16px;
@@ -105,6 +105,10 @@
 
     .content-section-adv {
         height: 275px;
+    }
+
+    .detail-login {
+        display: none;
     }
 }
 
@@ -163,10 +167,6 @@
         font-size: 25px;
     }
 
-    /* .list-product .card-item {
-        width: 95%;
-    } */
-
     .content-section-slider .slider-item img {
         object-fit: inherit;
     }
@@ -181,5 +181,41 @@
 
     .column-content-2 {
         flex-basis: 100%;
+    }
+
+    .modal-container-logo {
+        display: none;
+    }
+
+    .modal-container-detail {
+        width: 100%;
+    }
+
+    .modal-container {
+        max-width: calc(100% - 18px);
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .btn span {
+        visibility: hidden;
+    }
+
+    .btn span::after {
+        visibility: visible;
+        content: "Đồng ý";
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+    }
+
+    .modal-container-detail .login {
+        top: 32px;
+    }
+
+    .modal-container-detail .register {
+        top: 24px;
     }
 }

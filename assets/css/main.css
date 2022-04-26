@@ -4,7 +4,7 @@
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 999;
+    z-index: 10;
 }
 
 .header-search input {
@@ -1160,10 +1160,11 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 }
 
 .modal-signup {
@@ -1180,11 +1181,12 @@
 
 .modal-container {
     background-color: #fff;
-    max-width: calc(100% - 40px);
+    max-width: calc(100% - 50px);
     display: flex;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     overflow: hidden;
+    z-index: 11;
 }
 
 .modal-container-logo {
@@ -1235,6 +1237,12 @@
     width: 60%;
 }
 
+.modal-container-detail .detail-login {
+    position: absolute;
+    font-size: 28px;
+    color: #e66619;
+}
+
 .modal-login .control-form {
     font-size: 13px;
     width: 75%;
@@ -1275,11 +1283,11 @@
 }
 
 .modal-login .btn {
+    position: relative;
     border-radius: 30px;
     padding: 12px 20px;
     background: linear-gradient(117deg, #40e0d0, #ff8c00);
     border: none;
-    color: rgb(255, 255, 255);
     font-size: 1rem;
     text-transform: uppercase;
     font-family: inherit;
