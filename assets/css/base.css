@@ -43,6 +43,10 @@ body {
     width: 100% !important;
 }
 
+.height-100 {
+    height: 100% !important;
+}
+
 .d-block {
     display: block !important;
 }
