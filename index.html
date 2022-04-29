@@ -30,13 +30,13 @@
                             <a href="#">Trang chủ</a>
                         </li><li class="connect-tag">
                             <span class="connect-tag-item">Kết nối</span> 
-                            <a href="" class="connect-tag-icon connect-tag-icon-fb">
+                            <a href="#" class="connect-tag-icon connect-tag-icon-fb">
                                 <i class="fa-brands fa-facebook"></i>
                                 <div class="connect_qr_code_fb">
                                     <img src="./assets/img/qr_code.jpg" alt="QR Code" class="qr_img_fb">
                                 </div>
                             </a>
-                            <a href="" class="connect-tag-icon connect-tag-icon-gh">
+                            <a href="#" class="connect-tag-icon connect-tag-icon-gh">
                                 <i class="fa-brands fa-github"></i>
                                 <div class="connect_qr_code_gh">
                                     <img src="./assets/img/qr_code_gh.jpg" alt="QR Code" class="qr_img_gh">
@@ -56,7 +56,7 @@
                                 <li class="check-order-list">
                                     <ul>
                                         <li class="check-order-item check-order-content-unclicked">
-                                            <a href="">
+                                            <a href="#">
                                                 <img src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png" alt="">
                                                 <div class="check-order-content">
                                                     <p class="check-order-code">
@@ -75,7 +75,7 @@
                                             </a>
                                         </li>
                                         <li class="check-order-item check-order-content-unclicked">
-                                            <a href="">
+                                            <a href="#">
                                                 <img src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png" alt="">
                                                 <div class="check-order-content">
                                                     <p class="check-order-code">
@@ -94,7 +94,7 @@
                                             </a>
                                         </li>
                                         <li class="check-order-item check-order-content-unclicked">
-                                            <a href="">
+                                            <a href="#">
                                                 <img src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png" alt="">
                                                 <div class="check-order-content">
                                                     <p class="check-order-code">
@@ -113,7 +113,7 @@
                                             </a>
                                         </li>
                                         <li class="check-order-item check-order-content-unclicked">
-                                            <a href="">
+                                            <a href="#">
                                                 <img src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png" alt="">
                                                 <div class="check-order-content">
                                                     <p class="check-order-code">
@@ -132,7 +132,7 @@
                                             </a>
                                         </li>
                                         <li class="check-order-item check-order-content-unclicked">
-                                            <a href="">
+                                            <a href="#">
                                                 <img src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png" alt="">
                                                 <div class="check-order-content">
                                                     <p class="check-order-code">
@@ -151,7 +151,7 @@
                                             </a>
                                         </li>
                                         <li class="check-order-item check-order-content-unclicked">
-                                            <a href="">
+                                            <a href="#">
                                                 <img src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png" alt="">
                                                 <div class="check-order-content">
                                                     <p class="check-order-code">
@@ -172,14 +172,18 @@
                                     </ul>
                                 </li>
                                 <li class="check-order-footer">
-                                    <a href="">Xem tất cả</a>
+                                    <a href="#">Xem tất cả</a>
                                 </li>
                             </ul>
                         </li><li class="navbar-item navbar-item-separate">
                             <i class="fa-solid fa-user"></i>
-                            <a href="#"><b>Đăng ký</b></a>
+                            <label for="input-modal-register" onclick="showFormRegister()">
+                                <b>Đăng ký</b>
+                            </label>
                         </li><li class="navbar-item">
-                            <a href="#"><b>Đăng nhập</b></a>
+                            <label for="input-modal-login" onclick="showFormLogin()">
+                                <b>Đăng nhập</b>
+                            </label>
                         </li>
                     </ul>
                 </nav>
@@ -187,11 +191,68 @@
                     <div class="header-logo-2 pointer">
                         <img src="/assets/img/logo_page2.JPG" alt="" class="height-100 width-100">
                     </div>
-                    <div class="header-menu pointer">
-                        <a class="icon-menu" href="">
+                    <label for="input-nav-mobile" class="header-menu pointer">
+                        <span class="icon-menu" href="#">
                             <i class="fa-solid fa-bars"></i>
-                        </a>
-                    </div>
+                        </span>
+                    </label>
+                    <input type="checkbox" hidden name="" id="input-nav-mobile">
+                    <label for="input-nav-mobile" class="nav-overlay" onclick="hiddenNXB()"></label>
+                    <nav class="nav-mobile">
+                        <label for="input-nav-mobile" class="nav-close" onclick="hiddenNXB()">
+                            <i class="fa-solid fa-xmark"></i>
+                        </label>
+                        <ul class="nav-mobile-list">
+                            <li class="nav-mobile-list-nxb">
+                                <label for="mobile-nxb" class="nav-mobile-link">Nhà xuất bản</label>
+                                <input type="checkbox" hidden id="mobile-nxb">
+                                <ul class="nav-nxb-list">
+                                    <li class="nav-nxb-item">
+                                        <a class="nav-nxb-item-name" href="#">
+                                            Kim Đồng
+                                        </a>
+                                    </li>
+                                    <li class="nav-nxb-item">
+                                        <a class="nav-nxb-item-name" href="#">
+                                            Giáo Dục
+                                        </a>
+                                    </li>
+                                    <li class="nav-nxb-item">
+                                        <a class="nav-nxb-item-name" href="#">
+                                            Hồng Đức
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-mobile-link">Kinh tế</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-mobile-link">Văn học</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-mobile-link">Tâm lý - Kĩ năng sống</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-mobile-link">Ngoại ngữ</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-mobile-link">Tiểu thuyết</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-mobile-link">Tiểu sử - Hồi ký</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-mobile-link">Giáo khoa - Tham khảo</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-mobile-link">Sách thiếu nhi</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-mobile-link">Chuyên ngành</a>
+                            </li>
+                        </ul>
+                    </nav>
                     <div class="header-search">
                         <input class="" type="text" name="" id="" placeholder="Bạn cần tìm sách gì?">
                         <i class="search-btn fa-solid fa-magnifying-glass"></i>
@@ -199,16 +260,16 @@
                             <h4 class="history-find-heading">Lịch sử tìm kiếm</h4>
                             <ul class="history-find-list">
                                 <li class="history-find-item">
-                                    <a href="">Bút bi</a>
+                                    <a href="#">Bút bi</a>
                                 </li>
                                 <li class="history-find-item">
-                                    <a href="">Bút chì</a>
+                                    <a href="#">Bút chì</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="header-hotline pointer">
-                        <a class="icon-hotline" href="">
+                        <a class="icon-hotline" href="#">
                             <i class="fa-solid fa-headset"></i>
                         </a>
                         <a class="number-phone" href="#">
@@ -216,7 +277,7 @@
                         </a>
                     </div>
                     <div class="header-basket pointer">
-                        <a class="icon-basket" href="">
+                        <a class="icon-basket" href="#">
                             <i class="fa-solid fa-basket-shopping"></i>
                             <span class="header-basket-notice">
                                 3
@@ -225,9 +286,9 @@
                         <a class="basket-text" href="#">Giỏ hàng</a>
                     </div>
                     <div class="header-user pointer">
-                        <a class="icon-user" href="">
+                        <button onclick="showFormLogin()" class="icon-user" href="#">
                             <i class="fa-solid fa-user"></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -236,25 +297,25 @@
                     <div class="row content-categories">
                         <ul class="content-categories-list">
                             <li class="list-item list-item-nxb list-item-separate">
-                                <span class="list-item-title" href="">
+                                <span class="list-item-title" href="#">
                                     <i class="icon-navbar fa-solid fa-bars"></i>
                                     <p class="pull-right">Nhà xuất bản</p>
                                 </span>
                                 <ul class="nxb-list">
                                     <li class="nxb-item">
-                                        <a class="nxb-item-name" href="">
+                                        <a class="nxb-item-name" href="#">
                                             <i class="fa-solid fa-caret-right"></i>
                                             Kim Đồng
                                         </a>
                                     </li>
                                     <li class="nxb-item">
-                                        <a class="nxb-item-name" href="">
+                                        <a class="nxb-item-name" href="#">
                                             <i class="fa-solid fa-caret-right"></i>
                                             Giáo Dục
                                         </a>
                                     </li>
                                     <li class="nxb-item">
-                                        <a class="nxb-item-name" href="">
+                                        <a class="nxb-item-name" href="#">
                                             <i class="fa-solid fa-caret-right"></i>
                                             Hồng Đức
                                         </a>
@@ -262,47 +323,47 @@
                                 </ul>
                             </li>
                             <li class="list-item list-item-separate">                        
-                                <span class="list-item-title" href="">
+                                <span class="list-item-title" href="#">
                                     <p>Kinh tế</p>
                                 </span>
                             </li>
                             <li class="list-item list-item-separate">
-                                <a class="list-item-title" href="">
+                                <a class="list-item-title" href="#">
                                     <p>Văn học</p>
                                 </a>
                             </li>
                             <li class="list-item list-item-separate">
-                                <a class="list-item-title" href="">
+                                <a class="list-item-title" href="#">
                                     <p>Tâm lý - Kĩ năng sống</p>
                                 </a>
                             </li>
                             <li class="list-item list-item-separate">
-                                <a class="list-item-title" href="">
+                                <a class="list-item-title" href="#">
                                     <p>Ngoại ngữ</p>
                                 </a>
                             </li>
                             <li class="list-item list-item-separate">
-                                <a class="list-item-title" href="">
+                                <a class="list-item-title" href="#">
                                     <p>Tiểu thuyết</p>
                                 </a>
                             </li>
                             <li class="list-item list-item-separate">
-                                <a class="list-item-title" href="">
+                                <a class="list-item-title" href="#">
                                     <p>Tiểu sử - Hồi ký</p>
                                 </a>
                             </li>
                             <li class="list-item list-item-separate">
-                                <a class="list-item-title" href="">
+                                <a class="list-item-title" href="#">
                                     <p>Giáo khoa - Tham khảo</p>
                                 </a>
                             </li>
                             <li class="list-item list-item-separate">
-                                <a class="list-item-title" href="">
+                                <a class="list-item-title" href="#">
                                     <p>Sách thiếu nhi</p>
                                 </a>
                             </li>
                             <li class="list-item">
-                                <a class="list-item-title" href="">
+                                <a class="list-item-title" href="#">
                                     <p>Chuyên ngành</p>
                                 </a>
                             </li>
@@ -360,7 +421,7 @@
                 <div class="row container-list-product">
                     <div class="content-list-product">
                         <div class="content-list-product-title">
-                            <a class="content-list-product-title-name a-red" class="a-red" href="">
+                            <a class="content-list-product-title-name a-red" class="a-red" href="#">
                                 Sách Bán Chạy
                             </a>
                         </div>
@@ -577,14 +638,14 @@
                             </div>
                         </div>
                         <div class="content-list-product-footer">
-                            <a href="">
+                            <a href="#">
                                 Xem thêm
                             </a>
                         </div>
                     </div>
                     <div class="content-list-product">
                         <div class="content-list-product-title">
-                            <a class="content-list-product-title-name a-red" class="a-red" href="">
+                            <a class="content-list-product-title-name a-red" class="a-red" href="#">
                                 Sách Mới
                             </a>
                         </div>
@@ -836,14 +897,14 @@
                             </div>
                         </div>
                         <div class="content-list-product-footer">
-                            <a href="">
+                            <a href="#">
                                 Xem thêm
                             </a>
                         </div>
                     </div>
                     <div class="content-list-product">
                         <div class="content-list-product-title">
-                            <a class="content-list-product-title-name" href="">
+                            <a class="content-list-product-title-name" href="#">
                                 Sách Kinh Tế
                             </a>
                         </div>
@@ -851,14 +912,14 @@
                             
                         </div>
                         <div class="content-list-product-footer">
-                            <a href="">
+                            <a href="#">
                                 Xem thêm
                             </a>
                         </div>
                     </div>
                     <div class="content-list-product">
                         <div class="content-list-product-title">
-                            <a class="content-list-product-title-name" href="">
+                            <a class="content-list-product-title-name" href="#">
                                 Sách Văn Học
                             </a>
                         </div>
@@ -866,17 +927,17 @@
                             
                         </div>
                         <div class="content-list-product-footer">
-                            <a href="">
+                            <a href="#">
                                 Xem thêm
                             </a>
                         </div>
                     </div>
                     <div class="content-list-product">
                         <div class="content-list-product-title">
-                            <a class="content-list-product-title-name" href="">
+                            <a class="content-list-product-title-name" href="#">
                                 Sách Tâm Lý
                             </a>
-                            <a class="content-list-product-title-name ml-8" href="">
+                            <a class="content-list-product-title-name ml-8" href="#">
                                 Sách Kỹ Năng Sống
                             </a>
                         </div>
@@ -884,14 +945,14 @@
                             
                         </div>
                         <div class="content-list-product-footer">
-                            <a href="">
+                            <a href="#">
                                 Xem thêm
                             </a>
                         </div>
                     </div>
                     <div class="content-list-product">
                         <div class="content-list-product-title">
-                            <a class="content-list-product-title-name" href="">
+                            <a class="content-list-product-title-name" href="#">
                                 Sách Ngoại Ngữ
                             </a>
                         </div>
@@ -899,14 +960,14 @@
                             
                         </div>
                         <div class="content-list-product-footer">
-                            <a href="">
+                            <a href="#">
                                 Xem thêm
                             </a>
                         </div>
                     </div>
                     <div class="content-list-product">
                         <div class="content-list-product-title">
-                            <a class="content-list-product-title-name" href="">
+                            <a class="content-list-product-title-name" href="#">
                                 Sách Tiểu Thuyết
                             </a>
                         </div>
@@ -914,17 +975,17 @@
                             
                         </div>
                         <div class="content-list-product-footer">
-                            <a href="">
+                            <a href="#">
                                 Xem thêm
                             </a>
                         </div>
                     </div>
                     <div class="content-list-product">
                         <div class="content-list-product-title">
-                            <a class="content-list-product-title-name" href="">
+                            <a class="content-list-product-title-name" href="#">
                                 Sách Tiểu Sử
                             </a>
-                            <a class="content-list-product-title-name ml-8" href="">
+                            <a class="content-list-product-title-name ml-8" href="#">
                                 Sách Hồi Ký
                             </a>
                         </div>
@@ -932,17 +993,17 @@
                             
                         </div>
                         <div class="content-list-product-footer">
-                            <a href="">
+                            <a href="#">
                                 Xem thêm
                             </a>
                         </div>
                     </div>
                     <div class="content-list-product">
                         <div class="content-list-product-title">
-                            <a class="content-list-product-title-name" href="">
+                            <a class="content-list-product-title-name" href="#">
                                 Sách Giáo Khoa
                             </a>
-                            <a class="content-list-product-title-name ml-8" href="">
+                            <a class="content-list-product-title-name ml-8" href="#">
                                 Tài Liệu Tham Khảo
                             </a>
                         </div>
@@ -950,14 +1011,14 @@
                             
                         </div>
                         <div class="content-list-product-footer">
-                            <a href="">
+                            <a href="#">
                                 Xem thêm
                             </a>
                         </div>
                     </div>
                     <div class="content-list-product">
                         <div class="content-list-product-title">
-                            <a class="content-list-product-title-name" href="">
+                            <a class="content-list-product-title-name" href="#">
                                 Sách Thiếu Nhi
                             </a>
                         </div>
@@ -965,14 +1026,14 @@
                             
                         </div>
                         <div class="content-list-product-footer">
-                            <a href="">
+                            <a href="#">
                                 Xem thêm
                             </a>
                         </div>
                     </div>
                     <div class="content-list-product">
                         <div class="content-list-product-title">
-                            <a class="content-list-product-title-name" href="">
+                            <a class="content-list-product-title-name" href="#">
                                 Sách Chuyên Ngành
                             </a>
                         </div>
@@ -980,7 +1041,7 @@
                             
                         </div>
                         <div class="content-list-product-footer">
-                            <a href="">
+                            <a href="#">
                                 Xem thêm
                             </a>
                         </div>
@@ -1008,36 +1069,39 @@
                             <li class="footer-list-powered">Powered by Group 1</li>
                         </ul>
                         <div class="row footer-link-list-icon">
-                            <a href=""><i class="fa-brands fa-facebook-square a-fb"></i></a>
-                            <a href=""><i class="fa-brands fa-instagram-square a-ins"></i></a>
-                            <a href=""><i class="fa-brands fa-github-square a-git"></i></i></a>
-                            <a href=""><i class="fa-brands fa-google-plus-square a-google"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-square a-fb"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram-square a-ins"></i></a>
+                            <a href="#"><i class="fa-brands fa-github-square a-git"></i></i></a>
+                            <a href="#"><i class="fa-brands fa-google-plus-square a-google"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-    </div>
-
-    <div class="modal-login">
-        <div class="modal-container modal-signup">
+        
+        <input type="checkbox" hidden name="" id="input-modal-register">
+        <input type="checkbox" hidden name="" id="input-modal-login">
+        <div class="modal-login">
+            <button onclick="hiddenModal()"></button>
+        </div>
+        <div id="formRes" class="modal-container modal-signup">
             <div class="modal-container-logo">
                 <i class="fa-solid fa-circle-user"></i>
-                <p href="" class="text-login">ĐĂNG KÝ</p>
+                <p href="#" class="text-login">ĐĂNG KÝ</p>
             </div>
             <div class="modal-container-detail">
                 <div class="detail-login register">
                     <span>Đăng ký</span>
                 </div>
-                <div class="btn-close">
+                <label for="input-modal-register" class="btn-close" onclick="hiddenModal()">
                     <i class="fa-solid fa-xmark"></i>
-                </div>
+                </label>
                 <form action="">
                     <input type="text" name="username" placeholder="Tài khoản" class="control-form">
                     <input type="email" name="email" placeholder="Email" class="control-form">
                     <input type="text" name="phone" placeholder="Số điện thoại" class="control-form">
                     <div class="input-pwd">
-                        <input type="password" name="password" id="password" placeholder="Mật khẩu" class="control-form">
+                        <input type="password" name="password" placeholder="Mật khẩu" class="control-form">
                         <input type="password" name="confirm" id="confirm" placeholder="Xác nhận mật khẩu" class="control-form">
                     </div>
                     <div class="accept">
@@ -1053,26 +1117,26 @@
                     </div>
                 </form>
                 <div class="clone-button">
-                    <a href="">Đăng nhập ở đây</a>   
+                    <button onclick="showFormLogin()">Đăng nhập ở đây</button>   
                 </div>
             </div>
         </div>
 
-        <!-- <div class="modal-container modal-signin">
+        <div id="formLog" class="modal-container modal-signin">
             <div class="modal-container-logo">
                 <i class="fa-solid fa-circle-user"></i>
-                <p href="" class="text-login">ĐĂNG NHẬP</p>
+                <p href="#" class="text-login">ĐĂNG NHẬP</p>
             </div>
             <div class="modal-container-detail">
                 <div class="detail-login login">
                     <span>Đăng nhập</span>
                 </div>
-                <div class="btn-close">
+                <label for="input-modal-login" class="btn-close" onclick="hiddenModal()">
                     <i class="fa-solid fa-xmark"></i>
-                </div>
+                </label>
                 <form action="">
-                    <input type="text" name="username" id="" placeholder="Tài khoản" class="control-form">
-                    <input type="email" name="password" id="" placeholder="Mật khẩu" class="control-form">
+                    <input type="text" name="username" id="username" placeholder="Tài khoản" class="control-form">
+                    <input type="password" name="password" placeholder="Mật khẩu" class="control-form">
                     <div class="signin-container">
                         <div class="button-submit">
                             <button class="btn btn-success">
@@ -1080,20 +1144,21 @@
                             </button>    
                         </div>
                         <div class="forget-password">
-                            <a href="">Quên mật khẩu?</a>   
+                            <a href="#">Quên mật khẩu?</a>   
                         </div>
                     </div>
                 </form>
                 <div class="clone-button">
-                    <a href="">Đăng ký ở đây</a>   
+                    <button onclick="showFormRegister()">Đăng ký ở đây</button>   
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="/assets/js/frontend/plugin.js"></script>
+    <script type="text/javascript" src="/assets/js/frontend/formLogin.js"> </script>
 </body>
 </html>

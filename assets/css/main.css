@@ -104,7 +104,8 @@
     border-radius: 4px;
 }
 
-#header .header-content > div {
+#header .header-content > div,
+#header .header-content > label {
     margin-right: 8px;
 }
 
@@ -134,12 +135,14 @@
     font-weight: 600;
 }
 
-.header-user a,
+.header-user button,
 .header-menu a,
 .header-basket a,
 .header-hotline a {
     color: #fff;
     text-decoration: none;
+    background-color: transparent;
+    border: none;
 }
 
 .navbar-item i {
@@ -299,6 +302,7 @@
 }
 
 .navbar-item a,
+.navbar-item label,
 .connect-tag-item {
     color: #fff;
     text-decoration: none;
@@ -1111,6 +1115,7 @@
 .pointer:hover,
 .navbar-item:hover i,
 .navbar-item:hover > a,
+.navbar-item:hover > label,
 .connect-tag-icon:hover i,
 .header-search .search-btn:hover {
     cursor: pointer;
@@ -1128,65 +1133,68 @@
     }
 }
 
-@keyframes formRegisterAnimation {
-    from {
-        transform: translateY(-50%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes formLoginAnimation {
-    from {
-        transform: translateY(-80%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 /* Form Register */
+#input-modal-register:checked ~ .modal-signup {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+#input-modal-login:checked ~ .modal-signin {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
 .modal-login {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: 10;
+    display: none;
+}
+
+.modal-login button {
+    display:block; 
+    width: 100%; 
+    height: 100%; 
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
 }
 
 .modal-signup {
     min-height: 450px;
     width: 800px;
-    animation: formRegisterAnimation ease 0.5s;
 }
 
 .modal-signin {
-    min-height: 350px;
+    min-height: 400px;
     width: 700px;
-    animation: formLoginAnimation ease 0.5s;
 }
 
 .modal-container {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
     background-color: #fff;
     max-width: calc(100% - 50px);
-    display: flex;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
     border-radius: 10px;
     overflow: hidden;
     z-index: 11;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.modal-signup {
+    transform: translate(-50%, -245%);
+}
+
+.modal-signin {
+    transform: translate(-50%, -245%);
 }
 
 .modal-container-logo {
@@ -1229,11 +1237,11 @@
 }
 
 .modal-container-detail {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
     width: 60%;
 }
 
@@ -1243,7 +1251,7 @@
     color: #e66619;
 }
 
-.modal-login .control-form {
+.modal-container .control-form {
     font-size: 13px;
     width: 75%;
     display: block;
@@ -1254,35 +1262,35 @@
     border-bottom: 1px solid #000;
 }
 
-.modal-login .input-pwd {
+.modal-container .input-pwd {
     width: 75%;
     display: flex;
 }
 
-.modal-login #password {
+.modal-container #password {
     margin-right: 8px;
 }
 
-.modal-login #confirm {
+.modal-container #confirm {
     margin-left: 8px;
 }
 
-.modal-login .accept {
+.modal-container .accept {
     width: 75%;
 }
 
-.modal-login #check-accept {
+.modal-container #check-accept {
     margin-top: 32px;
 }
 
-.modal-login .button-submit {
+.modal-container .button-submit {
     width: 75%;
     display: flex;
     justify-content: flex-start;
     flex: 50%;
 }
 
-.modal-login .btn {
+.modal-container .btn {
     position: relative;
     border-radius: 30px;
     padding: 12px 20px;
@@ -1301,14 +1309,14 @@
     margin-top: 32px;
 }
    
-.modal-login .btn:hover,
-.modal-login .btn:focus {
+.modal-container .btn:hover,
+.modal-container .btn:focus {
     background: linear-gradient(117deg, #ff8c00, #40e0d0);
     box-shadow: 0 0.1rem 0.8rem rgb(254, 100, 70);
 }
    
 
-.modal-login .btn-close {
+.modal-container .btn-close {
     margin-bottom: 30px;
     position: absolute;
     top: 4%;
@@ -1317,24 +1325,26 @@
     cursor: pointer;
 }
 
-.modal-login .btn-close i {
+.modal-container .btn-close i {
     font-size: 20px;
 }
 
-.modal-login .btn-close:hover i {
+.modal-container .btn-close:hover i {
     cursor: pointer;
     color: #ff0000;
 }
 
-.modal-login .clone-button {
+.modal-container .clone-button {
     position: absolute;
     top: 90%;
     right: 5%;
 }
 
-.modal-login .clone-button a {
+.modal-container .clone-button button {
     color: #e66619;
-    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .modal-container-detail form {
@@ -1344,7 +1354,7 @@
     align-items: center;
 }
 
-.modal-login .forget-password {
+.modal-container .forget-password {
     display: flex;
     justify-content: flex-end;
     padding: 8px 0;
@@ -1352,12 +1362,12 @@
     flex: 50%;
 }
 
-.modal-login .forget-password a {
+.modal-container .forget-password a {
     text-decoration: none;
     color: #333;
 }
 
-.modal-login .signin-container {
+.modal-container .signin-container {
     display: flex;
     width: 75%;
     justify-content: space-between;
