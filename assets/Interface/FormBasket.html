@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./assets/img/icon_page.jpg">
+    <link rel="icon" type="image/x-icon" href="/assets/img/icon_page.jpg">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -32,13 +32,13 @@
                             <a href="#" class="connect-tag-icon connect-tag-icon-fb">
                                 <i class="fa-brands fa-facebook"></i>
                                 <div class="connect_qr_code_fb">
-                                    <img src="./assets/img/qr_code.jpg" alt="QR Code" class="qr_img_fb">
+                                    <img src="/assets/img/qr_code.jpg" alt="QR Code" class="qr_img_fb">
                                 </div>
                             </a>
                             <a href="#" class="connect-tag-icon connect-tag-icon-gh">
                                 <i class="fa-brands fa-github"></i>
                                 <div class="connect_qr_code_gh">
-                                    <img src="./assets/img/qr_code_gh.jpg" alt="QR Code" class="qr_img_gh">
+                                    <img src="/assets/img/qr_code_gh.jpg" alt="QR Code" class="qr_img_gh">
                                 </div>
                             </a>
                         </li>
@@ -285,7 +285,7 @@
                         <a class="basket-text" href="#">Giỏ hàng</a>
                     </div>
                     <div class="header-user pointer">
-                        <button onclick="showFormLogin()" class="icon-user" href="#">
+                        <button onclick="showFormLogin()" class="icon-user">
                             <i class="fa-solid fa-user"></i>
                         </button>
                     </div>
@@ -373,7 +373,67 @@
         </header>
 
         <div id="container">
-            
+            <div class="content-section">
+                <div class="row basket-title">
+                    <p>GIỎ HÀNG <span>(1 sản phẩm)</span></p>
+                </div>
+                <div class="row basket-container">
+                    <div class="basket-container-left">
+                        <div class="basket-header">
+                            <input type="checkbox" name="" id="" class="checkbox-add-cart">
+                            <p class="basket-select-all">Chọn tất cả (1 sản phẩm)</p>
+                            <p class="basket-money">Thành tiền</p>
+                        </div>
+                        <div class="basket-content">
+                            <a href="#">
+                                <ul class="basket-product-list">
+                                    <li class="basket-product-item">
+                                        <div>
+                                            <input type="checkbox" name="" id="" class="checkbox-add-cart item-center">
+                                        </div>
+                                        <div>
+                                            <img src="https://img.abaha.vn/photos/origin/83-1586781803-myphamohui-lgvina.png" alt="">
+                                        </div>
+                                        <div class="product-item-name">
+                                            <p>
+                                                Hộp Bột Nặn Playdoh NHAT/B5517B/GR - Xanh Lá                                              
+                                            </p>
+                                            <label for="number" class="quantity">
+                                                <span>Số lượng<input type="number" id="number" min="1" max="9" step="1" value="1"></span> 
+                                            </label>
+                                        </div>
+
+                                        <p class="product-price item-center">
+                                            18.750 đ                                 
+                                        </p>
+                                        <p class="cancel-product item-center">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                        </p>
+                                    </li>
+                                    <div class="border-product"></div>
+                                </ul>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="basket-container-right">
+                        <div class="basket-price">
+                            <div class="d-flex">
+                                <p>Thành tiền</p>
+                            </div>
+                            <div class="d-flex">
+                                <p>VAT</p>
+                                <p>5%</p>
+                            </div>
+                            <div class="border-product"></div>
+                            <div class="d-flex">
+                                <p><b>Tổng số tiền</b></p>
+                            </div>
+                            <div><button>Thanh toán</button></div>
+                            <div><button>Thanh toán</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer id="footer">
@@ -431,7 +491,7 @@
                         <input type="password" name="confirm" id="confirm" placeholder="Xác nhận mật khẩu" class="control-form">
                     </div>
                     <div class="accept">
-                        <input type="checkbox" id="check-accept" name="accept"> 
+                        <input type="checkbox" id="check-accept" name="accept" class="accept-register"> 
                         <label for="accept">          
                             Tôi xác nhận các yêu cầu trên là đúng
                         </label>

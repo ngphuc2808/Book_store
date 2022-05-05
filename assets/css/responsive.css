@@ -380,6 +380,37 @@
         top: 0;
         right: 3px;
     }
+    
+    .basket-container {
+        flex-direction: column;
+    }
+
+    .basket-container-left {
+        width: 100%;
+        padding: 0 8px;
+    }
+
+    .basket-container-right {
+        margin-top: 8px;
+        width: 100%;
+        padding: 0 8px;
+    }
+
+    .basket-product-item img {
+        max-height: 65px;
+        width: auto;
+    }
+
+    .product-price,
+    .product-item-name p,
+    .product-item-name label,
+    .product-item-name label input {
+        font-size: 13px;
+    }
+
+    .cancel-product {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 374px) { 
