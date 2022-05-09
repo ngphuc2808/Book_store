@@ -214,6 +214,10 @@
         top: 0;
         right: 3px;
     }
+
+    .list-favorite .card-item {
+        width: 30%;
+    }
 }
 
 /* Mobile */
@@ -410,6 +414,11 @@
 
     .cancel-product {
         font-size: 15px;
+    }
+
+    
+    .list-favorite .card-item {
+        width: 100%;
     }
 }
 

@@ -681,6 +681,15 @@
     position: relative;
 }
 
+.list-favorite {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    flex-wrap: wrap;
+    max-height: 800px;
+    overflow-y: auto;
+}
+
 .list-product .card-item {
     flex-shrink: 0;
     position: relative;
@@ -692,11 +701,24 @@
     border-radius: 4px;
 }
 
-.list-product .card-item:hover {
+.list-favorite .card-item {
+    width: 18%;
+    position: relative;
+    height: 100%;
+    padding: 8px;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform linear 0.1s;
+    border-radius: 4px;
+}
+
+.list-product .card-item:hover,
+.list-favorite .card-item:hover {
     transform: translateY(-2px);
 }
 
-.list-product .card-item-sale-off {
+.list-product .card-item-sale-off,
+.list-favorite .card-item-sale-off {
     text-align: center;
     position: absolute;
     top: 0;
@@ -712,7 +734,8 @@
     border-top-right-radius: 4px;
 }
 
-.list-product .card-item-sale-off::before {
+.list-product .card-item-sale-off::before
+.list-favorite .card-item-sale-off::before {
     content: "";
     position: absolute;
     border-top: 8px solid currentColor;
@@ -721,7 +744,8 @@
     bottom: -8px;
 }
 
-.list-product .card-item-sale-off::after {
+.list-product .card-item-sale-off::after,
+.list-favorite .card-item-sale-off::before {
     content: "";
     position: absolute;
     border-top: 8px solid currentColor;
@@ -730,19 +754,22 @@
     bottom: -8px;
 }
 
-.list-product .card-item-sale-off .sale-off-percent {
+.list-product .card-item-sale-off .sale-off-percent,
+.list-favorite .card-item-sale-off .sale-off-percent {
     color: #c92127;
     font-size: 13px;
     line-height: 13px;
 }
 
-.list-product .card-item-sale-off .sale-off-label {
+.list-product .card-item-sale-off .sale-off-label,
+.list-favorite .card-item-sale-off .sale-off-label {
     font-size: 14px;
     line-height: 14px;
     color: #c92127;
 }
 
-.list-product .card-item-label-favorite {
+.list-product .card-item-label-favorite,
+.list-favorite .card-item-label-favorite {
     line-height: 18px;
     position: absolute;
     top: 10px;
@@ -767,21 +794,25 @@
     bottom: -4px;
 }
 
-.list-product .card-item-label-favorite i {
+.list-product .card-item-label-favorite i,
+.list-favorite .card-item-label-favorite i {
     font-size: 9px;
     margin-right: 2px;
     color: #fff;
 }
 
-.list-product .card-item-label-favorite span {
+.list-product .card-item-label-favorite span,
+.list-favorite .card-item-label-favorite span {
     color: #fff;
 }
 
-.list-product .card-item:hover {
+.list-product .card-item:hover,
+.list-favorite .card-item:hover {
     box-shadow: 3px 3px 10px rgb(0 0 0 / 0.16);
 }
 
-.list-product .card-item-title {
+.list-product .card-item-title,
+.list-favorite .card-item-title {
     height: 40px;
     line-height: 20px;
     display: block;
@@ -794,7 +825,8 @@
     padding: 0 10px;
 }
 
-.list-product .old-price {
+.list-product .old-price,
+.list-favorite .old-price {
     text-decoration: line-through;
     font-weight: 500;
     color: #333;
@@ -805,36 +837,48 @@
     padding: 0  10px 10px 10px;
 }
 
-.list-product .new-price {
+.list-favorite .card-item-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 0  10px 10px 10px;
+}
+
+.list-product .new-price,
+.list-favorite .new-price {
     font-size: 18px;
     font-weight: 600;
     color: #c92127;
 }
 
-.list-product .old-price {
+.list-product .old-price,
+.list-favorite .old-price {
     text-decoration: line-through;
     font-weight: 500;
     color: #333;
     font-size: 15px;
 }
 
-.list-product .card-item-favorite {
+.list-product .card-item-favorite,
+.list-favorite .card-item-favorite {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0  10px 0 10px;
 }
 
-.list-product .favorite-icon i {
+.list-product .favorite-icon i,
+.list-favorite .favorite-icon i {
     font-size: 16px;
 }
 
-.list-product .favorite-heart {
+.list-product .favorite-heart,
+.list-favorite .favorite-heart {
     display: block;
     color: #c92127;
 }
 
-.list-product .favorite-heart-fill {
+.list-product .favorite-heart-fill,
+.list-favorite .favorite-heart-fill {
     display: none;
     color: #c92127;
 }
@@ -843,7 +887,8 @@
     padding: 0 !important;
 }
 
-.list-product .card-item-buy {
+.list-product .card-item-buy,
+.list-favorite .card-item-buy {
     display: flex;
     justify-content: center;
     padding: 18px 10px 10px 10px;
@@ -866,22 +911,43 @@
     border-radius: 20px;
 }
 
-.list-product .add-to-basket i {
+.list-favorite .remove-from-favorite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 36px;
+    padding: 4px 8px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: #c92127;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid #c92127;
+    border-radius: 20px;
+}
+
+.list-product .add-to-basket i,
+.list-favorite .remove-from-favorite i {
     margin-right: 8px;
 }
 
-.list-product .add-to-basket:hover {
+.list-product .add-to-basket:hover,
+.list-favorite .remove-from-favorite:hover {
     color: #fff;
-    background: linear-gradient(90deg, rgba(255,152,0,1) 0%, rgba(247,105,93,1) 100%);
+    background: linear-gradient(90deg, rgba(201, 33, 39, 1) 0%, rgba(247, 105, 93, 1) 100%);
     border: none;
     cursor: pointer;
 }
 
-.list-product .buy-now {
+.list-product .buy-now,
+.list-favorite .buy-now {
     background-image: linear-gradient(to left, #e1eec3, #f05053);
 }
 
-.list-product .card-item-img {
+.list-product .card-item-img,
+.list-favorite .card-item-img {
     width: 100%;
     min-height: 169px;
     display: flex;
@@ -889,13 +955,15 @@
     align-items: center;
 }
 
-.list-product .card-item-img a {
+.list-product .card-item-img a,
+.list-favorite .card-item-img a {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.list-product .card-item-img img {
+.list-product .card-item-img img,
+.list-favorite .card-item-img img {
     width: 70%;
     height: 70%;
 }
@@ -948,6 +1016,10 @@
 
 .basket-container {
     display: flex;
+}
+
+.favorite-container {
+    display: block;
 }
 
 .basket-header {
