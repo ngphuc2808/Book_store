@@ -688,6 +688,7 @@
     flex-wrap: wrap;
     max-height: 800px;
     overflow-y: auto;
+    border-radius: 8px;
 }
 
 .list-product .card-item {
