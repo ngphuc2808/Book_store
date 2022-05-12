@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000
+const port = 3333
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -23,12 +23,12 @@ app.get('/Product', (req, res) => {
   res.render('FormDetailProduct.ejs');
 })
 
-app.get('/Category', (req, res) => {
-  res.render('FormProductCategory.ejs');
+app.get('/Basket', (req, res) => {
+  res.render('FormBasket.ejs');
 })
 
-app.get('/Writter', (req, res) => {
-  res.render('FormWritterProduct.ejs');
+app.get('/Category', (req, res) => {
+  res.render('FormProductCategory.ejs');
 })
 
 app.listen(port, () => {

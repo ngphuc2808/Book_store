@@ -37,6 +37,7 @@ img{
 }
 .img-select{
     display: flex;
+    justify-content: center;
 }
 .img-item{
     margin: 0.3rem;
