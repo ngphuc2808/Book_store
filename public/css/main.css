@@ -307,6 +307,7 @@
     color: #fff;
     text-decoration: none;
     font-size: 13px;
+    margin-bottom: 0;
 }
 
 .connect-tag-item {
@@ -1801,17 +1802,6 @@ input.accept-register[type="checkbox"]:checked:after {
 
 /*Vinh*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
-
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-}
-body{
-    line-height: 1;
-    background-color: white;
-}
 .card-wrapper{
     max-width: 800px;
     max-height: 420px;

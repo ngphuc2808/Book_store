@@ -3,6 +3,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#main {
+    margin-top: 193px; 
+    display: flex; 
+    padding:0 16px
+}
+
 .topnav {
     overflow: hidden;
     background-color: #Fdc7cb;
@@ -69,14 +75,18 @@ body {
 }
 
 .content {
+    border: 1px solid #Bb505c;
+    max-height: 800px;
     float: left;
     /*Nằm bên trái*/
     width: 80%;
     /*Rộng 700px*/
-    height: 100vh;
+    min-height: 500px;
     /*Cao 300px*/
     background: #ffffff;
     /*Nền màu đỏ*/
+    overflow-y: auto;
+    margin-right: 16px;
 }
 
 .sidebar {
@@ -101,22 +111,20 @@ body {
 }
 
 .bar-forall {
-    width: 300px;
+    width: 100%;
     height: 50px;
     border-width: 2px;
     border-color: #Bb505c;
     border-style: solid;
-    border-left: none;
     border-bottom: none;
 }
 
 .bar-end {
-    width: 300px;
+    width: 100%;
     height: 50px;
     border-width: 2px;
     border-color: #Bb505c;
     border-style: solid;
-    border-left: none;
 }
 
 .bar-manage {
@@ -199,7 +207,6 @@ body {
 }
 
 table {
-    border: 1px solid #Bb505c;
     width: 100%;
     table-layout: fixed;
     text-align: center;
