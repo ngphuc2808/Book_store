@@ -12,7 +12,6 @@ function showFormRegister() {
     document.getElementById('formLog').style.transform = "translate(-50%, -245%)";
     document.getElementById('formLog').style.opacity = 0;
     document.querySelector('.modal-login').style.display = "block";
-
 }
 
 function hiddenModal() {
