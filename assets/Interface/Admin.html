@@ -29,7 +29,7 @@
                     <div class="dropdown-child">
                         <a class="fas fa-envelope bell"></a>
                         <a class="fas fa-bell bell"></a>
-                        <a class="fas fa-book-medical" href="#xmas-popup"></a>
+                        <a class="fas fa-book-medical" href="#popup-add-book"></a>
                     </div>
                 </div>
                 <div class="more">
@@ -91,8 +91,8 @@
                             70000
                         </td>
                         <td>
-                            <div><a style="cursor: pointer;">Sửa</a></div>
-                            <div><a style="cursor: pointer;">Xóa</a></div>
+                            <div><a style="cursor: pointer;" href="#popup-edit-book" class="a-edit-del">Sửa</a></div>
+                            <div><a style="cursor: pointer;" href="#popup-delete-book" class="a-edit-del">Xóa</a></div>
                         </td>
                     </tr>
                     <tr style="height: 150px; background-color: #cfc5e8; color: #Bb505c;">
@@ -151,22 +151,96 @@
                     </tr>
                 </table>
 
-                <div id="xmas-popup" class="popup" href="#">
-                    <div class="popup-content">
-                        <input type="text">
+                <div id="popup-add-book" class="popup" href="#">
+                    <div class="popup-content" style="background-color: #Fdc7cb;">
+                        <a href="#" class="close">x</a>
+                        <div class="form">
+                            <h2 class="manage-book">Trang Thêm Sách</h2>
+                            <form action="">
+                                <div class="input-form">
+                                    <input type="text" name="book-name" placeholder="Tên sách">
+                                </div>
+                                <div class="input-form">
+                                    <input type="password" name="author" placeholder="Tác giả">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="publisher" placeholder="Nhà xuất bản">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="publish-year" placeholder="Năm xuất bản">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="categories" placeholder="Thể loại">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="price" placeholder="Giá">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="image" placeholder="Link ảnh">
+                                </div>
+                                <div class="input-submit">
+                                    <input type="submit" value="Thêm">
+                                </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="wrapper">
-                    <h1>CSS Only Popup</h1>
-                    <p>
-                        Lorem ninja ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore maga aliquam erat volutpat. Ut ninja wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit ninja lobortis nisl
-                        ut aliquip ex ea commodo consequat. Duis ninja autem vel eum iriure dolor in hendrerit in vulputate ninja velit esse molestie consequat, vel illum dolore eu feugiat nulla ninja facilisis at vero eros et accumsan et iusto odio dignissim
-                        qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam ninja ipsum liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi
-                        ninja non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes ninja demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas ninja est etiam processus dynamicus, qui ninja
-                        sequitur mutationem consuetudium lectorum.
-                    </p>
-                    <a href="#xmas-popup" class="button">Show popup</a>
+                <div id="popup-edit-book" class="popup" href="#">
+                    <div class="popup-content" style="background-color: #Fdc7cb;">
+                        <a href="#" class="close">x</a>
+                        <div class="form">
+                            <h2 class="manage-book">Trang Sửa Thông Tin Sách</h2>
+                            <form action="">
+                                <div class="input-form">
+                                    <input type="text" name="book-name" placeholder="Tên sách" value="Kỹ năng làm việc nhóm của người Nhật">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="author" placeholder="Tác giả" value="Hidehiko Hamada">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="publisher" placeholder="Nhà xuất bản" value="1980 Books">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="publish-year" placeholder="Năm xuất bản" value="2022">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="categories" placeholder="Thể loại" value="Kỹ năng">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="price" placeholder="Giá" value="70000">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="image" placeholder="Link ảnh" value="/assets/img/admin/ky-nang-lam-viec-nhom-cua-nguoi-nhat.jpg" style="width: 50%; vertical-align:middle">
+                                </div>
+                                <div class="input-submit">
+                                    <input type="submit" value="Cập Nhật">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popup-delete-book" class="popup" href="#">
+                    <div class="popup-content" style="background-color: #Fdc7cb;">
+                        <a href="#" class="close">x</a>
+                        <div class="form">
+                            <h2 class="manage-book">Chắc Chắn Xóa Sách?</h2>
+                            <form action="">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="input-form">
+                                                <a name="delete" type="button" class="a-edit-del" href="#">Chắc Chắn</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="input-form">
+                                                <a name="n-delete" type="button" href="#" class="a-edit-del">Bỏ qua</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="sidebar">
