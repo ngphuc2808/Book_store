@@ -371,7 +371,7 @@
             <div class="order-head">ĐƠN HÀNG</div>
             <table class="or-table">
                 <tr class="or-row">
-                    <td><img src="/assets/img/admin/ky-nang-lam-viec-nhom-cua-nguoi-nhat.jpg" style="width: 100%; height: 100%"></td>
+                    <td><img src="/assets/img/ky-nang-lam-viec-nhom-cua-nguoi-nhat.jpg" style="width: 100%; height: 100%"></td>
                     <td class="dh-text-top">
                         <h2>Kỹ năng làm việc nhóm của người Nhật</h2>
                     </td>
@@ -382,35 +382,43 @@
                 </tr>
                 <tr class="or-row">
                     <td class="dh-text">Số lượng mua:</td>
-                    <td class="dh-infor">1</td>
+                    <td><input type="number" name="book-number" placeholder="Nhập số lượng sách cần mua!"></td>
                 </tr>
                 <tr class="or-row">
                     <td class="dh-text">Mã giảm giá:</td>
-                    <td class="dh-infor">abc</td>
+                    <td><input type="text" name="voucher-code" placeholder="Copy mã giảm giá vào đây!"></td>
                 </tr>
                 <tr class="or-row">
                     <td class="dh-text">Phương thức giao hàng:</td>
-                    <td class="dh-infor">Bình thường - 20.000 VND</td>
+                    <td>
+                        <div class="select">
+                            <select name="ship">
+                                <option selected disabled>Phương thức giao hàng:</option>
+                                <option value="1">Hỏa tốc - 100.000 VND</option>
+                                <option value="2">Bình thường - 20.000VND</option>
+                            </select>
+                        </div>
+                    </td>
                 </tr>
                 <tr class="or-row">
                     <td class="dh-text">Hình thức thanh toán:</td>
-                    <td class="dh-infor">Trả tiền khi nhận hàng</td>
+                    <td>
+                        <div class="select">
+                            <select name="pay">
+                                <option selected disabled>Hình thức thanh toán:</option>
+                                <option value="1">Chuyển khoản</option>
+                                <option value="2">Trả tiền khi nhận hàng</option>
+                            </select>
+                        </div>
+                    </td>
                 </tr>
                 <tr class="or-row">
                     <td class="dh-text">Thành tiền:</td>
-                    <td class="dh-infor">60000 VND</td>
-                </tr>
-                <tr class="or-row">
-                    <td class="dh-text">Trạng thái giao hàng:</td>
-                    <td class="dh-infor" style="background-color: #feffd1;">Đang giao hàng!</td>
-                </tr>
-                <tr class="or-row">
-                    <td class="dh-text">Trạng thái thanh toán:</td>
-                    <td class="dh-infor" style="background-color: #ffd1d1;">Chưa thanh toán!</td>
+                    <td class="dh-infor">100000 VND</td>
                 </tr>
             </table>
             <div class="or-submit">
-                <a name="order" type="button" class="order" href="#">Hủy đơn</a>
+                <a name="order" type="button" class="order" href="#">Mua</a>
             </div>
         </div>
 
