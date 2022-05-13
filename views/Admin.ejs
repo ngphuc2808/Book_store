@@ -7,13 +7,14 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../public/img/icon_page.jpg">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="../public/css/admin.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../public/css/base.css">
     <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/css/admin.css">
     <link rel="stylesheet" href="../public/css/responsive.css">
     <title>Nhà sách tương lai</title>
 </head>
@@ -222,7 +223,6 @@
                 </div>
             </div>
         </header>
-
         <div id="main">
             <div class="content">
                 <table>
@@ -275,8 +275,8 @@
                             70000
                         </td>
                         <td>
-                            <div><a style="cursor: pointer;">Sửa</a></div>
-                            <div><a style="cursor: pointer;">Xóa</a></div>
+                            <div><a style="cursor: pointer;" href="#popup-edit-book" class="a-edit-del">Sửa</a></div>
+                            <div><a style="cursor: pointer;" href="#popup-delete-book" class="a-edit-del">Xóa</a></div>
                         </td>
                     </tr>
                     <tr style="height: 150px; background-color: #cfc5e8; color: #Bb505c;">
@@ -335,11 +335,97 @@
                     </tr>
                 </table>
 
-                <div id="xmas-popup" class="popup" href="#">
-                    <div class="popup-content">
-                        <input type="text">
+                <div id="popup-add-book" class="popup" href="#">
+                    <div class="popup-content" style="background-color: #Fdc7cb;">
+                        <a href="#" class="close">x</a>
+                        <div class="form">
+                            <h2 class="manage-book">Trang Thêm Sách</h2>
+                            <form action="">
+                                <div class="input-form">
+                                    <input type="text" name="book-name" placeholder="Tên sách">
+                                </div>
+                                <div class="input-form">
+                                    <input type="password" name="author" placeholder="Tác giả">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="publisher" placeholder="Nhà xuất bản">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="publish-year" placeholder="Năm xuất bản">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="categories" placeholder="Thể loại">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="price" placeholder="Giá">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="image" placeholder="Link ảnh">
+                                </div>
+                                <div class="input-submit">
+                                    <input type="submit" value="Thêm">
+                                </div>
+                        </div>
                     </div>
                 </div>
+                <div id="popup-edit-book" class="popup" href="#">
+                    <div class="popup-content" style="background-color: #Fdc7cb;">
+                        <a href="#" class="close">x</a>
+                        <div class="form">
+                            <h2 class="manage-book">Trang Sửa Thông Tin Sách</h2>
+                            <form action="">
+                                <div class="input-form">
+                                    <input type="text" name="book-name" placeholder="Tên sách" value="Kỹ năng làm việc nhóm của người Nhật">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="author" placeholder="Tác giả" value="Hidehiko Hamada">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="publisher" placeholder="Nhà xuất bản" value="1980 Books">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="publish-year" placeholder="Năm xuất bản" value="2022">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="categories" placeholder="Thể loại" value="Kỹ năng">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="price" placeholder="Giá" value="70000">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="image" placeholder="Link ảnh" value="/assets/img/admin/ky-nang-lam-viec-nhom-cua-nguoi-nhat.jpg" style="width: 50%; vertical-align:middle">
+                                </div>
+                                <div class="input-submit">
+                                    <input type="submit" value="Cập Nhật">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popup-delete-book" class="popup" href="#">
+                    <div class="popup-content" style="background-color: #Fdc7cb;">
+                        <a href="#" class="close">x</a>
+                        <div class="form">
+                            <h2 class="manage-book">Chắc Chắn Xóa Sách?</h2>
+                            <form action="">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="input-form">
+                                                <a name="delete" type="button" class="a-edit-del" href="#">Chắc Chắn</a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="input-form">
+                                                <a name="n-delete" type="button" href="#" class="a-edit-del">Bỏ qua</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="sidebar">
                 <h3 class="bar1">
@@ -467,11 +553,12 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="../public/js/frontend/plugin.js"></script>
-    <script type="text/javascript" src="../public/js/frontend/formLogin.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="../public/js/frontend/plugin.js"></script>
+    <script src="../public/js/frontend/formLogin.js"></script>
+    <script src="../public/js/frontend/pagination.js"></script>
     </div>
 </body>

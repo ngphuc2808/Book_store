@@ -37,6 +37,8 @@ $(document).ready(function() {
     ]
   });
 
+  $('#user-info-dob').datepicker();
+
   $('.favorite-rating').rateYo({
     rating: 0,
     spacing: '3px',

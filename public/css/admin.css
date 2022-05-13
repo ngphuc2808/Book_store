@@ -184,7 +184,8 @@ body {
 
 #menu .sub-menu {
     position: absolute;
-    right: 300px;
+    right: 100%;
+    top: 0;
     list-style-type: circle;
     color: #Bb505c;
 }
@@ -206,7 +207,8 @@ body {
     background-color: #fdebec;
 }
 
-table {
+.content table {
+    border: 1px solid #Bb505c;
     width: 100%;
     table-layout: fixed;
     text-align: center;
@@ -221,7 +223,7 @@ table {
 
 .wrapper button {
     border: 3px solid #111;
-    adding: 10px;
+    padding: 10px;
     color: #111;
     text-decoration: none;
 }
@@ -234,11 +236,12 @@ table {
     left: 0;
     background: rgba(0, 0, 0, 0.6);
     display: none;
+    z-index: 100;
 }
 
-#xmas-popup .popup-content {
+#popup-add-book .popup-content {
     width: 600px;
-    height: 600px;
+    height: 100%;
     background: #bbb;
     margin: 100px auto;
     position: relative;
@@ -261,5 +264,112 @@ table {
 }
 
 .popup:target {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manage-book {
+    text-align: center;
+    color: #Bb505c;
+}
+
+.form {
+    background: #Fdc7cb;
+    padding-left: 5%;
+}
+
+.input-form {
+    padding-bottom: 2%;
+}
+
+.input-form input {
+    width: 90%;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 30px;
+    background-color: #ffffff;
+}
+
+.input-submit {
+    text-align: center;
+    padding-top: 10%;
+}
+
+.input-submit input {
+    text-align: center;
+    width: 20%;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #Bb505c;
+    background: transparent;
+    border-radius: 30px;
+    background-color: #ffffff;
+}
+
+.a-edit-del {
+    color: #Bb505c;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#popup-edit-book .popup-content {
+    width: 600px;
+    height: 70%;
+    background: #bbb;
+    margin: 100px auto;
+    position: relative;
+    border: 5px solid #fff;
+}
+
+#popup-edit-book .input-form input {
+    width: 90%;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #Bb505c;
+    background: transparent;
+    border-radius: 30px;
+    background-color: #ffffff;
+}
+
+#popup-delete-book .popup-content {
+    width: 600px;
+    height: 14%;
+    background: #bbb;
+    margin: 100px auto;
+    position: relative;
+    border: 5px solid #fff;
+}
+
+#popup-delete-book .input-form a {
+    width: 40%;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #Bb505c;
+    background: transparent;
+    border-radius: 30px;
+    background-color: #ffffff;
+}
+
+#popup-delete-book table {
+    border: 1px solid #Fdc7cb;
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
 }
