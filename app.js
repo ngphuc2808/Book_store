@@ -31,16 +31,20 @@ app.get('/Category', (req, res) => {
   res.render('FormProductCategory.ejs');
 })
 
+app.get('/Writter', (req, res) => {
+  res.render('FormProductWritter.ejs');
+})
+
 app.get('/Favorite', (req, res) => {
   res.render('FormFavoriteProduct.ejs');
 })
 
 app.get('/CheckOrder', (req, res) => {
-  res.render('Check-order.ejs');
+  res.render('CheckOrder.ejs');
 })
 
 app.get('/Order', (req, res) => {
-  res.render('FormOder.ejs');
+  res.render('FormOrder.ejs');
 })
 
 app.listen(port, () => {

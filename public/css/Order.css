@@ -1,8 +1,9 @@
 #order-container {
-    padding-top: 10%;
     background-color: #ffffff;
     width: 100%;
     height: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
 }
 
 .order-head {
@@ -13,7 +14,7 @@
     font-weight: bold;
     width: 100%;
     height: 100%;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 
 .or-table {
@@ -102,6 +103,11 @@ select {
 .or-submit {
     text-align: center;
     padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.or-submit a:hover {
+    opacity: 0.8;
 }
 
 .or-submit input {
@@ -144,20 +150,18 @@ select {
 }
 
 .order {
+    line-height: 50px;
     color: #Bb505c;
     text-align: center;
     text-decoration: none !important;
     font-size: 25px;
     width: 20%;
-    height: 50px;
     outline: none;
     border: 1px solid #e66619;
     letter-spacing: 1px;
     color: #ffffff;
     border-radius: 30px;
     background-color: #e66619;
-    padding-top: 5px;
-    padding-bottom: 5px;
     text-align: center;
 }
 

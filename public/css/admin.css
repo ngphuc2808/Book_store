@@ -10,6 +10,9 @@ body {
 }
 
 .topnav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     overflow: hidden;
     background-color: #Fdc7cb;
 }
@@ -241,7 +244,7 @@ body {
 
 #popup-add-book .popup-content {
     width: 600px;
-    height: 100%;
+    height: 70%;
     background: #bbb;
     margin: 100px auto;
     position: relative;

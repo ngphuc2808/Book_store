@@ -1950,16 +1950,16 @@ input.accept-register[type="checkbox"]:checked:after {
 
 .button-buy > :first-child {
     background-color: #fff;
-    color: #c92127;
-    border: 2px solid #c92127;
+    color: #e66619;
+    border: 2px solid #e66619;
     margin-right: 16px;
     font-weight: 600;
 }
 
 .button-buy > :last-child {
-    background-color: #c92127;
+    background-color: #e66619;
     color: #fff;
-    border: 2px solid #c92127;
+    border: 2px solid #e66619;
     font-weight: 600;
 }
 
