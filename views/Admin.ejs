@@ -7,11 +7,13 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../public/img/icon_page.jpg">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../public/css/base.css">
     <link rel="stylesheet" href="../public/css/main.css">
     <link rel="stylesheet" href="../public/css/admin.css">
@@ -234,6 +236,7 @@
                             <a class="fas fa-envelope bell"></a>
                             <a class="fas fa-bell bell"></a>
                             <a class="fas fa-book-medical" href="#popup-add-book"></a>
+                            <a class="fas fa-user-plus" href="#popup-add-employee"></a>
                         </div>
                     </div>
                 </div>
@@ -380,6 +383,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div id="popup-edit-book" class="popup" href="#">
                     <div class="popup-content" style="background-color: #Fdc7cb;">
                         <a href="#" class="close">x</a>
@@ -410,6 +414,42 @@
                                 <div class="input-submit">
                                     <input type="submit" value="Cập Nhật">
                                 </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="popup-add-employee" class="popup" href="#">
+                    <div class="popup-content" style="background-color: #Fdc7cb;">
+                        <a href="#" class="close">x</a>
+                        <div class="form">
+                            <h2 class="manage-book">Thêm thông tin nhân viên</h2>
+                            <form action="">
+                                <div class="input-form">
+                                    <input type="text" name="name" placeholder="Tên nhân viên">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="date-of-birth" placeholder="Ngày sinh">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="sex" placeholder="Giới tính">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="cmnd" placeholder="Số CMND">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="kpi" placeholder="Số đơn đã hoàn thiện">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="salary" placeholder="Lương theo tháng">
+                                </div>
+                                <div class="input-form">
+                                    <input type="text" name="image" placeholder="Link ảnh thẻ">
+                                </div>
+                                <div class="input-submit">
+                                    <input type="submit" value="Thêm">
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -469,9 +509,8 @@
                 <div class="row footer-detail">
                     <div class="column-content column-content-1">
                         <h3 class="footer-section-heading">Nhà Sách Tương Lai - Sách gì cũng có, mua ngay!</h3>
-                        <p class="footer-section-contain"> 
-                            NhaSachTuongLai - ứng dụng mua sắm trực tuyến, nơi tổng hợp các loại sách chính hãng từ nhiều nguồn uy tín. NhaSachTuongLai sẽ cung cấp 
-                            cho bạn những loại sách hay, thú vị, tin cậy, an toàn và miễn phí và an tâm khi mua hàng trực tuyến hơn bao giờ hết!
+                        <p class="footer-section-contain">
+                            NhaSachTuongLai - ứng dụng mua sắm trực tuyến, nơi tổng hợp các loại sách chính hãng từ nhiều nguồn uy tín. NhaSachTuongLai sẽ cung cấp cho bạn những loại sách hay, thú vị, tin cậy, an toàn và miễn phí và an tâm khi mua hàng trực tuyến hơn bao giờ hết!
                         </p>
                     </div>
                     <div class="column-content column-content-2">
@@ -492,78 +531,6 @@
                 </div>
             </div>
         </footer>
-        
-        <input type="checkbox" hidden name="" id="input-modal-register">
-        <input type="checkbox" hidden name="" id="input-modal-login">
-        <div class="modal-login">
-            <button onclick="hiddenModal()"></button>
-        </div>
-        <div id="formRes" class="modal-container modal-signup">
-            <div class="modal-container-logo">
-                <i class="fa-solid fa-circle-user"></i>
-                <p href="#" class="text-login">ĐĂNG KÝ</p>
-            </div>
-            <div class="modal-container-detail">
-                <div class="detail-login register">
-                    <span>Đăng ký</span>
-                </div>
-                <label for="input-modal-register" class="btn-close" onclick="hiddenModal()">
-                    <i class="fa-solid fa-xmark"></i>
-                </label>
-                <form action="">
-                    <input type="text" name="username" placeholder="Tài khoản" class="control-form">
-                    <input type="email" name="email" placeholder="Email" class="control-form">
-                    <input type="text" name="phone" placeholder="Số điện thoại" class="control-form">
-                    <div class="input-pwd">
-                        <input type="password" name="password" placeholder="Mật khẩu" class="control-form">
-                        <input type="password" name="confirm" id="confirm" placeholder="Xác nhận mật khẩu" class="control-form">
-                    </div>
-                    <div class="accept">
-                        <input type="checkbox" id="check-accept" name="accept"> 
-                        <label for="accept">          
-                            Tôi xác nhận các yêu cầu trên là đúng
-                        </label>
-                    </div>
-                    <div class="button-submit">
-                        <button class="btn btn-register">
-                            <span>Đăng ký</span> 
-                        </button>    
-                    </div>
-                </form>
-                <div class="clone-button">
-                    <button onclick="showFormLogin()">Đăng nhập ở đây</button>   
-                </div>
-            </div>
-        </div>
-    
-        <div id="formLog" class="modal-container modal-signin">
-            <div class="modal-container-logo">
-                <i class="fa-solid fa-circle-user"></i>
-                <p href="#" class="text-login">ĐĂNG NHẬP</p>
-            </div>
-            <div class="modal-container-detail">
-                <div class="detail-login login">
-                    <span>Đăng nhập</span>
-                </div>
-                <label for="input-modal-login" class="btn-close" onclick="hiddenModal()">
-                    <i class="fa-solid fa-xmark"></i>
-                </label>
-                <form action="">
-                    <input type="text" name="username" id="username" placeholder="Tài khoản" class="control-form">
-                    <input type="password" name="password" placeholder="Mật khẩu" class="control-form">
-                    <div class="signin-container">
-                        <div class="button-submit">
-                            <button class="btn btn-success">
-                                <span>Đăng nhập</span> 
-                            </button>    
-                        </div>
-                        <div class="forget-password">
-                            <a href="#">Quên mật khẩu?</a>   
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>

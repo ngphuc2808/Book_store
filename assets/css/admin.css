@@ -361,3 +361,12 @@ body {
     table-layout: fixed;
     text-align: center;
 }
+
+#popup-add-employee .popup-content {
+    width: 600px;
+    height: 100%;
+    background: #bbb;
+    margin: 100px auto;
+    position: relative;
+    border: 5px solid #fff;
+}
