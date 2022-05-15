@@ -4,9 +4,9 @@ body {
 }
 
 #main {
-    margin-top: 205px; 
-    display: flex; 
-    padding:0 16px
+    margin-top: 205px;
+    display: flex;
+    padding: 0 16px
 }
 
 .topnav {
@@ -375,4 +375,13 @@ body {
     width: 100%;
     table-layout: fixed;
     text-align: center;
+}
+
+#popup-add-employee .popup-content {
+    width: 600px;
+    height: 100%;
+    background: #bbb;
+    margin: 100px auto;
+    position: relative;
+    border: 5px solid #fff;
 }
