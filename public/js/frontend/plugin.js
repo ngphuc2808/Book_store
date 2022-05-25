@@ -51,6 +51,12 @@ $(document).ready(function() {
     ratedFill: '#c92127',
   });
 
+  $('input[type="file"]').change(function(){
+		var value = $("input[type='file']").val();
+		$('.js-value').text(value);
+	});
+
+
   jQuery('<div class="quantity-nav"><button class="quantity-button quantity-up"><i class="fa-solid fa-angle-up"></i></button><button class="quantity-button quantity-down"><i class="fa-solid fa-angle-down"></i></button></div>').insertAfter('.quantity input');
   jQuery('.quantity').each(function () {
     var spinner = jQuery(this),

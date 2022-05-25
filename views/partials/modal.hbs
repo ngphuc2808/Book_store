@@ -1,0 +1,74 @@
+<input type="checkbox" hidden name="" id="input-modal-register">
+<input type="checkbox" hidden name="" id="input-modal-login">
+<div class="modal-login">
+    <button onclick="hiddenModal()"></button>
+</div>
+<div id="formRes" class="modal-container modal-signup">
+    <div class="modal-container-logo">
+        <i class="fa-solid fa-circle-user"></i>
+        <p href="#" class="text-login">ĐĂNG KÝ</p>
+    </div>
+    <div class="modal-container-detail">
+        <div class="detail-login register">
+            <span>Đăng ký</span>
+        </div>
+        <label for="input-modal-register" class="btn-close" onclick="hiddenModal()">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+        <form action="">
+            <input type="text" name="username" placeholder="Tài khoản" class="control-form">
+            <input type="email" name="email" placeholder="Email" class="control-form">
+            <input type="text" name="phone" placeholder="Số điện thoại" class="control-form">
+            <div class="input-pwd">
+                <input type="password" name="password" placeholder="Mật khẩu" class="control-form">
+                <input type="password" name="confirm" id="confirm" placeholder="Xác nhận mật khẩu" class="control-form">
+            </div>
+            <div class="accept">
+                <input type="checkbox" id="check-accept" name="accept"> 
+                <label for="accept">          
+                    Tôi xác nhận các yêu cầu trên là đúng
+                </label>
+            </div>
+            <div class="button-submit">
+                <button class="btn btn-register">
+                    <span>Đăng ký</span> 
+                </button>    
+            </div>
+        </form>
+        <div class="clone-button">
+            <button onclick="showFormLogin()">Đăng nhập ở đây</button>   
+        </div>
+    </div>
+</div>
+
+<div id="formLog" class="modal-container modal-signin">
+    <div class="modal-container-logo">
+        <i class="fa-solid fa-circle-user"></i>
+        <p href="#" class="text-login">ĐĂNG NHẬP</p>
+    </div>
+    <div class="modal-container-detail">
+        <div class="detail-login login">
+            <span>Đăng nhập</span>
+        </div>
+        <label for="input-modal-login" class="btn-close" onclick="hiddenModal()">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+        <form action="">
+            <input type="text" name="username" id="username" placeholder="Tài khoản" class="control-form">
+            <input type="password" name="password" placeholder="Mật khẩu" class="control-form">
+            <div class="signin-container">
+                <div class="button-submit">
+                    <button class="btn btn-success">
+                        <span>Đăng nhập</span> 
+                    </button>    
+                </div>
+                <div class="forget-password">
+                    <a href="#">Quên mật khẩu?</a>   
+                </div>
+            </div>
+        </form>
+        <div class="clone-button">
+            <button onclick="showFormRegister()">Đăng ký ở đây</button>   
+        </div>
+    </div>
+</div>

@@ -1,0 +1,271 @@
+{{> headerAdmin}}
+
+<div id="admin-container">
+    <div class="content-section">
+        <div class="row admin-container">
+            <div class="admin-container-left">
+                <div class="admin-content">
+                    <div class="admin-avatar">
+                        <img src="https://www.kindpng.com/picc/m/699-6997452_administrator-network-icons-system-avatar-computer-transparent-admin.png" alt="">
+                    </div>
+                    <div class="admin-name">
+                        <p>Welcome, Administrator !</p>
+                    </div>
+                </div>
+                <div class="admin-category">
+                    <div class="admin-content-header">
+                        Danh mục quản lý
+                    </div>
+                    <div class="border-product"></div>
+                    <ul class="admin-list-category">
+                        <li class="admin-item-category" onclick="showFormEmployee()">Quản lý nhân viên</li>
+                        <li class="admin-item-category" onclick="showFormPerson()">Quản lý người dùng</li>
+                        <li class="admin-item-category" onclick="showFormProduct()">Quản lý sản phẩm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="admin-product admin-container-right">
+                <div class="admin-category-content">
+                    <div class="admin-header">
+                        <div class="admin-info-header">
+                            <i class="fa-brands fa-product-hunt"></i>
+                            <p>
+                                Quản lý sản phẩm
+                            </p>
+                        </div>
+                        <label for="input-modal-add-product-admin" class="admin-add-product" onclick="showFormAdminAddProduct()">
+                            Thêm sách
+                        </label>  
+                    </div>
+                    <div class="admin-list-header">
+                        <ul class="admin-list-info-product">
+                            <li class="admin-item-info-product">Hình ảnh</li>
+                            <li class="admin-item-info-product">Tên sản phẩm</li>
+                            <li class="admin-item-info-product">Giá tiền</li>
+                            <li class="admin-item-info-product">Số lượng</li>
+                            <li class="admin-item-info-product">Thông tin</li>
+                        </ul>
+                    </div>
+                    <div class="admin-info-content">
+                        <ul class="admin-list-product">
+                            <li class="admin-item-product">
+                                <div class="admin-image-product">
+                                    <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                </div>
+                            </li>
+                            <li class="admin-item-product">Lập trình và cuộc sống</li>
+                            <li class="admin-item-product">200.000</li>
+                            <li class="admin-item-product">100</li>
+                            <li class="admin-item-product">
+                                <label for="input-modal-product-admin" onclick="showFormAdminProduct()">
+                                    <b>Thông tin</b>
+                                </label>       
+                            </li>
+                        </ul>
+                        <ul class="admin-list-product">
+                            <li class="admin-item-product">
+                                <div class="admin-image-product">
+                                    <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                </div>
+                            </li>
+                            <li class="admin-item-product">Lập trình và cuộc sống</li>
+                            <li class="admin-item-product">200.000</li>
+                            <li class="admin-item-product">100</li>
+                            <li class="admin-item-product">
+                                <label for="input-modal-product-admin" onclick="showFormAdminProduct()">
+                                    <b>Thông tin</b>
+                                </label>       
+                            </li>
+                        </ul>
+                        <ul class="admin-list-product">
+                            <li class="admin-item-product">
+                                <div class="admin-image-product">
+                                    <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                </div>
+                            </li>
+                            <li class="admin-item-product">Lập trình và cuộc sống</li>
+                            <li class="admin-item-product">200.000</li>
+                            <li class="admin-item-product">100</li>
+                            <li class="admin-item-product">
+                                <label for="input-modal-product-admin" onclick="showFormAdminProduct()">
+                                    <b>Thông tin</b>
+                                </label>       
+                            </li>
+                        </ul>
+                        <ul class="admin-list-product">
+                            <li class="admin-item-product">
+                                <div class="admin-image-product">
+                                    <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                </div>
+                            </li>
+                            <li class="admin-item-product">Lập trình và cuộc sống</li>
+                            <li class="admin-item-product">200.000</li>
+                            <li class="admin-item-product">100</li>
+                            <li class="admin-item-product">
+                                <label for="input-modal-product-admin" onclick="showFormAdminProduct()">
+                                    <b>Thông tin</b>
+                                </label>       
+                            </li>
+                        </ul>
+                        <ul class="admin-list-product">
+                            <li class="admin-item-product">
+                                <div class="admin-image-product">
+                                    <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                </div>
+                            </li>
+                            <li class="admin-item-product">Lập trình và cuộc sống</li>
+                            <li class="admin-item-product">200.000</li>
+                            <li class="admin-item-product">100</li>
+                            <li class="admin-item-product">
+                                <label for="input-modal-product-admin" onclick="showFormAdminProduct()">
+                                    <b>Thông tin</b>
+                                </label>       
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="admin-person admin-container-right">
+                <div class="admin-category-content">
+                    <div class="admin-header">
+                        <div class="admin-info-header">
+                            <i class="fa-solid fa-user"></i>
+                            <p>
+                                Quản lý người dùng
+                            </p>
+                        </div>
+                    </div>
+                    <div class="admin-list-header">
+                        <ul class="admin-list-info-product admin-list-info-product-person">
+                            <li class="admin-item-info-product">Ảnh người dùng</li>
+                            <li class="admin-item-info-product">Tên người dùng</li>
+                            <li class="admin-item-info-product">Mã người dùng</li>
+                            <li class="admin-item-info-product">Tài khoản người dùng</li>
+                            <li class="admin-item-info-product">Thông tin</li>
+                        </ul>
+                    </div>
+                    <div class="admin-info-content">
+                        <ul class="admin-list-employee admin-list-employee-person">
+                            <li class="admin-item-employee">
+                                <div class="admin-image-employee">
+                                    <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                </div>
+                            </li>
+                            <li class="admin-item-employee">Nguyễn Hoàng Phúc</li>
+                            <li class="admin-item-employee">1</li>
+                            <li class="admin-item-employee">User1</li>
+                            <li class="admin-item-employee">
+                                <label for="input-modal-product-admin" onclick="showFormAdminPerson()">
+                                    <b>Thông tin</b>
+                                </label>       
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="admin-employee admin-container-right">
+                <div class="admin-category-content">
+                    <div class="admin-header">
+                        <div class="admin-info-header">
+                            <i class="fa-solid fa-clipboard-user"></i>
+                            <p>
+                                Quản lý nhân viên
+                            </p>
+                        </div>
+                        <label for="input-modal-add-employee-admin" class="admin-add-employee" onclick="showFormAdminAddEmployee()">
+                            Thêm nhân viên
+                        </label>  
+                    </div>
+                    <div class="admin-list-header">
+                        <ul class="admin-list-info-product">
+                            <li class="admin-item-info-product">Ảnh nhân viên</li>
+                            <li class="admin-item-info-product">Tên nhân viên</li>
+                            <li class="admin-item-info-product">Mã nhân viên</li>
+                            <li class="admin-item-info-product">Tài khoản nhân viên</li>
+                            <li class="admin-item-info-product">Thông tin</li>
+                        </ul>
+                    </div>
+                    <div class="admin-info-content">
+                        <ul class="admin-list-employee">
+                            <li class="admin-item-employee">
+                                <div class="admin-image-employee">
+                                    <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                </div>
+                            </li>
+                            <li class="admin-item-employee">Nguyễn Hoàng Phúc</li>
+                            <li class="admin-item-employee">1</li>
+                            <li class="admin-item-employee">User1</li>
+                            <li class="admin-item-employee">
+                                <label for="input-modal-product-admin" onclick="showFormAdminEmployee()">
+                                    <b>Thông tin</b>
+                                </label>       
+                            </li>
+                        </ul>
+                        <ul class="admin-list-employee">
+                            <li class="admin-item-employee">
+                                <div class="admin-image-employee">
+                                    <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                </div>
+                            </li>
+                            <li class="admin-item-employee">Nguyễn Hoàng Phúc</li>
+                            <li class="admin-item-employee">1</li>
+                            <li class="admin-item-employee">User1</li>
+                            <li class="admin-item-employee">
+                                <label for="input-modal-product-admin" onclick="showFormAdminEmployee()">
+                                    <b>Thông tin</b>
+                                </label>       
+                            </li>
+                        </ul>
+                        <ul class="admin-list-employee">
+                            <li class="admin-item-employee">
+                                <div class="admin-image-employee">
+                                    <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                </div>
+                            </li>
+                            <li class="admin-item-employee">Nguyễn Hoàng Phúc</li>
+                            <li class="admin-item-employee">1</li>
+                            <li class="admin-item-employee">User1</li>
+                            <li class="admin-item-employee">
+                                <label for="input-modal-product-admin" onclick="showFormAdminEmployee()">
+                                    <b>Thông tin</b>
+                                </label>       
+                            </li>
+                        </ul>
+                        <ul class="admin-list-employee">
+                            <li class="admin-item-employee">
+                                <div class="admin-image-employee">
+                                    <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                </div>
+                            </li>
+                            <li class="admin-item-employee">Nguyễn Hoàng Phúc</li>
+                            <li class="admin-item-employee">1</li>
+                            <li class="admin-item-employee">User1</li>
+                            <li class="admin-item-employee">
+                                <label for="input-modal-product-admin" onclick="showFormAdminEmployee()">
+                                    <b>Thông tin</b>
+                                </label>       
+                            </li>
+                        </ul>
+                        <ul class="admin-list-employee">
+                            <li class="admin-item-employee">
+                                <div class="admin-image-employee">
+                                    <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                </div>
+                            </li>
+                            <li class="admin-item-employee">Nguyễn Hoàng Phúc</li>
+                            <li class="admin-item-employee">1</li>
+                            <li class="admin-item-employee">User1</li>
+                            <li class="admin-item-employee">
+                                <label for="input-modal-product-admin" onclick="showFormAdminEmployee()">
+                                    <b>Thông tin</b>
+                                </label>       
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> modalAdmin}}

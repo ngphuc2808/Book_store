@@ -1,51 +1,44 @@
 const express = require('express');
+const { engine } = require('express-handlebars');
+
 const app = express();
-const port = 3000
 
-app.set('view engine', 'ejs');
-app.set('views', './views');
+const port = 3000;
 
-app.use("/public", express.static(__dirname + "/public"));
+app.engine('hbs', engine({ 
+  extname: '.hbs', 
+  defaultLayout: "Main",
+  layoutsDir: 'views/layouts',
+  partialsDir: 'views/partials'
+}));
 
-app.get('/HomePage', (req, res) => {
-    res.render('HomePage.ejs');
-})
+app.set('view engine', 'hbs');
 
-app.get('/Admin', (req, res) => {
-  res.render('Admin.ejs');
-})
+app.use('/public', express.static(__dirname + '/public'));
 
-app.get('/User', (req, res) => {
-  res.render('FormUserProfile.ejs');
-})
+const adminRouter = require('./routes/Admin.route');
+app.use('/admin', adminRouter);
 
-app.get('/Product', (req, res) => {
-  res.render('FormDetailProduct.ejs');
-})
+const homePageRouter = require('./routes/HomePage.route');
+app.use('/', homePageRouter);
 
-app.get('/Basket', (req, res) => {
-  res.render('FormBasket.ejs');
-})
+const categoriesRouter = require('./routes/Categories.route');
+app.use('/danh-muc-san-pham', categoriesRouter);
 
-app.get('/Category', (req, res) => {
-  res.render('FormProductCategory.ejs');
-})
+const basketRouter = require('./routes/Basket.route');
+app.use('/gio-hang', basketRouter);
 
-app.get('/Writter', (req, res) => {
-  res.render('FormProductWritter.ejs');
-})
+const productRouter = require('./routes/Product.route');
+app.use('/thong-tin-san-pham', productRouter);
 
-app.get('/Favorite', (req, res) => {
-  res.render('FormFavoriteProduct.ejs');
-})
+const listFavoriteRouter = require('./routes/ListFavorite.route');
+app.use('/danh-sach-yeu-thich', listFavoriteRouter);
 
-app.get('/CheckOrder', (req, res) => {
-  res.render('CheckOrder.ejs');
-})
+const userRouter = require('./routes/User.route');
+app.use('/thong-tin-ca-nhan', userRouter);
 
-app.get('/Order', (req, res) => {
-  res.render('FormOrder.ejs');
-})
+const orderRouter = require('./routes/Order.route');
+app.use('/trang-dat-hang', orderRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

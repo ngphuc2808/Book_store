@@ -1,0 +1,193 @@
+<input type="checkbox" hidden name="" id="input-modal-login-admin">
+<div class="modal-login">
+    <button onclick="hiddenModalAdmin()"></button>
+</div>
+
+<div id="formLog" class="modal-container modal-signin-admin">
+    <div class="modal-container-logo">
+        <i class="fa-solid fa-circle-user"></i>
+        <p href="#" class="text-login">ĐĂNG NHẬP</p>
+    </div>
+    <div class="modal-container-detail">
+        <div class="detail-login login">
+            <span>Đăng nhập</span>
+        </div>
+        <label for="input-modal-login-admin" class="btn-close" onclick="hiddenModalAdmin()">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+        <form action="">
+            <input type="text" name="username" id="username" placeholder="Tài khoản" class="control-form">
+            <input type="password" name="password" placeholder="Mật khẩu" class="control-form">
+            <div class="signin-container">
+                <div class="button-submit">
+                    <button class="btn btn-success">
+                        <span>Đăng nhập</span> 
+                    </button>    
+                </div>
+                <div class="forget-password">
+                    <a href="#">Quên mật khẩu?</a>   
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<input type="checkbox" hidden name="" id="input-modal-product-admin">
+<div class="modal-admin-product">
+    <button onclick="hiddenModalAdminProduct()"></button>
+</div>
+<div id="formProduct" class="modal-container modal-product-admin">
+    <div class="image-product">
+        <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+    </div>
+    <div class="modal-product-detail">
+        <label for="input-modal-product-admin" class="btn-product-close" onclick="hiddenModalAdminProduct()">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+        <form action="" class="form-product">
+            <input type="text" name="" placeholder="Tên sản phẩm">
+            <input type="text" name="" placeholder="Nhà xuất bản">
+            <input type="text" name="" placeholder="Giá tiền">
+            <input type="text" name="" placeholder="Giá khuyến mãi">
+            <textarea name="" id="product-detail-2" cols="30" rows="10" placeholder="Giới thiệu"></textarea>
+            <label for="custom-file-upload-5" class="filupp">
+                <span class="filupp-file-name js-value">Ảnh chính</span>
+                <input type="file" name="attachment-file" value="1" id="custom-file-upload-5"/>
+            </label>
+            <label for="custom-file-upload-6" class="filupp">
+                <span class="filupp-file-name js-value">Ảnh phụ 1</span>
+                <input type="file" name="attachment-file" value="1" id="custom-file-upload-6"/>
+            </label>
+            <label for="custom-file-upload-7" class="filupp">
+                <span class="filupp-file-name js-value">Ảnh phụ 2</span>
+                <input type="file" name="attachment-file" value="1" id="custom-file-upload-7"/>
+            </label>
+            <label for="custom-file-upload-8" class="filupp">
+                <span class="filupp-file-name js-value">Ảnh phụ 3</span>
+                <input type="file" name="attachment-file" value="1" id="custom-file-upload-8"/>
+            </label>
+            <div class="button-product">
+                <button>Cập nhật</button>
+                <button>Xóa</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<input type="checkbox" hidden name="" id="input-modal-employee-admin">
+<div class="modal-admin-employee">
+    <button onclick="hiddenModalAdminEmployee()"></button>
+</div>
+<div id="formEmployee" class="modal-container modal-employee-admin">
+    <div class="image-employee">
+        <div class="avatar-employee">
+        <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+        </div>
+    </div>
+    <div class="modal-employee-detail">
+        <label for="input-modal-employee-admin" class="btn-employee-close" onclick="hiddenModalAdminEmployee()">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+        <form action="" class="form-employee">
+            <input type="text" name="" placeholder="Tên nhân viên">
+            <input type="text" name="" placeholder="Tài khoản">
+            <input type="text" name="" placeholder="Mật khẩu">
+            <label for="custom-file-upload-10" class="filupp">
+                <span class="filupp-file-name js-value">Ảnh đại diện</span>
+                <input type="file" name="attachment-file" value="1" id="custom-file-upload-10"/>
+            </label>
+            <div class="button-employee">
+                <button>Cập nhật</button>
+                <button>Xóa</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<input type="checkbox" hidden name="" id="input-modal-person-admin">
+<div class="modal-admin-person">
+    <button onclick="hiddenModalAdminPerson()"></button>
+</div>
+<div id="formPerson" class="modal-container modal-person-admin">
+    <div class="image-person">
+        <div class="avatar-person">
+        <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+        </div>
+    </div>
+    <div class="modal-person-detail">
+        <label for="input-modal-person-admin" class="btn-person-close" onclick="hiddenModalAdminPerson()">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+        <form action="" class="form-person">
+            <input type="text" name="" placeholder="Nguyễn Hoàng Phúc" disabled="disabled">
+            <input type="text" name="" placeholder="Hoangphuc" disabled="disabled">
+            <input type="text" name="" placeholder="Mật khẩu">
+            <div class="button-person">
+                <button>Cập nhật</button>
+                <button>Xóa</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<input type="checkbox" hidden name="" id="input-modal-add-product-admin">
+<div class="modal-admin-add-product">
+    <button onclick="hiddenModalAdminAddProduct()"></button>
+</div>
+<div id="formAddProduct" class="modal-container modal-add-product-admin">
+    <div class="modal-add-product-detail">
+        <label for="input-modal-add-product-admin" class="btn-product-close" onclick="hiddenModalAdminAddProduct()">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+        <form action="" class="form-add-product">
+            <input type="text" name="" placeholder="Tên sản phẩm">
+            <input type="text" name="" placeholder="Nhà xuất bản">
+            <input type="text" name="" placeholder="Giá tiền">
+            <input type="text" name="" placeholder="Giá khuyến mãi">
+            <textarea name="" id="product-detail" cols="30" rows="10" placeholder="Giới thiệu"></textarea>
+            <label for="custom-file-upload-1" class="filupp">
+                <span class="filupp-file-name js-value">Ảnh chính</span>
+                <input type="file" name="attachment-file" value="1" id="custom-file-upload-1"/>
+            </label>
+            <label for="custom-file-upload-2" class="filupp">
+                <span class="filupp-file-name js-value">Ảnh phụ 1</span>
+                <input type="file" name="attachment-file" value="1" id="custom-file-upload-2"/>
+            </label>
+            <label for="custom-file-upload-3" class="filupp">
+                <span class="filupp-file-name js-value">Ảnh phụ 2</span>
+                <input type="file" name="attachment-file" value="1" id="custom-file-upload-3"/>
+            </label>
+            <label for="custom-file-upload-4" class="filupp">
+                <span class="filupp-file-name js-value">Ảnh phụ 3</span>
+                <input type="file" name="attachment-file" value="1" id="custom-file-upload-4"/>
+            </label>
+            <div class="button-product">
+                <button>Thêm</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<input type="checkbox" hidden name="" id="input-modal-add-employee-admin">
+<div class="modal-admin-add-employee">
+    <button onclick="hiddenModalAdminAddEmployee()"></button>
+</div>
+<div id="formAddEmployee" class="modal-container modal-add-employee-admin">
+    <div class="modal-add-employee-detail">
+        <label for="input-modal-add-employee-admin" class="btn-employee-close" onclick="hiddenModalAdminAddEmployee()">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+        <form action="" class="form-add-employee">
+            <input type="text" name="" placeholder="Tên nhân viên">
+            <input type="text" name="" placeholder="Tài khoản">
+            <input type="text" name="" placeholder="Mật khẩu">
+            <label for="custom-file-upload-9" class="filupp">
+                <span class="filupp-file-name js-value">Ảnh đại diện</span>
+                <input type="file" name="attachment-file" value="1" id="custom-file-upload-9"/>
+            </label>
+            <div class="button-employee">
+                <button>Thêm</button>
+            </div>
+        </form>
+    </div>
+</div>

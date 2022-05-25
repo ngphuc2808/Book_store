@@ -1,0 +1,125 @@
+<header id="header">
+    <div class="content-section b-color">
+        <nav class="row navbar d-flex">
+            <div class="header-logo pointer">
+                <img src="../public/img/logo_page2.JPG" alt="" class="width-100 height-100">
+            </div>
+            <ul class="navbar-list list-1">
+                <li class="navbar-item navbar-item-separate">
+                    <i class="fa-solid fa-book-open"></i>
+                    <a href="#">Trang chủ</a>
+                </li>
+                <li class="connect-tag">
+                    <span class="connect-tag-item">Kết nối</span>
+                    <a href="#" class="connect-tag-icon connect-tag-icon-fb">
+                        <i class="fa-brands fa-facebook"></i>
+                        <div class="connect_qr_code_fb">
+                            <img src="../public/img/qr_code.jpg" alt="QR Code" class="qr_img_fb">
+                        </div>
+                    </a>
+                    <a href="#" class="connect-tag-icon connect-tag-icon-gh">
+                        <i class="fa-brands fa-github"></i>
+                        <div class="connect_qr_code_gh">
+                            <img src="../public/img/qr_code_gh.jpg" alt="QR Code" class="qr_img_gh">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="row header-content">
+            <div class="header-logo-2 pointer">
+                <img src="../public/img/logo_page2.JPG" alt="" class="height-100 width-100">
+            </div>
+            <label for="input-nav-mobile" class="header-menu pointer">
+                <span class="icon-menu" href="#">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+            </label>
+            <input type="checkbox" hidden name="" id="input-nav-mobile">
+            <label for="input-nav-mobile" class="nav-overlay" onclick="hiddenNXB()"></label>
+            <nav class="nav-mobile">
+                <label for="input-nav-mobile" class="nav-close" onclick="hiddenNXB()">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <ul class="nav-mobile-list">
+                    <li class="nav-mobile-list-nxb">
+                        <label for="mobile-nxb" class="nav-mobile-link">Nhà xuất bản</label>
+                        <input type="checkbox" hidden id="mobile-nxb">
+                        <ul class="nav-nxb-list">
+                            <li class="nav-nxb-item">
+                                <a class="nav-nxb-item-name" href="#">
+                                    Kim Đồng
+                                </a>
+                            </li>
+                            <li class="nav-nxb-item">
+                                <a class="nav-nxb-item-name" href="#">
+                                    Giáo Dục
+                                </a>
+                            </li>
+                            <li class="nav-nxb-item">
+                                <a class="nav-nxb-item-name" href="#">
+                                    Hồng Đức
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-mobile-link">Kinh tế</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-mobile-link">Văn học</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-mobile-link">Tâm lý - Kĩ năng sống</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-mobile-link">Ngoại ngữ</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-mobile-link">Tiểu thuyết</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-mobile-link">Tiểu sử - Hồi ký</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-mobile-link">Giáo khoa - Tham khảo</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-mobile-link">Sách thiếu nhi</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-mobile-link">Chuyên ngành</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-search">
+                <input class="" type="text" name="" id="" placeholder="Tìm kiếm">
+                <i class="search-btn fa-solid fa-magnifying-glass"></i>
+                <div class="history-find">
+                    <h4 class="history-find-heading">Lịch sử tìm kiếm</h4>
+                    <ul class="history-find-list">
+                        <li class="history-find-item">
+                            <a href="#">Bút bi</a>
+                        </li>
+                        <li class="history-find-item">
+                            <a href="#">Bút chì</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-list list-2">
+                <div class="navbar-item">
+                    <i class="fa-solid fa-user"></i>
+                    <label for="input-modal-login-admin" onclick="showFormLoginAdmin()">
+                        <b>Đăng nhập</b>
+                    </label>
+                </div>
+            </div>
+            <div class="header-user pointer">
+                <button onclick="showFormLoginAdmin()" class="icon-user">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
