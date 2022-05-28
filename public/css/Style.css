@@ -1867,6 +1867,17 @@ input[type=number] {
     display: none;
 }
 
+.modal-toast {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+}
+
 .modal-admin-product,
 .modal-admin-employee,
 .modal-admin-person {
@@ -1892,6 +1903,7 @@ input[type=number] {
     display: none;
 }
 
+.modal-toast button,
 .modal-login button,
 .modal-admin-product button,
 .modal-admin-add-product button,
@@ -3133,4 +3145,67 @@ input.accept-register[type="checkbox"]:checked:after {
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;
+}
+
+.list-toast {
+    position: fixed;
+    top: 74%;
+    right: 4%;
+    z-index: 999999;
+    display: block;
+    box-shadow: 0 5px 8px rgb(0 0 0 / 30%);
+    transition: ease 1.5s;
+}
+
+.toast {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    min-height: 125px;
+    max-height: 250px;
+    border-left: 4px solid;
+}
+
+.toast--error {
+    border-color: #ff623d;
+}
+
+.toast--error .toast__icon {
+    color: #ff623d;
+}
+
+.toast__icon {
+    font-size: 24px;
+}
+
+.toast__icon,
+.toast__close {
+    padding: 0 16px;
+}
+
+.toast__body {
+    flex-grow: 1;
+}
+
+.toast__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toast__msg {
+    font-size: 16px;
+    color: #888;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.toast__close {
+font-size: 20px;
+color: rgba(0, 0, 0, 0.3);
+cursor: pointer;
 }

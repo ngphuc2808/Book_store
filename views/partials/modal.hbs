@@ -15,24 +15,24 @@
         <label for="input-modal-register" class="btn-close" onclick="hiddenModal()">
             <i class="fa-solid fa-xmark"></i>
         </label>
-        <form action="">
-            <input type="text" name="username" placeholder="Tài khoản" class="control-form">
-            <input type="email" name="email" placeholder="Email" class="control-form">
-            <input type="text" name="phone" placeholder="Số điện thoại" class="control-form">
+        <form action="/" method="post">
+            <input type="text" id="username" name="username" placeholder="Tài khoản" class="control-form" {{#if values}}value={{values.username}}{{else}}value=''{{/if}}>
+            <input type="text" id="email" name="email" placeholder="Email" class="control-form" {{#if values}}value={{values.email}}{{else}}value=''{{/if}}>
+            <input type="text" id="phone" name="phone" placeholder="Số điện thoại" class="control-form" {{#if values}}value={{values.phone}}{{else}}value=''{{/if}}>
             <div class="input-pwd">
-                <input type="password" name="password" placeholder="Mật khẩu" class="control-form">
-                <input type="password" name="confirm" id="confirm" placeholder="Xác nhận mật khẩu" class="control-form">
+                <input type="password" id="password" name="password" placeholder="Mật khẩu" class="control-form" {{#if values}}value={{values.password}}{{else}}value=''{{/if}}>
+                <input type="password" id="confirm" name="confirm" id="confirm" placeholder="Xác nhận mật khẩu" class="control-form" {{#if values}}value={{values.confirm}}{{else}}value=''{{/if}}>
             </div>
             <div class="accept">
-                <input type="checkbox" id="check-accept" name="accept"> 
+                <input type="checkbox" class="accept-register" id="check-accept" name="accept" {{#if values.accept}}checked{{/if}}> 
                 <label for="accept">          
                     Tôi xác nhận các yêu cầu trên là đúng
                 </label>
             </div>
             <div class="button-submit">
-                <button class="btn btn-register">
+                <button id="buttonSubmit" class="btn btn-register" type="submit">
                     <span>Đăng ký</span> 
-                </button>    
+                </button>
             </div>
         </form>
         <div class="clone-button">

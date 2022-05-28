@@ -21,6 +21,10 @@
         display: none;
     }
 
+    .list-product .card-item {
+        width: 240px !important;
+    }
+
 }
 
 
@@ -377,6 +381,10 @@
 
     .name-phone {
         flex-basis: 40%;
+    }
+
+    .list-product .card-item {
+        width: 240px !important;
     }
 }
 
@@ -845,6 +853,16 @@
 
     .order-container-button button {
         width: 100%;
+    }
+
+    .list-toast {
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    .list-product .card-item {
+        width: 378px !important;
     }
 }
 

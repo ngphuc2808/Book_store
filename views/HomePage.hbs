@@ -1,4 +1,28 @@
 {{> header}}
+{{#if errors}}
+    <div class="modal-toast">
+        <button onclick="hiddenToast()"></button>
+    </div>
+    <div class="list-toast">
+        <div class="toast toast--error">
+            <div class="toast__icon">
+                <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Đăng ký thất bại rồi!</h3>
+                <p class="toast__msg">
+                    {{#each errors}}
+                        {{this}}
+                        <br>       
+                    {{/each}}
+                </p>
+            </div>
+            <div class="toast__close" onclick="hiddenToast();">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+{{/if}}
 
 <div id="container">
     <div class="content-section">
