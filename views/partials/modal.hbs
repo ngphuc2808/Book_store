@@ -15,13 +15,13 @@
         <label for="input-modal-register" class="btn-close" onclick="hiddenModal()">
             <i class="fa-solid fa-xmark"></i>
         </label>
-        <form action="/" method="post">
-            <input type="text" id="username" name="username" placeholder="Tài khoản" class="control-form" {{#if values}}value={{values.username}}{{else}}value=''{{/if}}>
-            <input type="text" id="email" name="email" placeholder="Email" class="control-form" {{#if values}}value={{values.email}}{{else}}value=''{{/if}}>
-            <input type="text" id="phone" name="phone" placeholder="Số điện thoại" class="control-form" {{#if values}}value={{values.phone}}{{else}}value=''{{/if}}>
+        <form id="formRegister" action="/trang-chu" method="post">
+            <input type="text" id="username" name="username" placeholder="Tài khoản" class="control-form" {{#if values}}value="{{values.username}}"{{else}}value=""{{/if}}>
+            <input type="text" id="email" name="email" placeholder="Email" class="control-form" {{#if values}}value="{{values.email}}"{{else}}value=""{{/if}}>
+            <input type="text" id="phone" name="phone" placeholder="Số điện thoại" class="control-form" {{#if values}}value="{{values.phone}}"{{else}}value=""{{/if}}>
             <div class="input-pwd">
-                <input type="password" id="password" name="password" placeholder="Mật khẩu" class="control-form" {{#if values}}value={{values.password}}{{else}}value=''{{/if}}>
-                <input type="password" id="confirm" name="confirm" id="confirm" placeholder="Xác nhận mật khẩu" class="control-form" {{#if values}}value={{values.confirm}}{{else}}value=''{{/if}}>
+                <input type="password" id="password" name="password" placeholder="Mật khẩu" class="control-form" {{#if values}}value="{{values.password}}"{{else}}value=""{{/if}}>
+                <input type="password" id="confirm" name="confirm" id="confirm" placeholder="Xác nhận mật khẩu" class="control-form" {{#if values}}value="{{values.confirm}}"{{else}}value=""{{/if}}>
             </div>
             <div class="accept">
                 <input type="checkbox" class="accept-register" id="check-accept" name="accept" {{#if values.accept}}checked{{/if}}> 
@@ -53,12 +53,12 @@
         <label for="input-modal-login" class="btn-close" onclick="hiddenModal()">
             <i class="fa-solid fa-xmark"></i>
         </label>
-        <form action="">
-            <input type="text" name="username" id="username" placeholder="Tài khoản" class="control-form">
-            <input type="password" name="password" placeholder="Mật khẩu" class="control-form">
+        <form id="formLogin" action="/thong-tin-ca-nhan" method="post">
+            <input type="text" name="usernameLogin" id="usernameLogin" placeholder="Tài khoản" class="control-form" {{#if valuesLogin}}value="{{valuesLogin.usernameLogin}}"{{else}}value=''{{/if}}>
+            <input type="password" name="passwordLogin" placeholder="Mật khẩu" class="control-form" {{#if valuesLogin}}value="{{valuesLogin.passwordLogin}}"{{else}}value=''{{/if}}>
             <div class="signin-container">
                 <div class="button-submit">
-                    <button class="btn btn-success">
+                    <button class="btn btn-success" type="submit">
                         <span>Đăng nhập</span> 
                     </button>    
                 </div>

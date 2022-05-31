@@ -7,6 +7,12 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String
     },
+    name: {
+        type: String
+    },
+    dob: {
+        type: String
+    },
     email: {
         type: String
     },
@@ -14,6 +20,12 @@ const userSchema = new mongoose.Schema({
         type: String
     },
     address: {
+        type: String
+    },
+    avatar: {
+        type: String
+    },
+    detail: {
         type: String
     }
 });

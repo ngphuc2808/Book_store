@@ -1,10 +1,9 @@
-const express = require('express');
 const bcrypt = require('bcrypt');
-const User = require('../model/user.model');
-const validator = require("email-validator");
-validator.validate("test@email.com");
- 
-const userController = {
+const User = require('../model/User.model');
+const validator = require('email-validator');
+validator.validate('test@email.com');
+
+const authController = {
     // Register
     registerUser: async(req, res) => {
         try {
@@ -16,9 +15,13 @@ const userController = {
             const user = await new User({
                 username: req.body.username,
                 password: hash,
+                name: "",
+                dob: "",
                 email: req.body.email,
                 phone: req.body.phone,
-                address: ""
+                address: "",
+                avatar: "",
+                detail: "",
             });
 
             // Validate Thong tin cua User
@@ -34,6 +37,12 @@ const userController = {
                 !req.body.confirm ) {
                 errors.push('Bạn đã nhập thiếu thông tin, vui lòng kiểm tra lại!');
             } else {
+                if(req.body.username < 8) {
+                    errors.push('Vui lòng nhập một tài khoản dài hơn');
+                }
+                if(req.body.password < 8) {
+                    errors.push('Vui lòng nhập một mật khẩu dài hơn');
+                }
                 if(usernameAccount) {
                     errors.push('Tài khoản đã tồn tại');
                 }
@@ -53,31 +62,86 @@ const userController = {
                     errors.push('Vui lòng nhập đúng định dạng số điện thoại');
                 }
                 if(req.body.accept !== "on") {
-                    errors.push("Vui lòng các nhận các yêu cầu trên là đúng");
+                    errors.push('Vui lòng các nhận các yêu cầu trên là đúng');
                 } 
             } 
             
-            if(errors.length > 0) {
+            if(errors.length) {
                 res.render('HomePage', {
                     errors: errors,
                     values: req.body
-                })
+                });
                 return;
             } else {
                 await user.save((err, doc) => {
                     if(!err) {
-                        res.redirect('/');
+                        res.render('HomePage');
                     }
-                    else    
-                    errors.push('Đăng ký thất bại !');
+                    else {
+                        errors.push('Đăng ký thất bại !');
+                    }  
                 });
             }  
-        } 
-        catch(err) {
+        } catch(err) {
             console.log('Register failed!!! ' + err);
         }
     },
+
     // Login
+    loginUser: async(req, res) => {
+        try {
+            const errorsLogin = [];
+            if(!req.body.usernameLogin ||
+                !req.body.passwordLogin ) {
+                errorsLogin.push('Bạn đã nhập thiếu thông tin, vui lòng kiểm tra lại!');
+                console.log('Bạn đã nhập thiếu thông tin, vui lòng kiểm tra lại!');
+            } else {
+                const user = await User.findOne({ username: req.body.usernameLogin });
+                if(!user) {
+                    errorsLogin.push('Sai tài khoản đăng nhập');
+                } else {
+                    const validPassword = await bcrypt.compare(req.body.passwordLogin, user.password);
+                    if(!validPassword) {
+                        errorsLogin.push('Sai mật khẩu đăng nhập');
+                    } else {
+                        if(user && validPassword) {
+                            req.session.isAuthenticated = true;
+                            req.session.authUser = user;
+                            res.redirect(`/thong-tin-ca-nhan/${user._id}`);
+                        }
+                    }
+                }
+            }
+
+            if(errorsLogin.length) {
+                res.render('HomePage', {
+                    errorsLogin: errorsLogin,
+                    valuesLogin: req.body
+                });
+                return;
+            } 
+        } catch(err) {
+            console.log('Login failed!!! ' + err);
+        }
+    },
+
+    // Update
+    updateInfo: async(req, res) => {
+        try {
+            req.body.avatar = req.file.path;
+            User.findOneAndUpdate({ _id : req.body._id }, req.body, {new: true}, (err, doc) => {
+                if(!err) {
+                    res.redirect(`/thong-tin-ca-nhan/${req.body._id}`);
+                } else {
+                    if(err.name === 'ValidationError') {
+                        handleValidationError(err, req.body);
+                    }
+                }
+            });
+        } catch(err) {
+            console.log('Update failed!!! ' + err);
+        }
+    }
 };
 
 // Validate Email
@@ -93,11 +157,11 @@ function checkEmail(mail) {
     if(!valid)
         return false;
 
-    var parts = mail.split("@");
+    var parts = mail.split('@');
     if(parts[0].length>64)
         return false;
 
-    var domainParts = parts[1].split(".");
+    var domainParts = parts[1].split('.');
     if(domainParts.some(function(part) { return part.length>63; }))
         return false;
 
@@ -120,4 +184,4 @@ function checkNumberPhone(number) {
     return true; 
 }
 
-module.exports = userController;
+module.exports = authController;

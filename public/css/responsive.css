@@ -25,6 +25,12 @@
         width: 240px !important;
     }
 
+    .avt-img {
+        top: 293px;
+        left: -425px;
+        width: 78%;
+    }
+
 }
 
 
@@ -133,6 +139,10 @@
     }
 
     #mobile-tg:checked ~ .nav-nxb-list {
+        display: block;
+    }
+
+    #mobile-cat:checked ~ .nav-nxb-list {
         display: block;
     }
 }
@@ -385,6 +395,17 @@
 
     .list-product .card-item {
         width: 240px !important;
+    }
+
+    .user-name {
+        width: 86%;
+        font-size: 23px;
+    }
+
+    .avt-img {
+        top: 293px;
+        left: -304px;
+        width: 53%;
     }
 }
 
@@ -864,7 +885,27 @@
     .list-product .card-item {
         width: 378px !important;
     }
+
+    .avt-img {
+        top: -140px;
+        width: 100%;
+        left: -20px;
+    }
+
+    .user-header {
+        margin-top: 6px;
+    }
+
+    .user-content {
+        margin-bottom: 60px;
+    }
+
+    .user-name {
+        font-size: 23px;
+        width: 58%;
+    }
 }
+
 
 @media (max-width: 374px) { 
     .header-search {

@@ -1,15 +1,14 @@
 {{> header}}
-
 <div id="container">
     <div class="content-section">
         <div class="row user-container">
             <div class="user-container-left">
                 <div class="user-content">
                     <div class="user-avatar">
-                        <img src="https://jutsume.com/images/2021/05/09/gojou-satoru-shared-by-ana-on-we-heart-it.jpg" alt="">
+                        <img src="../{{lcAuthUser.avatar}}" alt="">
                     </div>
                     <div class="user-name">
-                        <p>Your name</p>
+                        <p>{{lcAuthUser.name}}</p>
                     </div>
                 </div>
             </div>
@@ -20,30 +19,35 @@
                     </div>
                     <div class="border-product"></div>
                     <div class="user-info">
-                        <form action="" class="form-info">
-                            <label for="user-info-name">
-                                <p>Họ tên</p> 
-                                <input id="user-info-name" type="text" placeholder="Họ tên">
-                            </label>
-                            <label for="user-info-dob">
-                                <p>Ngày sinh</p>
-                                <input id="user-info-dob" type="text" placeholder="Ngày sinh">
-                            </label>
+                        <form id="formUpdateInfo" action="/trang-thong-tin" class="form-info" method="post" enctype="multipart/form-data">
+                            <input type="hidden" id="_id" name="_id" placeholder="Id" class="control-form" value="{{lcAuthUser._id}}">
                             <label for="user-info-mail">
                                 <p>Email</p>
-                                <input id="user-info-mail" type="email" placeholder="Email">
+                                <input id="user-info-mail" name="email" disabled type="email" value="{{lcAuthUser.email}}">
                             </label>
                             <label for="user-info-phone">
                                 <p>Số điện thoại</p>
-                                <input id="user-info-phone" type="text" placeholder="Số điện thoại">
+                                <input id="user-info-phone" name="phone" disabled type="text" value="{{lcAuthUser.phone}}">
+                            </label>
+                            <label for="user-info-name">
+                                <p>Họ tên</p> 
+                                <input id="user-info-name" name="name" type="text" placeholder="{{lcAuthUser.name}}" value="{{lcAuthUser.name}}">
+                            </label>
+                            <label for="user-info-dob">
+                                <p>Ngày sinh</p>
+                                <input id="user-info-dob" name="dob" type="text" placeholder="{{lcAuthUser.dob}}" value="{{lcAuthUser.dob}}">
                             </label>
                             <label for="user-info-address">
                                 <p>Địa chỉ</p>
-                                <input id="user-info-address" type="text" placeholder="Địa chỉ">
+                                <input id="user-info-address" name="address" type="text" placeholder="{{lcAuthUser.address}}" value="{{lcAuthUser.address}}">
                             </label>
                             <label for="user-info-message">
                                 <p>Giới thiệu</p>
-                                <textarea id="user-info-message" placeholder="Giới thiệu" aria-invalid="true" aria-required="true"></textarea>
+                                <textarea id="user-info-message" name="detail" placeholder="{{lcAuthUser.detail}}"aria-invalid="true" aria-required="true">{{lcAuthUser.detail}}</textarea>
+                            </label>
+                            <label for="custom-file-upload" class="filupp avt-img">
+                                <span class="filupp-file-name js-value">Ảnh đại diện</span>
+                                <input type="file" name="avatar" id="custom-file-upload"/>
                             </label>
                             <button type="submit" class="update-info">Cập nhật</button>
                         </form>
@@ -52,15 +56,15 @@
                             <div class="icon-info">
                                 <div class="info-address">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <p>Số 1 Võ Văn Ngân</p>
+                                    <p>{{lcAuthUser.address}}</p>
                                 </div>
                                 <div class="info-phone">
                                     <i class="fa-solid fa-phone"></i>
-                                    <p>0906391823</p>
+                                    <p>{{lcAuthUser.phone}}</p>
                                 </div>
                                 <div class="info-mail">
                                     <i class="fa-solid fa-envelope"></i>
-                                    <p>@hcmute.edu.vn</p>
+                                    <p>{{lcAuthUser.email}}</p>
                                 </div>
                             </div>
                         </div>

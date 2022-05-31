@@ -68,11 +68,11 @@
     padding: 0 8px;
 }
 
-.list-1> :first-child {
+.list-1 > :first-child {
     padding-left: 0;
 }
 
-.list-2> :last-child {
+.list-2 > :last-child {
     padding-right: 0;
 }
 
@@ -495,6 +495,7 @@
     width: 100%;
     border-top: 1px solid #d3d3d3;
     text-align: center;
+    font-size: 15px;
 }
 
 .navbar-item .check-order-content-unclicked {
@@ -1141,8 +1142,9 @@
     padding: 0 10px 0 10px;
 }
 
-.favorite-rating {
+#favorite-rating {
     z-index: 0;
+    padding: 0 !important;
 }
 
 .list-product .favorite-icon i,
@@ -1163,10 +1165,6 @@
 .list-favorite .favorite-heart-fill {
     display: none;
     color: #c92127;
-}
-
-.favorite-rating {
-    padding: 0 !important;
 }
 
 .list-product .card-item-buy,
@@ -2670,9 +2668,9 @@ input.accept-register[type="checkbox"]:checked:after {
 
 .user-name {
     position: absolute;
-    font-size: 24px;
-    letter-spacing: 1px;
-    top: 80%;
+    font-size: 21px;
+    /* letter-spacing: 1px; */
+    top: 82%;
     left: 50%;
     transform: translate(-50%, -4%);
 }
@@ -3208,4 +3206,82 @@ input.accept-register[type="checkbox"]:checked:after {
 font-size: 20px;
 color: rgba(0, 0, 0, 0.3);
 cursor: pointer;
+}
+
+.show-info {
+    position: relative;
+}
+
+.show-info ul::before {
+    content: "";
+    border-style: solid;
+    border-width: 13px 16px;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    top: -25px;
+    right: 12px;
+}
+
+.show-info:hover ul {
+    transform: scale(1);
+}
+
+
+.show-info ul {
+    top: 44px;
+    right: -11px;
+    width: 158px;
+    background-color: #fff;
+    position: absolute;
+    border: 1px solid #d3d3d3;
+    list-style: none;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    z-index: 1;
+    transform: scale(0);
+    transform-origin: 95% top;
+    transition: ease 0.2s;
+}
+
+.show-info ul li {
+    padding: 4px 16px;
+}
+
+.show-info ul li:hover {
+    background-color: #ddd;
+}
+
+.show-info ul li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+
+
+.show-info label {
+    position: relative;
+}
+
+.show-info label i {
+    position: absolute;
+    top: 18%;
+    right: -18%;
+}
+
+#formLogout {
+    display: none;
+}
+
+.upload-user-avatar {
+    display: flex;
+    justify-content: center;
+}
+
+#formUpdateInfo {
+    position: relative;
+}
+
+.avt-img {
+    position: absolute;
 }

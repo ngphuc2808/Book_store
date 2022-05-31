@@ -23,7 +23,30 @@
         </div>
     </div>
 {{/if}}
-
+{{#if errorsLogin}}
+    <div class="modal-toast">
+        <button onclick="hiddenToast()"></button>
+    </div>
+    <div class="list-toast">
+        <div class="toast toast--error">
+            <div class="toast__icon">
+                <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Đăng nhập thất bại rồi!</h3>
+                <p class="toast__msg">
+                    {{#each errorsLogin}}
+                        {{this}}
+                        <br>       
+                    {{/each}}
+                </p>
+            </div>
+            <div class="toast__close" onclick="hiddenToast();">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+{{/if}}
 <div id="container">
     <div class="content-section">
         <div class="row content-section-adv">
@@ -99,7 +122,7 @@
                             <span class="new-price">50.000 đ</span>
                         </div>
                         <div class="card-item-favorite">
-                            <div class="favorite-rating"></div>
+                            <div id="favorite-rating"></div>
                             <div class="favorite-icon">
                                 <i class="favorite-heart fa-regular fa-heart"></i>
                                 <i class="favorite-heart-fill fa-solid fa-heart"></i>

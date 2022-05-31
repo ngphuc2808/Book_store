@@ -39,7 +39,7 @@ $(document).ready(function() {
 
   $('#user-info-dob').datepicker();
 
-  $('.favorite-rating').rateYo({
+  $('#favorite-rating').rateYo({
     rating: 0,
     spacing: '3px',
     starWidth: '14px',
@@ -48,7 +48,7 @@ $(document).ready(function() {
     minValue: 0,
     maxValue: 5,
     normalFill: '#999',
-    ratedFill: '#c92127',
+    ratedFill: '#c92127'
   });
 
   $('input[type="file"]').change(function(){
