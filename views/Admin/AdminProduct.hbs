@@ -1,0 +1,75 @@
+{{> headerAdmin}}
+<div id="admin-container">
+    <div class="content-section">
+        <div class="row admin-container">
+            <div class="admin-container-left">
+                <div class="admin-content">
+                    <div class="admin-avatar">
+                        <img src="https://www.kindpng.com/picc/m/699-6997452_administrator-network-icons-system-avatar-computer-transparent-admin.png" alt="">
+                    </div>
+                    <div class="admin-name">
+                        <p>Welcome, Administrator !</p>
+                    </div>
+                </div>
+                <div class="admin-list-category">
+                    <div class="admin-content-header">
+                        Danh mục quản lý
+                    </div>
+                    <div class="border-product"></div>
+                    <ul class="admin-category">
+                        <li class="admin-item-category"><a href="/admin/employee">Quản lý nhân viên</a></li>
+                        <li class="admin-item-category"><a href="/admin/user">Quản lý người dùng</a></li>
+                        <li class="admin-item-category"><a href="/admin/category">Quản lý danh mục</a></li>
+                        <li class="admin-item-category"><a href="/admin/product">Quản lý sản phẩm</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="admin-product admin-container-right">
+                <div class="admin-category-content">
+                    <div class="admin-header">
+                        <div class="admin-info-header">
+                            <i class="fa-brands fa-product-hunt"></i>
+                            <p>
+                                Quản lý sản phẩm
+                            </p>
+                        </div>
+                        <label class="admin-add-product" onclick="showFormAdminAddProduct()">
+                            Thêm sách
+                        </label>  
+                    </div>
+                    <div class="admin-list-header">
+                        <ul class="admin-list-info-product">
+                            <li class="admin-item-info-product">Hình ảnh</li>
+                            <li class="admin-item-info-product">Tên sản phẩm</li>
+                            <li class="admin-item-info-product">Giá tiền</li>
+                            <li class="admin-item-info-product">Số lượng</li>
+                            <li class="admin-item-info-product">&nbsp;</li>
+                        </ul>
+                    </div>
+                    <div class="admin-info-content">
+                        <ul class="admin-list-product">
+                            <li class="admin-item-product">
+                                <div class="admin-image-product">
+                                    <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                </div>
+                            </li>
+                            <li class="admin-item-product">Lập trình và cuộc sống</li>
+                            <li class="admin-item-product">200.000</li>
+                            <li class="admin-item-product">100</li>
+                            <li class="admin-item-product">
+                                <a href="">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                                <i class="fa-solid fa-trash-can"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> modalAdmin}}
+
+{{> footer}}

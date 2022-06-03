@@ -330,31 +330,34 @@
     }
 
     .admin-list-employee > :nth-child(3) {
-        flex-basis: 19%;
+        flex-basis: 29%;
     }
 
     .admin-list-employee > :nth-child(4) {
-        flex-basis: 35%;
-    }
-
-    .admin-list-employee > :nth-child(5) {
-        flex-basis: 15%;
-    }
-
-    .admin-list-product > :nth-child(2) {
-        flex-basis: 33%;
-    }
-
-    .admin-list-product > :nth-child(3) {
-        flex-basis: 19%;
-    }
-
-    .admin-list-product > :nth-child(4) {
         flex-basis: 25%;
     }
 
+    .admin-item-employee a,
+    .admin-item-employee i,
+    .admin-item-product a,
+    .admin-item-product i {
+        padding: 0 3px;
+    }
+
+    .admin-list-product > :nth-child(2) {
+        flex-basis: 44%;
+    }
+
+    .admin-list-product > :nth-child(3) {
+        flex-basis: 10%;
+    }
+
+    .admin-list-product > :nth-child(4) {
+        flex-basis: 35%;
+    }
+
     .admin-list-product > :nth-child(5) {
-        flex-basis: 23%;
+        flex-basis: 17%;
     }
 
     .admin-list-employee-person > :nth-child(3) {
@@ -406,6 +409,27 @@
         top: 293px;
         left: -304px;
         width: 53%;
+    }
+
+    .emp-account {
+        flex-basis: 34%;
+    }
+
+    .user-account {
+        flex-basis: 52%;
+    }
+
+    .cat-title {
+        display: block !important;
+    }
+
+    .code-cat {
+        display: flex !important;
+        flex-basis: 40%;
+    }
+
+    .admin-add-category {
+        width: 230px;
     }
 }
 
@@ -748,12 +772,8 @@
     }
 
     .admin-list-employee > :first-child,
-    .admin-list-employee > :nth-child(2) {
+    .admin-list-employee > :nth-child(4) {
         display: none;
-    }
-
-    .admin-list-product > :nth-child(2) {
-        flex-basis: 47%;
     }
 
     .admin-list-product > :nth-child(3) {
@@ -903,6 +923,38 @@
     .user-name {
         font-size: 23px;
         width: 58%;
+    }
+
+    .admin-list-employee > :nth-child(2) {
+        flex-basis: 71%;
+    }
+
+    .admin-list-employee > :nth-child(3) {
+        flex-basis: 38%;
+    }
+
+    .admin-list-product > :nth-child(2) {
+        flex-basis: 74%;
+    }
+
+    .admin-item-employee a,
+    .admin-item-employee i,
+    .admin-item-product a,
+    .admin-item-product i {
+        padding: 0 3px;
+    }
+
+    .cat-title {
+        display: block !important;
+    }
+
+    .code-cat {
+        display: flex !important;
+        flex-basis: 62%;
+    }
+    
+    .admin-add-category {
+        font-size: 13px;
     }
 }
 

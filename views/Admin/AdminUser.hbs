@@ -1,0 +1,74 @@
+{{> headerAdmin}}
+<div id="admin-container">
+    <div class="content-section">
+        <div class="row admin-container">
+            <div class="admin-container-left">
+                <div class="admin-content">
+                    <div class="admin-avatar">
+                        <img src="https://www.kindpng.com/picc/m/699-6997452_administrator-network-icons-system-avatar-computer-transparent-admin.png" alt="">
+                    </div>
+                    <div class="admin-name">
+                        <p>Welcome, Administrator !</p>
+                    </div>
+                </div>
+                <div class="admin-list-category">
+                    <div class="admin-content-header">
+                        Danh mục quản lý
+                    </div>
+                    <div class="border-product"></div>
+                    <ul class="admin-category">
+                        <li class="admin-item-category"><a href="/admin/employee">Quản lý nhân viên</a></li>
+                        <li class="admin-item-category"><a href="/admin/user">Quản lý người dùng</a></li>
+                        <li class="admin-item-category"><a href="/admin/category">Quản lý danh mục</a></li>
+                        <li class="admin-item-category"><a href="/admin/product">Quản lý sản phẩm</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="admin-person admin-container-right">
+                <div class="admin-category-content">
+                    <div class="admin-header">
+                        <div class="admin-info-header">
+                            <i class="fa-solid fa-user"></i>
+                            <p>
+                                Quản lý người dùng
+                            </p>
+                        </div>
+                    </div>
+                    <div class="admin-list-header">
+                        <ul class="admin-list-info-product admin-list-info-product-person">
+                            <li class="admin-item-info-product">Ảnh người dùng</li>
+                            <li class="admin-item-info-product">Tên người dùng</li>
+                            <li class="admin-item-info-product">Số điện thoại</li>
+                            <li class="admin-item-info-product user-account">Tài khoản người dùng</li>
+                            <li class="admin-item-info-product">&nbsp;</li>
+                        </ul>
+                    </div>
+                    <div class="admin-info-content">
+                        {{#each this.users}}
+                            <ul class="admin-list-employee admin-list-employee-person">
+                                <li class="admin-item-employee">
+                                    <div class="admin-image-employee">
+                                        <img src="../{{avatar}}" alt="">
+                                    </div>
+                                </li>
+                                <li class="admin-item-employee">{{name}}</li>
+                                <li class="admin-item-employee">{{phone}}</li>
+                                <li class="admin-item-employee">{{username}}</li>
+                                <li class="admin-item-employee">
+                                    <a href="">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </li>
+                            </ul>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> modalAdmin}}
+
+{{> footer}}

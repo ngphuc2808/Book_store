@@ -107,19 +107,33 @@
                     </ul>
                 </div>
             </div>
-            <div class="navbar-list list-2">
-                <div class="navbar-item">
+            {{#if lcIsAuthenticatedAdmin}}
+                <form id="formLogoutAdmin" action="/admin/dang-xuat" method="post"></form>
+                <li class="navbar-item show-info info-admin">
                     <i class="fa-solid fa-user"></i>
-                    <label for="input-modal-login-admin" onclick="showFormLoginAdmin()">
-                        <b>Đăng nhập</b>
+                    <label>
+                        <b>Xin chào, {{lcAuthAdmin.username}}!</b>
+                        <i class="fa-solid fa-sort-down"></i>
                     </label>
+                    <ul>
+                        <li><a href="javascript: $('#formLogoutAdmin').submit();">Đăng xuất</a></li>
+                    </ul>
+                </li>
+            {{else}}
+                <div class="navbar-list list-2">
+                    <div class="navbar-item">
+                        <i class="fa-solid fa-user"></i>
+                        <label for="input-modal-login-admin" onclick="showFormLoginAdmin()">
+                            <b>Đăng nhập</b>
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <div class="header-user pointer">
-                <button onclick="showFormLoginAdmin()" class="icon-user">
-                    <i class="fa-solid fa-user"></i>
-                </button>
-            </div>
+                <div class="header-user pointer">
+                    <button onclick="showFormLoginAdmin()" class="icon-user">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
+            {{/if}}
         </div>
     </div>
 </header>

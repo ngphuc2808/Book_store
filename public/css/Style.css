@@ -1837,23 +1837,6 @@ input[type=number] {
     opacity: 1;
 }
 
-#input-modal-login-admin:checked~.modal-signin-admin {
-    transform: translate(-50%, -50%);
-    opacity: 1;
-}
-
-.admin-product {
-    display: none;
-}
-
-.admin-person {
-    display: none;
-}
-
-.admin-employee {
-    display: block;
-}
-
 .modal-login {
     position: fixed;
     top: 0;
@@ -1890,7 +1873,8 @@ input[type=number] {
 }
 
 .modal-admin-add-product,
-.modal-admin-add-employee {
+.modal-admin-add-employee,
+.modal-admin-add-category {
     position: fixed;
     top: 0;
     left: 0;
@@ -1905,6 +1889,7 @@ input[type=number] {
 .modal-login button,
 .modal-admin-product button,
 .modal-admin-add-product button,
+.modal-admin-add-category button,
 .modal-admin-add-employee button,
 .modal-admin-employee button,
 .modal-admin-person button {
@@ -1944,6 +1929,11 @@ input[type=number] {
 
 .modal-add-product-admin {
     height: 800px;
+    width: 500px;
+}
+
+.modal-add-category-admin {
+    height: 300px;
     width: 500px;
 }
 
@@ -1989,6 +1979,7 @@ input[type=number] {
 .modal-employee-admin .form-employee,
 .modal-person-admin .form-person,
 .modal-add-product-admin .form-add-product,
+.modal-add-category-admin .form-add-category,
 .modal-add-employee-admin .form-add-employee {
     display: flex;
     flex-direction: column;
@@ -2002,6 +1993,7 @@ input[type=number] {
 .modal-employee-admin .form-employee input,
 .modal-person-admin .form-person input,
 .modal-add-product-admin .form-add-product input,
+.modal-add-category-admin .form-add-category input,
 .modal-add-employee-admin .form-add-employee input {
     width: 70%;
     padding: 14px 12px;
@@ -2032,6 +2024,7 @@ input[type=number] {
 }
 
 .form-add-product .button-product,
+.form-add-category .button-category,
 .form-add-employee .button-employee {
     display: flex;
     justify-content: center;
@@ -2040,6 +2033,7 @@ input[type=number] {
 }
 
 .form-add-product .button-product button,
+.form-add-category .button-category button,
 .form-add-employee .button-employee button {
     width: 75%;
     padding: 14px 0;
@@ -2053,6 +2047,7 @@ input[type=number] {
 }
 
 .form-add-product .button-product button:hover,
+.form-add-category .button-category button:hover,
 .form-add-employee .button-employee button:hover {
     cursor: pointer;
     opacity: 0.8;
@@ -2112,6 +2107,7 @@ input[type=number] {
 }
 
 .modal-add-product-admin .modal-add-product-detail,
+.modal-add-category-admin .modal-add-category-detail,
 .modal-add-employee-admin .modal-add-employee-detail {
     position: relative;
     background-color: #282828;
@@ -2126,6 +2122,7 @@ input[type=number] {
 .modal-employee-detail .btn-employee-close,
 .modal-person-detail .btn-person-close,
 .modal-add-product-detail .btn-product-close,
+.modal-add-category-detail .btn-category-close,
 .modal-add-employee-detail .btn-employee-close {
     color: #e66619;
     position: absolute;
@@ -2139,6 +2136,7 @@ input[type=number] {
 .modal-employee-detail .btn-employee-close i,
 .modal-person-detail .btn-person-close i,
 .modal-add-product-detail .btn-product-close i,
+.modal-add-category-detail .btn-category-close i,
 .modal-add-employee-detail .btn-employee-close i {
     font-size: 20px;
 }
@@ -2147,6 +2145,7 @@ input[type=number] {
 .modal-employee-detail .btn-employee-close:hover i,
 .modal-person-detail .btn-person-close:hover i,
 .modal-add-product-detail .btn-product-close:hover i,
+.modal-add-category-detail .btn-category-close:hover i,
 .modal-add-employee-detail .btn-employee-close:hover i  {
     opacity: 0.8;
 }
@@ -2171,6 +2170,7 @@ input[type=number] {
 .modal-signin-admin,
 .modal-product-admin,
 .modal-add-product-admin,
+.modal-add-category-admin,
 .modal-add-employee-admin,
 .modal-employee-admin,
 .modal-person-admin {
@@ -2700,12 +2700,15 @@ input.accept-register[type="checkbox"]:checked:after {
     height: 280px;
 }
 
-.admin-category {
-    margin-top: 16px;
+.admin-list-category {
     background-color: #fff;
     box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
-    height: auto;
+    margin-top: 16px;
     border-radius: 4px;
+}
+
+.admin-category {
+    height: auto;
 }
 
 .admin-content-header {
@@ -2714,11 +2717,11 @@ input.accept-register[type="checkbox"]:checked:after {
     letter-spacing: 0.5px;
 }
 
-.admin-list-category {
+.admin-category {
     list-style: none;
 }
 
-.admin-list-category > :last-child {
+.admin-category > :last-child {
     padding-bottom: 12px;
 }
 
@@ -2727,6 +2730,11 @@ input.accept-register[type="checkbox"]:checked:after {
     font-size: 16px;
     transition: ease 0.3s;
     letter-spacing: 0.5px;
+}
+
+.admin-item-category a {
+    color: #000;
+    text-decoration: none;
 }
 
 .admin-list-product,
@@ -2742,10 +2750,17 @@ input.accept-register[type="checkbox"]:checked:after {
     list-style: none;
 }
 
-.admin-item-category:hover {
+.admin-item-category a:hover {
     cursor: pointer;
     transform: translateX(+5px);
     color: #e66619;
+}
+
+.admin-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .admin-image-product,
@@ -2759,20 +2774,20 @@ input.accept-register[type="checkbox"]:checked:after {
 }
 
 .admin-list-product > :nth-child(2) {
-    flex-basis: 29%;
+    flex-basis: 32%;
     padding: 0 12px;
 }
 
 .admin-list-product > :nth-child(3) {
-    flex-basis: 15%;
+    flex-basis: 14%;
 }
 
 .admin-list-product > :nth-child(4) {
-    flex-basis: 23%;
+    flex-basis: 27%;
 }
 
 .admin-list-product > :nth-child(5) {
-    flex-basis: 17%;
+    flex-basis: 5%;
 }
 
 .admin-list-product > :nth-child(5) label {
@@ -2786,21 +2801,29 @@ input.accept-register[type="checkbox"]:checked:after {
     cursor: pointer;
 }
 
+.emp-account {
+    flex-basis: 24%;
+}
+
+.user-account {
+    flex-basis: 26%;
+}
+
 .admin-list-employee > :nth-child(2) {
-    flex-basis: 27%;
+    flex-basis: 25%;
     padding: 0 12px;
 }
 
 .admin-list-employee > :nth-child(3) {
-    flex-basis: 14%;
+    flex-basis: 15%;
 }
 
 .admin-list-employee > :nth-child(4) {
-    flex-basis: 32%;
+    flex-basis: 28%;
 }
 
 .admin-list-employee > :nth-child(5) {
-    flex-basis: 8%;
+    flex-basis: 14%;
 }
 
 .admin-list-employee > :nth-child(5) label {
@@ -2822,6 +2845,21 @@ input.accept-register[type="checkbox"]:checked:after {
     font-size: 16px;
     color: #fff;
     font-weight: 600;
+}
+
+.admin-item-employee a,
+.admin-item-employee i,
+.admin-item-product a, 
+.admin-item-product i {
+    font-size: 20px;
+    color: #fff;
+    padding: 0 6px;
+}
+
+.admin-item-product a:hover, 
+.admin-item-product i:hover {
+    color: #e66619;
+    cursor: pointer;
 }
 
 .admin-image-product img,
@@ -2895,6 +2933,14 @@ input.accept-register[type="checkbox"]:checked:after {
     margin-right: 8px;
 }
 
+.admin-add-category {
+    color: #0fb300;
+    padding: 4px 8px;
+    border: 2px solid #0fb300;
+    border-radius: 4px;
+    width: 182px;
+}
+
 .admin-add-product {
     color: #0fb300;
     padding: 4px 8px;
@@ -2911,6 +2957,7 @@ input.accept-register[type="checkbox"]:checked:after {
     width: 181px;
 }
 
+.admin-add-category:hover,
 .admin-add-product:hover,
 .admin-add-employee:hover {
     cursor: pointer;
@@ -3165,15 +3212,23 @@ input.accept-register[type="checkbox"]:checked:after {
     max-width: 450px;
     min-height: 125px;
     max-height: 250px;
-    border-left: 4px solid;
+    border-left: 6px solid;
 }
 
 .toast--error {
     border-color: #ff623d;
 }
 
+.toast--success {
+    border-color: #1ef729;
+}
+
 .toast--error .toast__icon {
     color: #ff623d;
+}
+
+.toast--success .toast__icon {
+    color: #1ef729;
 }
 
 .toast__icon {
@@ -3206,6 +3261,10 @@ input.accept-register[type="checkbox"]:checked:after {
 font-size: 20px;
 color: rgba(0, 0, 0, 0.3);
 cursor: pointer;
+}
+
+.info-admin label b {
+    font-size: 16px;
 }
 
 .show-info {
@@ -3266,7 +3325,7 @@ cursor: pointer;
 .show-info label i {
     position: absolute;
     top: 18%;
-    right: -18%;
+    right: -22px;
 }
 
 #formLogout {
@@ -3284,4 +3343,24 @@ cursor: pointer;
 
 .avt-img {
     position: absolute;
+}
+
+.code-cat {
+    flex-basis: 34%;
+}
+
+.cat-name {
+    flex-basis: 42% !important;
+}
+
+.cat-icon {
+    flex-basis: 24%;
+}
+
+.modal-add-employee-detail h3,
+.modal-add-category-detail h3,
+.modal-add-product-detail h3 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 28px;
 }

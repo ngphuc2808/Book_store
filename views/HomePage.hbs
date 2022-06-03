@@ -23,6 +23,24 @@
         </div>
     </div>
 {{/if}}
+{{#if doc}}
+    <div class="modal-toast">
+        <button onclick="hiddenToast()"></button>
+    </div>
+    <div class="list-toast">
+        <div class="toast toast--success">
+            <div class="toast__icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Đăng ký thành công!</h3>
+            </div>
+            <div class="toast__close" onclick="hiddenToast();">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+{{/if}}
 {{#if errorsLogin}}
     <div class="modal-toast">
         <button onclick="hiddenToast()"></button>
@@ -725,3 +743,5 @@
 </div>
 
 {{> modal}}
+
+{{> footer}}

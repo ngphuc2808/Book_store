@@ -15,12 +15,12 @@
         <label for="input-modal-login-admin" class="btn-close" onclick="hiddenModalAdmin()">
             <i class="fa-solid fa-xmark"></i>
         </label>
-        <form action="">
+        <form action="/admin" method="post">
             <input type="text" name="username" id="username" placeholder="Tài khoản" class="control-form">
             <input type="password" name="password" placeholder="Mật khẩu" class="control-form">
             <div class="signin-container">
                 <div class="button-submit">
-                    <button class="btn btn-success">
+                    <button class="btn btn-success" type="submit">
                         <span>Đăng nhập</span> 
                     </button>    
                 </div>
@@ -119,8 +119,8 @@
             <i class="fa-solid fa-xmark"></i>
         </label>
         <form action="" class="form-person">
-            <input type="text" name="" placeholder="Nguyễn Hoàng Phúc" disabled="disabled">
-            <input type="text" name="" placeholder="Hoangphuc" disabled="disabled">
+            <input type="text" name="" placeholder="Họ tên" disabled="disabled">
+            <input type="text" name="" placeholder="Tài khoản" disabled="disabled">
             <input type="text" name="" placeholder="Mật khẩu">
             <div class="button-person">
                 <button>Cập nhật</button>
@@ -130,20 +130,19 @@
     </div>
 </div>
 
-<input type="checkbox" hidden name="" id="input-modal-add-product-admin">
 <div class="modal-admin-add-product">
     <button onclick="hiddenModalAdminAddProduct()"></button>
 </div>
 <div id="formAddProduct" class="modal-container modal-add-product-admin">
     <div class="modal-add-product-detail">
-        <label for="input-modal-add-product-admin" class="btn-product-close" onclick="hiddenModalAdminAddProduct()">
+        <label class="btn-product-close" onclick="hiddenModalAdminAddProduct()">
             <i class="fa-solid fa-xmark"></i>
         </label>
+        <h3>Thêm sách</h3>
         <form action="" class="form-add-product">
             <input type="text" name="" placeholder="Tên sản phẩm">
             <input type="text" name="" placeholder="Nhà xuất bản">
             <input type="text" name="" placeholder="Giá tiền">
-            <input type="text" name="" placeholder="Giá khuyến mãi">
             <textarea name="" id="product-detail" cols="30" rows="10" placeholder="Giới thiệu"></textarea>
             <label for="custom-file-upload-1" class="filupp">
                 <span class="filupp-file-name js-value">Ảnh chính</span>
@@ -168,25 +167,39 @@
     </div>
 </div>
 
-<input type="checkbox" hidden name="" id="input-modal-add-employee-admin">
+<div class="modal-admin-add-category">
+    <button onclick="hiddenModalAdminAddCategory()"></button>
+</div>
+<div id="formAddCategory" class="modal-container modal-add-category-admin">
+    <div class="modal-add-category-detail">
+        <label class="btn-category-close" onclick="hiddenModalAdminAddCategory()">
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+        <h3>Thêm danh mục</h3>
+        <form action="" class="form-add-category">
+            <input type="text" name="" placeholder="Tên danh mục">
+            <div class="button-category">
+                <button>Thêm</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 <div class="modal-admin-add-employee">
     <button onclick="hiddenModalAdminAddEmployee()"></button>
 </div>
 <div id="formAddEmployee" class="modal-container modal-add-employee-admin">
     <div class="modal-add-employee-detail">
-        <label for="input-modal-add-employee-admin" class="btn-employee-close" onclick="hiddenModalAdminAddEmployee()">
+        <label class="btn-employee-close" onclick="hiddenModalAdminAddEmployee()">
             <i class="fa-solid fa-xmark"></i>
         </label>
-        <form action="" class="form-add-employee">
-            <input type="text" name="" placeholder="Tên nhân viên">
-            <input type="text" name="" placeholder="Tài khoản">
-            <input type="text" name="" placeholder="Mật khẩu">
-            <label for="custom-file-upload-9" class="filupp">
-                <span class="filupp-file-name js-value">Ảnh đại diện</span>
-                <input type="file" name="attachment-file" value="1" id="custom-file-upload-9"/>
-            </label>
+        <h3>Thêm nhân viên</h3>
+        <form action="/admin/them-nhan-vien" method="post" class="form-add-employee">
+            <input type="text" name="name" placeholder="Tên nhân viên">
+            <input type="text" name="username" placeholder="Tài khoản">
+            <input type="password" name="password" placeholder="Mật khẩu">
             <div class="button-employee">
-                <button>Thêm</button>
+                <button type="submit">Thêm</button>
             </div>
         </form>
     </div>

@@ -13,6 +13,11 @@ function hiddenModalAdminAddProduct() {
     document.getElementById('formAddProduct').style.transform = "translate(-50%, -245%)";
 }
 
+function hiddenModalAdminAddCategory() {
+    document.querySelector('.modal-admin-add-category').style.display = "none";
+    document.getElementById('formAddCategory').style.transform = "translate(-50%, -300%)";
+}
+
 function hiddenModalAdminEmployee() {
     document.querySelector('.modal-admin-employee').style.display = "none";
     document.getElementById('formEmployee').style.transform = "translate(-50%, -245%)";
@@ -52,6 +57,12 @@ function showFormAdminAddProduct() {
     document.querySelector('.modal-admin-add-product').style.display = "block";
 }
 
+function showFormAdminAddCategory() {
+    document.getElementById('formAddCategory').style.transform = "translate(-50%, -50%)";
+    document.getElementById('formAddCategory').style.opacity = 1;
+    document.querySelector('.modal-admin-add-category').style.display = "block";
+}
+
 function showFormAdminAddEmployee() {
     document.getElementById('formAddEmployee').style.transform = "translate(-50%, -50%)";
     document.getElementById('formAddEmployee').style.opacity = 1;
@@ -62,22 +73,4 @@ function showFormLoginAdmin() {
     document.getElementById('formLog').style.transform = "translate(-50%, -50%)";
     document.getElementById('formLog').style.opacity = 1;
     document.querySelector('.modal-login').style.display = "block";
-}
-
-function showFormProduct() {
-    document.querySelector('.admin-person').style.display = "none";
-    document.querySelector('.admin-employee').style.display = "none";
-    document.querySelector('.admin-product').style.display = "block";
-}
-
-function showFormEmployee() {
-    document.querySelector('.admin-product').style.display = "none";
-    document.querySelector('.admin-person').style.display = "none";
-    document.querySelector('.admin-employee').style.display = "block";
-}
-
-function showFormPerson() {
-    document.querySelector('.admin-product').style.display = "none";
-    document.querySelector('.admin-employee').style.display = "none";
-    document.querySelector('.admin-person').style.display = "block";
 }

@@ -1,0 +1,119 @@
+{{> headerAdmin}}
+{{#if errorsEmp}}
+    <div class="modal-toast">
+        <button onclick="hiddenToast()"></button>
+    </div>
+    <div class="list-toast">
+        <div class="toast toast--error">
+            <div class="toast__icon">
+                <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Tạo tài khoản nhân viên thất bại!</h3>
+                <p class="toast__msg">
+                    {{#each errorsEmp}}
+                        {{this}}
+                        <br>       
+                    {{/each}}
+                </p>
+            </div>
+            <div class="toast__close" onclick="hiddenToast();">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+{{/if}}
+{{#if table}}
+    <div class="modal-toast">
+        <button onclick="hiddenToast()"></button>
+    </div>
+    <div class="list-toast">
+        <div class="toast toast--success">
+            <div class="toast__icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Tạo tài khoản nhân viên thành công!</h3>
+            </div>
+            <div class="toast__close" onclick="hiddenToast();">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+{{/if}}
+<div id="admin-container">
+    <div class="content-section">
+        <div class="row admin-container">
+            <div class="admin-container-left">
+                <div class="admin-content">
+                    <div class="admin-avatar">
+                        <img src="https://www.kindpng.com/picc/m/699-6997452_administrator-network-icons-system-avatar-computer-transparent-admin.png" alt="">
+                    </div>
+                    <div class="admin-name">
+                        <p>Welcome, Administrator !</p>
+                    </div>
+                </div>
+                <div class="admin-list-category">
+                    <div class="admin-content-header">
+                        Danh mục quản lý
+                    </div>
+                    <div class="border-product"></div>
+                    <ul class="admin-category">
+                        <li class="admin-item-category"><a href="/admin/employee">Quản lý nhân viên</a></li>
+                        <li class="admin-item-category"><a href="/admin/user">Quản lý người dùng</a></li>
+                        <li class="admin-item-category"><a href="/admin/category">Quản lý danh mục</a></li>
+                        <li class="admin-item-category"><a href="/admin/product">Quản lý sản phẩm</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="admin-employee admin-container-right">
+                <div class="admin-category-content">
+                    <div class="admin-header">
+                        <div class="admin-info-header">
+                            <i class="fa-solid fa-clipboard-user"></i>
+                            <p>
+                                Quản lý nhân viên
+                            </p>
+                        </div>
+                        <label class="admin-add-employee" onclick="showFormAdminAddEmployee()">
+                            Thêm nhân viên
+                        </label>  
+                    </div>
+                    <div class="admin-list-header">
+                        <ul class="admin-list-info-product">
+                            <li class="admin-item-info-product">Ảnh nhân viên</li>
+                            <li class="admin-item-info-product">Tên nhân viên</li>
+                            <li class="admin-item-info-product">Số điện thoại</li>
+                            <li class="admin-item-info-product emp-account">Tài khoản nhân viên</li>
+                            <li class="admin-item-info-product">&nbsp;</li>
+                        </ul>
+                    </div>
+                    <div class="admin-info-content">
+                        {{#each this.employees}}
+                            <ul class="admin-list-employee">
+                                <li class="admin-item-employee">
+                                    <div class="admin-image-employee">
+                                        <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
+                                    </div>
+                                </li>
+                                <li class="admin-item-employee">{{nameEmp}}</li>
+                                <li class="admin-item-employee">{{phoneEmp}}</li>
+                                <li class="admin-item-employee">{{usernameEmp}}</li>
+                                <li class="admin-item-employee">
+                                    <a href="">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </a>
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </li>
+                            </ul>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> modalAdmin}}
+
+{{> footer}}

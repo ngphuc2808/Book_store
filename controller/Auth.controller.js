@@ -75,7 +75,9 @@ const authController = {
             } else {
                 await user.save((err, doc) => {
                     if(!err) {
-                        res.render('HomePage');
+                        res.render('HomePage', {
+                            success: success
+                        });
                     }
                     else {
                         errors.push('Đăng ký thất bại !');
@@ -94,7 +96,6 @@ const authController = {
             if(!req.body.usernameLogin ||
                 !req.body.passwordLogin ) {
                 errorsLogin.push('Bạn đã nhập thiếu thông tin, vui lòng kiểm tra lại!');
-                console.log('Bạn đã nhập thiếu thông tin, vui lòng kiểm tra lại!');
             } else {
                 const user = await User.findOne({ username: req.body.usernameLogin });
                 if(!user) {

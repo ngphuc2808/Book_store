@@ -6,14 +6,8 @@ const authController = require('../controller/Auth.controller');
 const restrict = require('../middlewares/Auth.middleware');
 const User = require('../model/User.model');
 
-router.get('/thong-tin-ca-nhan/:id', restrict, (req, res) => {
-    User.findById(req.params.id, (err, doc) => {
-        if(!err) {
-            res.render('FormUserProfile', {
-                user: doc
-            })
-        }
-    });
+router.get('/thong-tin-ca-nhan/:id', restrict,async (req, res) => {
+    res.render('FormUserProfile');
 });
 
 router.get('/thong-tin-ca-nhan', restrict, (req, res) => {
