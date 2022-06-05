@@ -47,9 +47,15 @@
                         {{#each this.users}}
                             <ul class="admin-list-employee admin-list-employee-person">
                                 <li class="admin-item-employee">
-                                    <div class="admin-image-employee">
-                                        <img src="../{{avatar}}" alt="">
-                                    </div>
+                                    {{#if avatar}}
+                                        <div class="admin-image-employee">
+                                            <img src="../{{avatar}}" alt="">
+                                        </div>
+                                    {{else}}
+                                        <div class="admin-image-employee">
+                                            <img src="../../public/uploads/avatar.png" alt="">
+                                        </div>
+                                    {{/if}}
                                 </li>
                                 <li class="admin-item-employee">{{name}}</li>
                                 <li class="admin-item-employee">{{phone}}</li>

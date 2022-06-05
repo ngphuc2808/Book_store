@@ -121,20 +121,20 @@
 .form-order-header {
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
 }
 
 .form-order-container {
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
     margin-top: 12px;
 }
 
 .form-check-order-container {
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
     margin-top: 12px;
     min-height: 500px;
     max-height: 800px;
@@ -888,7 +888,7 @@
 }
 
 .content-list-product {
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
     border-radius: 4px;
     margin-top: 16px;
     width: 100%;
@@ -936,7 +936,7 @@
     max-height: 800px;
     overflow-y: auto;
     border-radius: 4px;
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
 }
 
 .list-product .card-item {
@@ -1326,7 +1326,7 @@
     background-color: #fff;
     padding: 8px 4px;
     border-radius: 4px;
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
 }
 
 .basket-header p {
@@ -1383,7 +1383,7 @@ input.checkbox-add-cart[type="checkbox"]:checked:after {
     border-radius: 4px;
     min-height: 600px;
     overflow-y: auto;
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
 }
 
 .basket-content a {
@@ -1450,7 +1450,7 @@ input.checkbox-add-cart[type="checkbox"]:checked:after {
     background-color: #fff;
     min-height: 209px;
     border-radius: 4px;
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
 }
 
 .basket-price> :first-child,
@@ -1917,11 +1917,6 @@ input[type=number] {
     width: 1000px;
 }
 
-.modal-employee-admin {
-    height: 450px;
-    width: 800px;
-}
-
 .modal-person-admin {
     height: 450px;
     width: 800px;
@@ -1938,12 +1933,11 @@ input[type=number] {
 }
 
 .modal-add-employee-admin {
-    height: 450px;
+    height: 600px;
     width: 500px;
 }
 
 .modal-product-admin .image-product,
-.modal-employee-admin .image-employee,
 .modal-person-admin .image-person {
     width: 45%;
     position: relative;
@@ -1956,7 +1950,6 @@ input[type=number] {
     object-fit: cover;
 }
 
-.modal-employee-admin .avatar-employee,
 .modal-person-admin .avatar-person  {
     width: 250px;
     height: 250px;
@@ -1966,7 +1959,6 @@ input[type=number] {
     transform: translate(-50%, -50%);
 }
 
-.modal-employee-admin .avatar-employee img,
 .modal-person-admin .avatar-person img {
     width: 100%;
     height: 100%;
@@ -1976,7 +1968,6 @@ input[type=number] {
 }
 
 .modal-product-admin .form-product,
-.modal-employee-admin .form-employee,
 .modal-person-admin .form-person,
 .modal-add-product-admin .form-add-product,
 .modal-add-category-admin .form-add-category,
@@ -1990,7 +1981,6 @@ input[type=number] {
 }
 
 .modal-product-admin .form-product input,
-.modal-employee-admin .form-employee input,
 .modal-person-admin .form-person input,
 .modal-add-product-admin .form-add-product input,
 .modal-add-category-admin .form-add-category input,
@@ -2053,8 +2043,77 @@ input[type=number] {
     opacity: 0.8;
 }
 
+.edit-employee-avatar {
+    width: 200px;
+    height: 200px;
+    margin: 24px 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.edit-employee-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.edit-employee-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-employee {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-employee > :last-child {
+    margin-bottom: 24px;
+}
+
+.form-employee input {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+}
+
+.form-employee > :nth-child(6) {
+    margin-bottom: 8px;
+}
+
+.form-employee label {
+    width: 100%;
+}
+
+.form-employee .button-employee {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 16px;
+}
+
+.form-employee .button-employee button {
+    width: 100%;
+    background-color: #e66619;
+    padding: 14px 0;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    color: #fff;
+    
+}
+
 .form-product .button-product,
-.form-employee .button-employee,
 .form-person .button-person {
     display: flex;
     justify-content: space-between;
@@ -2063,19 +2122,16 @@ input[type=number] {
 }
 
 .form-product .button-product > :first-child,
-.form-employee .button-employee > :first-child,
 .form-person .button-person > :first-child {
     background-color: #e66619;
 }
 
 .form-product .button-product > :last-child,
-.form-employee .button-employee > :last-child,
 .form-person .button-person > :last-child {
     background-color: #fa0000;
 }
 
 .form-product .button-product button,
-.form-employee .button-employee button,
 .form-person .button-person button {
     width: 46%;
     padding: 14px 0;
@@ -2095,7 +2151,6 @@ input[type=number] {
 }
 
 .modal-product-admin .modal-product-detail,
-.modal-employee-admin .modal-employee-detail,
 .modal-person-admin .modal-person-detail {
     position: relative;
     background-color: #282828;
@@ -2172,7 +2227,6 @@ input[type=number] {
 .modal-add-product-admin,
 .modal-add-category-admin,
 .modal-add-employee-admin,
-.modal-employee-admin,
 .modal-person-admin {
     transform: translate(-50%, -245%);
 }
@@ -2400,7 +2454,7 @@ input.accept-register[type="checkbox"]:checked:after {
 .product-container {
     display: flex;
     background-color: #fff;
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
     border-radius: 4px;
 }
 
@@ -2544,7 +2598,7 @@ input.accept-register[type="checkbox"]:checked:after {
 }
 
 .categories-content {
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
     border-radius: 4px;
 }
 
@@ -2563,7 +2617,7 @@ input.accept-register[type="checkbox"]:checked:after {
 }
 
 .user-info-content {
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
     border-radius: 4px;
 }
 
@@ -2637,7 +2691,7 @@ input.accept-register[type="checkbox"]:checked:after {
     background-color: #fff;
     min-height: 209px;
     border-radius: 4px;
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
 }
 
 .user-avatar,
@@ -2688,7 +2742,7 @@ input.accept-register[type="checkbox"]:checked:after {
 .user-content {
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
     position: relative;
     height: 350px;
 }
@@ -2702,7 +2756,7 @@ input.accept-register[type="checkbox"]:checked:after {
 
 .admin-list-category {
     background-color: #fff;
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
     margin-top: 16px;
     border-radius: 4px;
 }
@@ -2888,6 +2942,14 @@ input.accept-register[type="checkbox"]:checked:after {
     width: 100%;
 }
 
+.edit-employee {
+    width: 84%;
+}
+
+.edit-id-employee {
+    width: 350px !important;
+}
+
 .admin-list-header {
     margin-top: 16px;
 }
@@ -2897,13 +2959,9 @@ input.accept-register[type="checkbox"]:checked:after {
     max-height: 680px;
     background-color: #404040;
     overflow-y: auto;
-    box-shadow: 0px 0px 3px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 30%);
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-}
-
-.admin-info-content > :last-child {
-    margin-bottom: 24px;
 }
 
 .admin-list-info-product {
@@ -3261,6 +3319,10 @@ input.accept-register[type="checkbox"]:checked:after {
 font-size: 20px;
 color: rgba(0, 0, 0, 0.3);
 cursor: pointer;
+}
+
+.info-admin-mobile {
+    display: none;
 }
 
 .info-admin label b {

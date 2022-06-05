@@ -134,6 +134,10 @@
         opacity: 1;
     }
 
+    #mobile-admin:checked ~ .nav-nxb-list {
+        display: block;
+    }
+
     #mobile-nxb:checked ~ .nav-nxb-list {
         display: block;
     }
@@ -191,7 +195,7 @@
         top: 0;
         left: 0;
         bottom: 0;
-        width: 50%;
+        width: 60%;
         max-width: 100%;
         background-color: #25292f;
         box-shadow: 1px 0 0 #e66619;
@@ -430,6 +434,42 @@
 
     .admin-add-category {
         width: 230px;
+    }
+
+    .show-i label,
+    .show-i-user label {
+        color: #e66619;
+    }
+
+    .show-i label > :last-child {
+        position: absolute;
+        top: 74px;
+        left: 53%;
+    }
+
+    .show-i-user label > :last-child {
+        position: absolute;
+        top: 74px;
+        left: 422px;
+    }
+
+    .show-i label > :first-child,
+    .show-i-user label > :first-child {
+        padding-right: 6px;
+    }
+
+
+
+    .info-admin {
+        display: none;
+    }
+
+    .info-user {
+        display: none;
+    }
+
+    .hello-user {
+        display: none;
     }
 }
 
@@ -955,6 +995,32 @@
     
     .admin-add-category {
         font-size: 13px;
+    }
+
+    .show-i label,
+    .show-i-user label {
+        color: #e66619;
+    }
+
+    .show-i label > :last-child {
+        position: absolute;
+        top: 8%;
+        left: 45%;
+    }
+
+    .show-i label > :first-child,
+    .show-i-user label > :first-child {
+        padding-right: 6px;
+    }
+
+    .show-i-user label > :last-child {
+        position: absolute;
+        top: 8%;
+        left: 293px;
+    }
+
+    .info-admin {
+        display: none;
     }
 }
 

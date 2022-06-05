@@ -74,36 +74,6 @@
     </div>
 </div>
 
-<input type="checkbox" hidden name="" id="input-modal-employee-admin">
-<div class="modal-admin-employee">
-    <button onclick="hiddenModalAdminEmployee()"></button>
-</div>
-<div id="formEmployee" class="modal-container modal-employee-admin">
-    <div class="image-employee">
-        <div class="avatar-employee">
-        <img src="https://readvii.com/wp-content/uploads/2020/03/sach-lap-trinh-va-cuoc-song-200x300.png" alt="">
-        </div>
-    </div>
-    <div class="modal-employee-detail">
-        <label for="input-modal-employee-admin" class="btn-employee-close" onclick="hiddenModalAdminEmployee()">
-            <i class="fa-solid fa-xmark"></i>
-        </label>
-        <form action="" class="form-employee">
-            <input type="text" name="" placeholder="Tên nhân viên">
-            <input type="text" name="" placeholder="Tài khoản">
-            <input type="text" name="" placeholder="Mật khẩu">
-            <label for="custom-file-upload-10" class="filupp">
-                <span class="filupp-file-name js-value">Ảnh đại diện</span>
-                <input type="file" name="attachment-file" value="1" id="custom-file-upload-10"/>
-            </label>
-            <div class="button-employee">
-                <button>Cập nhật</button>
-                <button>Xóa</button>
-            </div>
-        </form>
-    </div>
-</div>
-
 <input type="checkbox" hidden name="" id="input-modal-person-admin">
 <div class="modal-admin-person">
     <button onclick="hiddenModalAdminPerson()"></button>
@@ -194,10 +164,12 @@
             <i class="fa-solid fa-xmark"></i>
         </label>
         <h3>Thêm nhân viên</h3>
-        <form action="/admin/them-nhan-vien" method="post" class="form-add-employee">
-            <input type="text" name="name" placeholder="Tên nhân viên">
-            <input type="text" name="username" placeholder="Tài khoản">
-            <input type="password" name="password" placeholder="Mật khẩu">
+        <form action="/admin/employee" method="post" class="form-add-employee" >
+            <input type="text" name="name" placeholder="Tên nhân viên" {{#if valuesEmp}}value="{{valuesEmp.name}}"{{else}}value=""{{/if}}>
+            <input type="text" name="email" placeholder="Email" {{#if valuesEmp}}value="{{valuesEmp.email}}"{{else}}value=""{{/if}}>
+            <input type="text" name="phone" placeholder="Số điện thoại" {{#if valuesEmp}}value="{{valuesEmp.phone}}"{{else}}value=""{{/if}}>
+            <input type="text" name="username" placeholder="Tài khoản" {{#if valuesEmp}}value="{{valuesEmp.username}}"{{else}}value=""{{/if}}>
+            <input type="password" name="password" placeholder="Mật khẩu" {{#if valuesEmp}}value="{{valuesEmp.password}}"{{else}}value=""{{/if}}>
             <div class="button-employee">
                 <button type="submit">Thêm</button>
             </div>

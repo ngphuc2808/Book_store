@@ -2,7 +2,7 @@
     <div class="content-section b-color">
         <nav class="row navbar d-flex">
             <div class="header-logo pointer">
-                <img src="../public/img/logo_page2.JPG" alt="" class="width-100 height-100">
+                <img src="../../public/img/logo_page2.JPG" alt="" class="width-100 height-100">
             </div>
             <ul class="navbar-list list-1">
                 <li class="navbar-item navbar-item-separate">
@@ -14,21 +14,21 @@
                     <a href="#" class="connect-tag-icon connect-tag-icon-fb">
                         <i class="fa-brands fa-facebook"></i>
                         <div class="connect_qr_code_fb">
-                            <img src="../public/img/qr_code.jpg" alt="QR Code" class="qr_img_fb">
+                            <img src="../../public/img/qr_code.jpg" alt="QR Code" class="qr_img_fb">
                         </div>
                     </a>
                     <a href="#" class="connect-tag-icon connect-tag-icon-gh">
                         <i class="fa-brands fa-github"></i>
                         <div class="connect_qr_code_gh">
-                            <img src="../public/img/qr_code_gh.jpg" alt="QR Code" class="qr_img_gh">
+                            <img src="../../public/img/qr_code_gh.jpg" alt="QR Code" class="qr_img_gh">
                         </div>
-                    </a>
+                    </a>icon
                 </li>
             </ul>
         </nav>
         <div class="row header-content">
             <div class="header-logo-2 pointer">
-                <img src="../public/img/logo_page2.JPG" alt="" class="height-100 width-100">
+                <img src="../../public/img/logo_page2.JPG" alt="" class="height-100 width-100">
             </div>
             <label for="input-nav-mobile" class="header-menu pointer">
                 <span class="icon-menu" href="#">
@@ -36,60 +36,30 @@
                 </span>
             </label>
             <input type="checkbox" hidden name="" id="input-nav-mobile">
-            <label for="input-nav-mobile" class="nav-overlay" onclick="hiddenNXB()"></label>
+            <label for="input-nav-mobile" class="nav-overlay"></label>
             <nav class="nav-mobile">
-                <label for="input-nav-mobile" class="nav-close" onclick="hiddenNXB()">
+                <label for="input-nav-mobile" class="nav-close">
                     <i class="fa-solid fa-xmark"></i>
                 </label>
                 <ul class="nav-mobile-list">
-                    <li class="nav-mobile-list-nxb">
-                        <label for="mobile-nxb" class="nav-mobile-link">Nhà xuất bản</label>
-                        <input type="checkbox" hidden id="mobile-nxb">
-                        <ul class="nav-nxb-list">
-                            <li class="nav-nxb-item">
-                                <a class="nav-nxb-item-name" href="#">
-                                    Kim Đồng
-                                </a>
-                            </li>
-                            <li class="nav-nxb-item">
-                                <a class="nav-nxb-item-name" href="#">
-                                    Giáo Dục
-                                </a>
-                            </li>
-                            <li class="nav-nxb-item">
-                                <a class="nav-nxb-item-name" href="#">
-                                    Hồng Đức
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-mobile-link">Kinh tế</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-mobile-link">Văn học</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-mobile-link">Tâm lý - Kĩ năng sống</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-mobile-link">Ngoại ngữ</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-mobile-link">Tiểu thuyết</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-mobile-link">Tiểu sử - Hồi ký</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-mobile-link">Giáo khoa - Tham khảo</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-mobile-link">Sách thiếu nhi</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-mobile-link">Chuyên ngành</a>
-                    </li>
+                    {{#if lcIsAuthenticatedAdmin}}
+                        <li class="nav-mobile-list-nxb show-i">
+                            <label for="mobile-admin" class="nav-mobile-link">
+                                <i class="fa-solid fa-user icon-admin"></i>
+                                <b>Xin chào, {{lcAuthAdmin.username}}!</b>
+                                <i class="fa-solid fa-sort-down"></i>
+                            </label>
+                            <input type="checkbox" hidden id="mobile-admin">
+                            <ul class="nav-nxb-list">
+                                <li class="nav-nxb-item"><a class="nav-nxb-item-name" href="javascript: $('#formLogoutAdmin').submit();">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                    {{/if}}
+                    <li class="nav-mobile-list-nxb"><a href="/admin" class="nav-mobile-link">Trang quản trị</a></li>
+                    <li class="nav-mobile-list-nxb"><a class="nav-mobile-link" href="/admin/employee">Quản lý nhân viên</a></li>
+                    <li class="nav-mobile-list-nxb"><a class="nav-mobile-link" href="/admin/user">Quản lý người dùng</a></li>
+                    <li class="nav-mobile-list-nxb"><a class="nav-mobile-link" href="/admin/category">Quản lý danh mục</a></li>
+                    <li class="nav-mobile-list-nxb"><a class="nav-mobile-link" href="/admin/product">Quản lý sản phẩm</a></li>
                 </ul>
             </nav>
             <div class="header-search">
@@ -110,8 +80,8 @@
             {{#if lcIsAuthenticatedAdmin}}
                 <form id="formLogoutAdmin" action="/admin/dang-xuat" method="post"></form>
                 <li class="navbar-item show-info info-admin">
-                    <i class="fa-solid fa-user"></i>
-                    <label>
+                    <i class="fa-solid fa-user icon-admin"></i>
+                    <label class="name-admin">
                         <b>Xin chào, {{lcAuthAdmin.username}}!</b>
                         <i class="fa-solid fa-sort-down"></i>
                     </label>

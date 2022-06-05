@@ -7,7 +7,10 @@ const restrict = require('../middlewares/Auth.middleware');
 const User = require('../model/User.model');
 
 router.get('/thong-tin-ca-nhan/:id', restrict,async (req, res) => {
-    res.render('FormUserProfile');
+    const user = await User.find({_id: req.params.id}).lean();
+    res.render('FormUserProfile', {
+        user: user
+    });
 });
 
 router.get('/thong-tin-ca-nhan', restrict, (req, res) => {

@@ -32,15 +32,22 @@ router.get('/user', restrictAdmin, async (req, res) => {
 
 router.get('/employee', restrictAdmin, async (req, res) => {
     const listEmployee = await Employee.find().lean();
-    console.log(listEmployee);
     res.render('Admin/AdminEmployee', {
         employees: listEmployee,
         emptyEmployee: listEmployee.length === 0
     });
 });
 
-router.post('/them-nhan-vien', adminController.createEmployee);
+router.post('/employee', adminController.createEmployee);
 
+router.get('/employee/:id', restrictAdmin,async (req, res) => {
+    const employee = await Employee.find({_id: req.params.id}).lean();
+    res.render('Admin/AdminEditEmployee', {
+        employee: employee
+    });
+});
+
+router.post('/trang-thong-tin-nhan-vien', upload.single('avatar'), adminController.updateInfoEmployee);
 
 router.get('/product', restrictAdmin, (req, res) => {
     res.render('Admin/AdminProduct');

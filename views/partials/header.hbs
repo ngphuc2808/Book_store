@@ -3,7 +3,7 @@
         <nav class="row navbar d-flex">
             <div class="header-logo pointer">
                 <a href="/trang-chu">
-                    <img src="../public/img/logo_page2.JPG" alt="" class="width-100 height-100">
+                    <img src="../../public/img/logo_page2.JPG" alt="" class="width-100 height-100">
                 </a>
             </div>
             <ul class="navbar-list list-1">
@@ -16,13 +16,13 @@
                     <a href="https://www.facebook.com/Hoangphuc2808/" target="_blank" class="connect-tag-icon connect-tag-icon-fb">
                         <i class="fa-brands fa-facebook"></i>
                         <div class="connect_qr_code_fb">
-                            <img src="../public/img/qr_code.jpg" alt="QR Code" class="qr_img_fb">
+                            <img src="../../public/img/qr_code.jpg" alt="QR Code" class="qr_img_fb">
                         </div>
                     </a>
                     <a href="https://github.com/ngphuc2808/book_store" target="_blank" class="connect-tag-icon connect-tag-icon-gh">
                         <i class="fa-brands fa-github"></i>
                         <div class="connect_qr_code_gh">
-                            <img src="../public/img/qr_code_gh.jpg" alt="QR Code" class="qr_img_gh">
+                            <img src="../../public/img/qr_code_gh.jpg" alt="QR Code" class="qr_img_gh">
                         </div>
                     </a>
                 </li>
@@ -164,7 +164,7 @@
                 </li>
                 {{#if lcIsAuthenticated}}
                     <form id="formLogout" action="/dang-xuat" method="post"></form>
-                    <li class="navbar-item show-info">
+                    <li class="navbar-item show-info info-user">
                         <i class="fa-solid fa-user"></i>
                         <label>
                             <b>Xin chào, {{lcAuthUser.name}}!</b>
@@ -193,7 +193,7 @@
         <div class="row header-content">
             <div class="header-logo-2 pointer">
                 <a href="/trang-chu">
-                    <img src="../public/img/logo_page2.JPG" alt="" class="height-100 width-100">
+                    <img src="../../public/img/logo_page2.JPG" alt="" class="height-100 width-100">
                 </a>
             </div>
             <label for="input-nav-mobile" class="header-menu pointer">
@@ -208,6 +208,19 @@
                     <i class="fa-solid fa-xmark"></i>
                 </label>
                 <ul class="nav-mobile-list">
+                    {{#if lcIsAuthenticated}}
+                        <li class="nav-mobile-list-nxb show-i-user">
+                            <label for="mobile-admin" class="nav-mobile-link">
+                                <i class="fa-solid fa-user icon-admin"></i>
+                                <b>Xin chào, {{lcAuthUser.name}}!</b>
+                                <i class="fa-solid fa-sort-down"></i>
+                            </label>
+                            <input type="checkbox" hidden id="mobile-admin">
+                            <ul class="nav-nxb-list">
+                                <li class="nav-nxb-item"><a class="nav-nxb-item-name" href="javascript: $('#formLogout').submit();">Đăng xuất</a></li>
+                            </ul>
+                        </li>
+                    {{/if}}
                     <li class="nav-mobile-list-nxb"><a href="/trang-chu" class="nav-mobile-link">Trang chủ</a></li>
                     <li class="nav-mobile-list-nxb"><a href="/thong-tin-ca-nhan/{{lcAuthUser._id}}" class="nav-mobile-link">Thông tin cá nhân</a></li>
                     <li class="nav-mobile-list-nxb"><a href="/gio-hang" class="nav-mobile-link">Giỏ hàng</a></li>
@@ -314,11 +327,15 @@
                 </a>
                 <a class="basket-text" href="/gio-hang">Giỏ hàng</a>
             </div>
-            <div class="header-user pointer">
-                <button onclick="showFormLogin()" class="icon-user">
-                    <i class="fa-solid fa-user"></i>
-                </button>
-            </div>
+            {{#if lcIsAuthenticated}}
+                <div class="header-user pointer hello-user"></div>
+            {{else}}
+                <div class="header-user pointer">
+                    <button onclick="showFormLogin()" class="icon-user">
+                        <i class="fa-solid fa-user"></i>
+                    </button>
+                </div>
+            {{/if}}
         </div>
     </div>
     <div class="list-category w-100 bc-white">

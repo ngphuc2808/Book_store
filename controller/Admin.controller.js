@@ -17,32 +17,46 @@ const adminController = {
                 name: req.body.name,
                 username: req.body.username,
                 password: hash,
-                email: "",
-                phone: "",
+                email: req.body.email,
+                phone: req.body.phone,
                 avatar: ""
             });
 
             // Validate Thong tin cua Nhan vien
             const usernameEmp = await Employee.findOne({username: req.body.username});
+            const emailAccount = await Employee.findOne({email: req.body.email});
+            const phoneAccount = await Employee.findOne({phone: req.body.phone});
             const errorsEmp = [];
             if(!req.body.username ||
                 !req.body.password ||
                 !req.body.name) {
                 errorsEmp.push('Bạn đã nhập thiếu thông tin nhân viên, vui lòng kiểm tra lại!');
             } else {
-                if(req.body.username < 8) {
+                if(req.body.username.length < 4) {
                     errorsEmp.push('Vui lòng nhập một tài khoản dài hơn');
                 }
-                if(req.body.password < 8) {
+                if(req.body.password < 6) {
                     errorsEmp.push('Vui lòng nhập một mật khẩu dài hơn');
                 }
                 if(usernameEmp) {
                     errorsEmp.push('Tài khoản nhân viên đã tồn tại');
                 }
+                if(emailAccount) {
+                    errorsEmp.push('Email đã tồn tại');
+                }
+                if(phoneAccount) {
+                    errorsEmp.push('Số điện thoại đã tồn tại');
+                }
+                if(!checkEmail(req.body.email)) {
+                    errorsEmp.push('Vui lòng nhập đúng định dạng email');
+                }
+                if(!checkNumberPhone(req.body.phone)) {
+                    errorsEmp.push('Vui lòng nhập đúng định dạng số điện thoại');
+                }
             } 
             
             if(errorsEmp.length) {
-                res.render('Admin/Admin', {
+                res.render('Admin/AdminEmployee', {
                     errorsEmp: errorsEmp,
                     valuesEmp: req.body
                 });
@@ -50,17 +64,18 @@ const adminController = {
             } else {
                 await employee.save((err, table) => {
                     if(!err) {
+                        console.log(table.avatar);
                         res.render('Admin/AdminEmployee', {
-                            table: table
+                            table: table,
                         });
                     }
                     else {
-                        errorsEmp.push('Đăng ký thất bại !');
+                        errorsEmp.push('Thêm nhân viên thất bại !');
                     }  
                 });
             }  
         } catch(err) {
-            console.log('Register failed!!! ' + err);
+            console.log('Create employee failed!!! ' + err);
         }
     },
 
@@ -104,7 +119,16 @@ const adminController = {
     // Update
     updateInfoEmployee: async(req, res) => {
         try {
-            
+            req.body.avatar = req.file.path;
+            Employee.findOneAndUpdate({ _id : req.body._id }, req.body, {new: true}, (err, doc) => {
+                if(!err) {
+                    res.redirect(`/admin/employee/${req.body._id}`);
+                } else {
+                    if(err.name === 'ValidationError') {
+                        handleValidationError(err, req.body);
+                    }
+                }
+            });
         } catch(err) {
             console.log('Update failed!!! ' + err);
         }

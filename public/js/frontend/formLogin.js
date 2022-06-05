@@ -19,7 +19,3 @@ function hiddenModal() {
     document.getElementById('formRes').style.transform = "translate(-50%, -245%)";
     document.getElementById('formLog').style.transform = "translate(-50%, -245%)";
 }
-
-function hiddenNXB() {
-    document.getElementById('mobile-nxb').checked = false;
-}

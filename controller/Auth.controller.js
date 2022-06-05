@@ -37,10 +37,10 @@ const authController = {
                 !req.body.confirm ) {
                 errors.push('Bạn đã nhập thiếu thông tin, vui lòng kiểm tra lại!');
             } else {
-                if(req.body.username < 8) {
+                if(req.body.username.length < 8) {
                     errors.push('Vui lòng nhập một tài khoản dài hơn');
                 }
-                if(req.body.password < 8) {
+                if(req.body.password.length < 8) {
                     errors.push('Vui lòng nhập một mật khẩu dài hơn');
                 }
                 if(usernameAccount) {
@@ -73,7 +73,7 @@ const authController = {
                 });
                 return;
             } else {
-                await user.save((err, doc) => {
+                await user.save((err, success) => {
                     if(!err) {
                         res.render('HomePage', {
                             success: success

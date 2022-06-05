@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const restrict = require('../middlewares/Auth.middleware');
 
-router.get('/', (req, res) => {
+router.get('/', restrict, (req, res) => {
     res.render('FormBasket');
 });
 

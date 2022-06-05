@@ -1,0 +1,75 @@
+{{> headerAdmin}}
+<div id="admin-container">
+    <div class="content-section">
+        <div class="row admin-container">
+            <div class="admin-container-left">
+                <div class="admin-content">
+                    <div class="admin-avatar">
+                        <img src="https://www.kindpng.com/picc/m/699-6997452_administrator-network-icons-system-avatar-computer-transparent-admin.png" alt="">
+                    </div>
+                    <div class="admin-name">
+                        <p>Welcome, Administrator !</p>
+                    </div>
+                </div>
+                <div class="admin-list-category">
+                    <div class="admin-content-header">
+                        Danh mục quản lý
+                    </div>
+                    <div class="border-product"></div>
+                    <ul class="admin-category">
+                        <li class="admin-item-category"><a href="/admin/employee">Quản lý nhân viên</a></li>
+                        <li class="admin-item-category"><a href="/admin/user">Quản lý người dùng</a></li>
+                        <li class="admin-item-category"><a href="/admin/category">Quản lý danh mục</a></li>
+                        <li class="admin-item-category"><a href="/admin/product">Quản lý sản phẩm</a></li>
+                    </ul>
+                </div>
+            </div>
+            {{#each this.employee}}
+            <div class="admin-product admin-container-right">
+                <div class="admin-category-content">
+                    <div class="admin-header bc-white black-shadow">
+                        <div class="admin-info-header edit-employee">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <p>
+                                Chỉnh sửa thông tin
+                            </p>
+                        </div>
+                            <label class="admin-add-product edit-id-employee">
+                                Id: {{_id}}
+                            </label>  
+                    </div>
+                    <div class="admin-info-content bc-white mt-16 edit-employee-form">
+                            {{#if avatar}}
+                                <div class="edit-employee-avatar">
+                                    <img src="../../{{avatar}}" alt="">
+                                </div>
+                            {{else}}
+                                <div class="edit-employee-avatar">
+                                    <img src="../../public/uploads/avatar.png" alt="">
+                                </div>
+                            {{/if}}
+                        <form action="/admin/trang-thong-tin-nhan-vien" method="post" class="form-employee" enctype="multipart/form-data">
+                            <input type="hidden" name="_id" placeholder="Id" value="{{_id}}">
+                            <input type="text" name="email" placeholder="Email" value="{{email}}" disabled>
+                            <input type="text" name="phone" placeholder="Số điện thoại" value="{{phone}}" disabled>
+                            <input type="text" name="name" placeholder="Tên nhân viên" value="{{name}}">
+                            <input type="text" name="username" placeholder="Tài khoản" value="{{username}}">
+                            <label for="custom-file-upload" class="filupp">
+                                <span class="filupp-file-name js-value">Ảnh đại diện</span>
+                                <input type="file" name="avatar" id="custom-file-upload"/>
+                            </label>
+                            <div class="button-employee">
+                                <button type="submit">Cập nhật</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+{{> modalAdmin}}
+
+{{> footer}}
